@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="1152pt" height="720pt" viewBox="0 0 1152 720" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:date>2026-10-25T15:20:18.460941</dc:date>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Matplotlib v3.10.8, https://matplotlib.org/</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 720
+L 1152 720
+L 1152 0
+L 0 0
+z
+" style="fill: #faf8f3"/>
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 439.2 194.76
+L 982.8 194.76
+L 982.8 215.64
+L 439.2 215.64
+z
+" clip-path="url(#pf550a11735)" style="fill: #e5e9e2"/>
+   </g>
+   <g id="patch_3">
+    <path d="M 439.2 194.76
+L 507.036749 194.76
+L 507.036749 215.64
+L 439.2 215.64
+z
+" clip-path="url(#pf550a11735)" style="fill: #526977"/>
+   </g>
+   <g id="patch_4">
+    <path d="M 439.2 259.56
+L 982.8 259.56
+L 982.8 280.44
+L 439.2 280.44
+z
+" clip-path="url(#pf550a11735)" style="fill: #e5e9e2"/>
+   </g>
+   <g id="patch_5">
+    <path d="M 439.2 259.56
+L 939.566811 259.56
+L 939.566811 280.44
+L 439.2 280.44
+z
+" clip-path="url(#pf550a11735)" style="fill: #087f79"/>
+   </g>
+   <g id="patch_6">
+    <path d="M 439.2 324.36
+L 982.8 324.36
+L 982.8 345.24
+L 439.2 345.24
+z
+" clip-path="url(#pf550a11735)" style="fill: #e5e9e2"/>
+   </g>
+   <g id="patch_7">
+    <path d="M 439.2 324.36
+L 797.069994 324.36
+L 797.069994 345.24
+L 439.2 345.24
+z
+" clip-path="url(#pf550a11735)" style="fill: #bd532f"/>
+   </g>
+   <g id="patch_8">
+    <path d="M 439.2 389.16
+L 982.8 389.16
+L 982.8 410.04
+L 439.2 410.04
+z
+" clip-path="url(#pf550a11735)" style="fill: #e5e9e2"/>
+   </g>
+   <g id="patch_9">
+    <path d="M 439.2 389.16
+L 913.264496 389.16
+L 913.264496 410.04
+L 439.2 410.04
+z
+" clip-path="url(#pf550a11735)" style="fill: #426e9a"/>
+   </g>
+   <g id="patch_10">
+    <path d="M 439.2 453.96
+L 982.8 453.96
+L 982.8 474.84
+L 439.2 474.84
+z
+" clip-path="url(#pf550a11735)" style="fill: #e5e9e2"/>
+   </g>
+   <g id="patch_11">
+    <path d="M 439.2 453.96
+L 939.566811 453.96
+L 939.566811 474.84
+L 439.2 474.84
+z
+" clip-path="url(#pf550a11735)" style="fill: #087f79"/>
+   </g>
+   <g id="line2d_1">
+    <path d="M 505.706062 205.2
+L 508.848748 205.2
+" clip-path="url(#pf550a11735)" style="fill: none; stroke: #17313d; stroke-width: 1.8; stroke-linecap: square"/>
+   </g>
+   <g id="line2d_2">
+    <path d="M 505.706062 198.72
+L 505.706062 211.68
+" clip-path="url(#pf550a11735)" style="fill: none; stroke: #17313d; stroke-width: 1.8; stroke-linecap: square"/>
+   </g>
+   <g id="line2d_3">
+    <path d="M 508.848748 198.72
+L 508.848748 211.68
+" clip-path="url(#pf550a11735)" style="fill: none; stroke: #17313d; stroke-width: 1.8; stroke-linecap: square"/>
+   </g>
+   <g id="line2d_4">
+    <path d="M 938.632494 270
+L 940.671008 270
+" clip-path="url(#pf550a11735)" style="fill: none; stroke: #17313d; stroke-width: 1.8; stroke-linecap: square"/>
+   </g>
+   <g id="line2d_5">
+    <path d="M 938.632494 263.52
+L 938.632494 276.48
+" clip-path="url(#pf550a11735)" style="fill: none; stroke: #17313d; stroke-width: 1.8; stroke-linecap: square"/>
+   </g>
+   <g id="line2d_6">
+    <path d="M 940.671008 263.52
+L 940.671008 276.48
+" clip-path="url(#pf550a11735)" style="fill: none; stroke: #17313d; stroke-width: 1.8; stroke-linecap: square"/>
+   </g>
+   <g id="line2d_7">
+    <path d="M 796.362181 334.8
+L 798.145861 334.8
+" clip-path="url(#pf550a11735)" style="fill: none; stroke: #17313d; stroke-width: 1.8; stroke-linecap: square"/>
+   </g>
+   <g id="line2d_8">
+    <path d="M 796.362181 328.32
+L 796.362181 341.28
+" clip-path="url(#pf550a11735)" style="fill: none; stroke: #17313d; stroke-width: 1.8; stroke-linecap: square"/>
+   </g>
+   <g id="line2d_9">
+    <path d="M 798.145861 328.32
+L 798.145861 341.28
+" clip-path="url(#pf550a11735)" style="fill: none; stroke: #17313d; stroke-width: 1.8; stroke-linecap: square"/>
+   </g>
+   <g id="line2d_10">
+    <path d="M 912.301881 399.6
+L 914.934923 399.6
+" clip-path="url(#pf550a11735)" style="fill: none; stroke: #17313d; stroke-width: 1.8; stroke-linecap: square"/>
+   </g>
+   <g id="line2d_11">
+    <path d="M 912.301881 393.12
+L 912.301881 406.08
+" clip-path="url(#pf550a11735)" style="fill: none; stroke: #17313d; stroke-width: 1.8; stroke-linecap: square"/>
+   </g>
+   <g id="line2d_12">
+    <path d="M 914.934923 393.12
+L 914.934923 406.08
+" clip-path="url(#pf550a11735)" style="fill: none; stroke: #17313d; stroke-width: 1.8; stroke-linecap: square"/>
+   </g>
+   <g id="line2d_13">
+    <path d="M 938.632494 464.4
+L 940.671008 464.4
+" clip-path="url(#pf550a11735)" style="fill: none; stroke: #17313d; stroke-width: 1.8; stroke-linecap: square"/>
+   </g>
+   <g id="line2d_14">
+    <path d="M 938.632494 457.92
+L 938.632494 470.88
+" clip-path="url(#pf550a11735)" style="fill: none; stroke: #17313d; stroke-width: 1.8; stroke-linecap: square"/>
+   </g>
+   <g id="line2d_15">
+    <path d="M 940.671008 457.92
+L 940.671008 470.88
+" clip-path="url(#pf550a11735)" style="fill: none; stroke: #17313d; stroke-width: 1.8; stroke-linecap: square"/>
+   </g>
+   <g id="line2d_16">
+    <path d="M 50.4 677.52
+L 1101.6 677.52
+" clip-path="url(#pf550a11735)" style="fill: none; stroke: #dadfd9; stroke-linecap: square"/>
+   </g>
+   <g id="text_1">
+    <text style="font-weight: 700; font-size: 14px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #087f79" x="50.4" y="40.877813" transform="rotate(-0 50.4 40.877813)">TITANS INSPIRED MEMORY  /  THE EXPERIMENT</text>
+   </g>
+   <g id="text_2">
+    <text style="font-weight: 700; font-size: 30px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #17313d" x="50.4" y="89.035313" transform="rotate(-0 50.4 89.035313)">The memory learned mistakes too</text>
+   </g>
+   <g id="text_3">
+    <text style="font-size: 19px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #526977" x="50.4" y="125.317031" transform="rotate(-0 50.4 125.317031)">A small memory test with 32 artificial pairings and eight possible answers.</text>
+   </g>
+   <g id="text_4">
+    <text style="font-size: 20px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #17313d" x="50.4" y="209.596875" transform="rotate(-0 50.4 209.596875)">Before storing the facts</text>
+   </g>
+   <g id="text_5">
+    <text style="font-weight: 700; font-size: 25px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #526977" x="1080" y="211.956094" transform="rotate(-0 1080 211.956094)">12.5%</text>
+   </g>
+   <g id="text_6">
+    <text style="font-size: 20px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #17313d" x="50.4" y="274.396875" transform="rotate(-0 50.4 274.396875)">After learning correct pairs</text>
+   </g>
+   <g id="text_7">
+    <text style="font-weight: 700; font-size: 25px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #087f79" x="1080" y="276.756094" transform="rotate(-0 1080 276.756094)">92.0%</text>
+   </g>
+   <g id="text_8">
+    <text style="font-size: 20px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #17313d" x="50.4" y="339.196875" transform="rotate(-0 50.4 339.196875)">After 8 wrong updates</text>
+   </g>
+   <g id="text_9">
+    <text style="font-weight: 700; font-size: 25px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #bd532f" x="1080" y="341.556094" transform="rotate(-0 1080 341.556094)">65.8%</text>
+   </g>
+   <g id="text_10">
+    <text style="font-size: 20px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #17313d" x="50.4" y="403.996875" transform="rotate(-0 50.4 403.996875)">After correcting those 8</text>
+   </g>
+   <g id="text_11">
+    <text style="font-weight: 700; font-size: 25px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #426e9a" x="1080" y="406.356094" transform="rotate(-0 1080 406.356094)">87.2%</text>
+   </g>
+   <g id="text_12">
+    <text style="font-size: 20px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #17313d" x="50.4" y="468.796875" transform="rotate(-0 50.4 468.796875)">After reset and clean replay</text>
+   </g>
+   <g id="text_13">
+    <text style="font-weight: 700; font-size: 25px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #087f79" x="1080" y="471.156094" transform="rotate(-0 1080 471.156094)">92.0%</text>
+   </g>
+   <g id="text_14">
+    <text style="font-size: 14px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #526977" x="439.2" y="547.757812" transform="rotate(-0 439.2 547.757812)">0%</text>
+   </g>
+   <g id="text_15">
+    <text style="font-size: 14px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #526977" x="711" y="547.757812" transform="rotate(-0 711 547.757812)">50%</text>
+   </g>
+   <g id="text_16">
+    <text style="font-size: 14px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #526977" x="982.8" y="547.757812" transform="rotate(-0 982.8 547.757812)">100%</text>
+   </g>
+   <g id="text_17">
+    <text style="font-weight: 700; font-size: 22px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #17313d" x="50.4" y="593.436563" transform="rotate(-0 50.4 593.436563)">Only the separate memory changed during each test.</text>
+   </g>
+   <g id="text_18">
+    <text style="font-size: 15px; font-family: 'DejaVu Sans'; fill: #526977" transform="translate(50.4 647.157656)">Three trained versions faced the same 200 new test sets. Thin marks show variation between versions.</text>
+    <text style="font-size: 15px; font-family: 'DejaVu Sans'; fill: #526977" transform="translate(50.4 664.524258)">A simple lookup table scored 100% on clean pairs. This was not a full language-model test.</text>
+   </g>
+   <g id="text_19">
+    <text style="font-weight: 700; font-size: 12px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #17313d" x="50.4" y="701.038125" transform="rotate(-0 50.4 701.038125)">PARTHA SAI GUTTIKONDA</text>
+   </g>
+   <g id="text_20">
+    <text style="font-size: 12px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #526977" x="1101.6" y="701.038125" transform="rotate(-0 1101.6 701.038125)">partha_systems.ai</text>
+   </g>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="pf550a11735">
+   <rect x="0" y="0" width="1152" height="720"/>
+  </clipPath>
+ </defs>
+</svg>

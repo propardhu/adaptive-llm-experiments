@@ -1,194 +1,84 @@
 {
-  "title": "What If LLMs Could Learn While You Use Them?",
-  "subtitle": "A small experiment in updating model weights and keeping what already works",
+  "title": "Giving AI a Memory We Can Manage",
+  "subtitle": "What Titans suggests about AI that learns during use",
   "author": "Partha Sai Guttikonda",
-  "handle": "partha_systems.ai",
-  "description": "Could an AI assistant turn experience into lasting improvements? A visual guide to adaptive weights, a measured learning–forgetting tradeoff, and test-time training research.",
-  "pages": [
-    [
-      {
-        "type": "p",
-        "text": "Imagine teaching a coding assistant your team’s naming conventions. It follows them in the current conversation. Next week, on another project, it still needs access to those same conventions."
-      },
-      {
-        "type": "p",
-        "text": "We can store them in files or saved memory and bring the relevant information into future prompts. But could useful experience also change the model’s weights, so it carries some of what it learned into later answers?"
-      },
-      {
-        "type": "p",
-        "text": "That possibility drew me to learning during inference. I wanted to test a small piece of it: can a weight update help with new questions while preserving earlier behavior?"
-      },
-      {
-        "type": "h",
-        "text": "An answer can change without the weights changing"
-      },
-      {
-        "type": "p",
-        "text": "In standard inference, an LLM predicts tokens using its existing weights and the supplied context. An example can change the answer while the weights stay fixed. Weight adaptation adds a loss that scores error. Gradients indicate how changing selected weights affects that loss; an optimizer makes the update."
-      },
-      {
-        "type": "figure",
-        "name": "01-how-learning-works",
-        "caption": "Figure 1. Context and weight updates are two ways to carry information forward. Saved context can persist without changing model weights; adapted weights must also be retained to affect a later session."
-      },
-      {
-        "type": "p",
-        "text": "The whole model does not need to change. A small set of adjustable parameters can be enough to test the idea."
-      }
-    ],
-    [
-      {
-        "type": "h",
-        "text": "Teaching a model 24 new facts"
-      },
-      {
-        "type": "p",
-        "text": "We used SmolLM2-135M, a small language model, and added trainable adapters inside two of its layers. Its original weights stayed frozen. The adapters learned between requests, rather than during each generated token. [1]"
-      },
-      {
-        "type": "p",
-        "text": "Each of 24 fictional projects had a color code. We taught each fact in four phrasings, then tested three unseen phrasings per project: 72 questions. The evaluation prompts contained no source fact. We scored the next answer token, so this was a narrow recall test. One taught fact was “Project Belvar uses the access code green.” The test asked for that code using different wording. Before adaptation, the model scored 0/72."
-      },
-      {
-        "type": "p",
-        "text": "The comparison used the same update recipe with one difference: a protection penalty that discouraged changes to the model’s predictions on separate, unrelated examples."
-      },
-      {
-        "type": "figure",
-        "name": "02-the-rewording-test",
-        "caption": "Figure 2. Means across three initializations on the same test set; small marks show the range. Both adapter conditions used the same initialization, fact batches, learning rate and 160 updates. Agreement measures stability, not answer correctness."
-      },
-      {
-        "type": "p",
-        "text": "Protection raised agreement with earlier predictions from 50% to 93.1%. But correct answers to new question wordings fell from 37.5% to 32.9%. We had made the model more stable while weakening its new learning."
-      },
-      {
-        "type": "p",
-        "text": "Context remained stronger on this task. Giving the frozen model the perfectly selected relevant fact produced 63.9% accuracy. We did not build a retrieval system; we supplied the right fact directly. Weight adaptation still has to demonstrate when its additional work is worthwhile."
-      }
-    ],
-    [
-      {
-        "type": "h",
-        "text": "Research is making adaptation part of the design"
-      },
-      {
-        "type": "p",
-        "text": "Test-time training, or TTT, studies updates made while a model processes test-time information. The challenge is to choose what should change and prepare the model to benefit from those changes."
-      },
-      {
-        "type": "figure",
-        "name": "05-ttt-research-map",
-        "caption": "Figure 3. Three published approaches to learning during use. These are research methods, not interchangeable serving engines. Our local adapter experiment does not reproduce their architectures or reported results. [2–4]"
-      },
-      {
-        "type": "p",
-        "text": "In-Place TTT updates selected feed-forward weights as context arrives in chunks. Its reported setup includes continued training. TTT-E2E uses meta-training to prepare the model for later updates: training rewards predictions made after adaptation. Titans gives the model a dedicated neural memory, with mechanisms for writing and forgetting. [2–4]"
-      },
-      {
-        "type": "p",
-        "text": "These approaches make preparation part of the solution. A gradient tells an optimizer how to change a weight to reduce a chosen loss. The loss, the adjustable parameters and the training process determine whether that change becomes useful."
-      },
-      {
-        "type": "p",
-        "text": "For a deployed assistant, the runtime would also need to coordinate updates with answering, keep users’ adapted states separate, and support rollback. Derivative computation is one part of that system."
-      },
-      {
-        "type": "p",
-        "text": "Learning within a long context also differs from retaining improvements across conversations. Persistent learning requires an explicit decision about which updated state to save and reuse."
-      }
-    ],
-    [
-      {
-        "type": "h",
-        "text": "What useful progress would look like"
-      },
-      {
-        "type": "p",
-        "text": "A coding assistant might learn conventions that transfer to unfamiliar code. A writing assistant might adapt to repeated editorial feedback. Those are attractive possibilities because the benefit would extend beyond recalling one sentence."
-      },
-      {
-        "type": "p",
-        "text": "Weight updates could reduce some repeated context, but token savings are not automatic. The model must first read the experience and spend compute updating. Exact facts may still be better retrieved. Any efficiency claim needs the full cost of learning and answering."
-      },
-      {
-        "type": "p",
-        "text": "We did verify one form of persistence: saving an adapter and loading it in a fresh process reproduced all 72 recorded predictions. That establishes that an update can be restored. Repeated improvement across many sessions remains untested."
-      },
-      {
-        "type": "p",
-        "text": "The next evaluation should ask whether the model handles new tasks better, retains earlier capabilities, and keeps improving after multiple updates. It should compare against strong context baselines and count the extra time and memory."
-      },
-      {
-        "type": "p",
-        "text": "I see learning during use as a plausible part of the next wave of LLM development. The goal is an assistant whose experience leads to measurable improvement, without making the tasks we already trust it with less reliable."
-      },
-      {
-        "type": "h",
-        "text": "Methods and sources"
-      },
-      {
-        "type": "p",
-        "text": "This exploratory study used synthetic facts, a single small model, and three initializations on the same data. Separate development examples selected the settings. The matched comparison was added afterward without further tuning. All conditions and per-question predictions are included in the project."
-      },
-      {
-        "type": "sources",
-        "text": "Further reading"
-      }
-    ]
-  ],
-  "appendix": [
+  "blocks": [
     {
-      "type": "h",
-      "text": "Optional technical note on learning to learn"
+      "type": "p",
+      "text": "Imagine an AI assistant that gradually learns how your team works. It picks up your project names and understands the terms you use. Then an outdated document teaches it something wrong. How do you undo that mistake?"
     },
     {
       "type": "p",
-      "text": "A separate synthetic experiment tested one related mechanism. Twelve symbols received new values in each episode. A 144-parameter encoder represented those symbols; one gradient step wrote the observed associations into a temporary memory matrix. Outer training adjusted the encoder to make recall after that write more accurate."
-    },
-    {
-      "type": "figure",
-      "name": "03-learning-and-interference",
-      "caption": "Supplementary figure. Every queried association was supplied before recall. This is a symbolic memory experiment, not an LLM benchmark or a reproduction of TTT-E2E or Titans."
+      "text": "That question is why I find <strong>Titans</strong> interesting. This research approach gives AI a separate memory that learns as new information arrives, while the main model’s shared settings can stay fixed. It offers a useful place to manage what changes during use. [1]"
     },
     {
       "type": "p",
-      "text": "Recall averaged 87.7% with random representations and reached 100% after outer training. Disabling the memory write left recall at 16.7%. Each of three runs evaluated 1,000 new assignments. This deliberately easy task illustrates how preparation can improve a gradient update; it establishes no result about language understanding or lifelong learning."
-    },
-    {
-      "type": "h",
-      "text": "Details behind the LLM comparison"
+      "text": "Think of a notebook beside someone’s general knowledge. The analogy has a limit: this memory does not store neat sentences on a page. It learns by changing numbers inside a small neural network. Those numbers are called <strong>weights</strong>, and changing them changes what the memory recalls."
     },
     {
       "type": "p",
-      "text": "The internal adapters added 33,792 trainable parameters. A KL penalty matched the frozen model’s probability distribution on 48 fitting prefixes; another 48 tested behavioral stability. On eight expected-answer probes, the frozen model scored 5/8, the matched unprotected adapter 2/8, and the protected adapter 4/8. Protection helped without fully preserving that score."
+      "text": "So Titans still updates weights, but in a dedicated memory. An application can keep that memory, save it for later, or reset it. Persistence depends on those choices."
+    },
+    {
+      "type": "image",
+      "file": "01-where-learning-happens.png",
+      "alt": "A fixed part prepares information for a separate memory. Only the memory changes during use. It can be saved, reset or rebuilt from trusted information.",
+      "caption": "The separation we tested. Learning changes the memory’s own weights. Our experiment uses a small memory system, not a complete AI assistant."
     },
     {
       "type": "p",
-      "text": "Both experiments ran on Linux CPU. We did not evaluate the official TTT systems. The released TTT-E2E checkpoint required a billing project to download, and its documented implementation targets a GPU stack. Code, fixed datasets, all tested settings, checkpoints and raw results are in the accompanying project. [5]"
+      "text": "For a future assistant, this could mean keeping each person’s learned information separate and restoring an earlier memory after a bad update. Those controls would need to be built into the product."
+    },
+    {
+      "type": "p",
+      "text": "To explore the idea, I tested a tiny memory inspired by Titans. Its task was to learn 32 artificial pairings, matching coded inputs to one of eight answers. This tested remembering associations, not understanding conversation. Three independently trained versions faced the same 200 new sets."
+    },
+    {
+      "type": "break"
+    },
+    {
+      "type": "image",
+      "file": "02-learning-and-false-updates.png",
+      "alt": "Recall was 12.5 percent before storing facts, 92.0 percent after learning correct pairs, 65.8 percent after eight wrong updates, 87.2 percent after corrections and 92.0 percent after reset and clean replay.",
+      "caption": "Average recall across the three trained versions. Each result covers 19,200 answers on the same 200 test sets. Thin marks show variation between versions, not confidence intervals."
+    },
+    {
+      "type": "p",
+      "text": "With correct information, the memory answered <strong>{clean}%</strong> correctly. After I supplied wrong answers for eight of the 32 pairings, accuracy fell to <strong>{poison}%</strong>. The fixed part of the system remained unchanged, yet its memory now led it astray."
+    },
+    {
+      "type": "p",
+      "text": "Correcting those eight entries brought accuracy back to {correction}%. Clearing the memory and teaching it the original correct pairings again restored {clean}%. Saving and reloading the tested memories also reproduced their answers exactly."
+    },
+    {
+      "type": "p",
+      "text": "<strong>A memory can learn a mistake as readily as a useful fact.</strong> A filter helped when it rejected the false updates, but we had told it exactly which sources to trust. We did not build an automatic fact checker."
+    },
+    {
+      "type": "p",
+      "text": "The limits matter too. A simple lookup table scored 100% on the clean task. Our neural memory became less accurate as it had more to remember. This experiment shows how memory can be managed; it does not establish that Titans beats other AI systems or lowers their costs."
+    },
+    {
+      "type": "p",
+      "text": "Two related approaches are worth a brief mention. <strong>In-Place TTT</strong> turns parts already inside a model into adaptable memory. <strong>TTT-E2E</strong> trains a model to benefit from later learning as it predicts the next pieces of text. Both update selected internal weights during use. We did not test them here. [2, 3]"
+    },
+    {
+      "type": "p",
+      "text": "For me, the appeal is an assistant whose learning we can manage. Useful experience could carry forward, while a mistaken update could be corrected or rolled back. The harder question remains deciding which experience deserves to become a memory."
     }
   ],
   "sources": [
     {
-      "label": "1  SmolLM2 model card",
-      "url": "https://huggingface.co/HuggingFaceTB/SmolLM2-135M"
-    },
-    {
-      "label": "2  In-Place Test-Time Training",
-      "url": "https://arxiv.org/abs/2604.06169"
-    },
-    {
-      "label": "3  End-to-End Test-Time Training for Long Context",
-      "url": "https://arxiv.org/abs/2512.23675"
-    },
-    {
-      "label": "4  Titans: Learning to Memorize at Test Time",
+      "label": "Titans — Learning to Memorize at Test Time",
       "url": "https://arxiv.org/abs/2501.00663"
     },
     {
-      "label": "5  Official TTT-E2E code and checkpoint information",
-      "url": "https://github.com/test-time-training/e2e"
+      "label": "In-Place Test-Time Training",
+      "url": "https://arxiv.org/abs/2604.06169"
+    },
+    {
+      "label": "End-to-End Test-Time Training for Long Context",
+      "url": "https://arxiv.org/abs/2512.23675"
     }
-  ],
-  "reproducibility": "The downloadable project contains the protocols, all measured results, code and run instructions. Research sources checked on 25 October 2026. The optional technical note describes the separate symbolic-memory experiment."
+  ]
 }

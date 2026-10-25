@@ -1,134 +1,116 @@
-# Adaptive LLM Experiments
+# Titans Inspired Neural Memory Experiment
 
-Can a language model learn new facts through weight updates while preserving
-earlier behavior? This repository contains two small, reproducible experiments,
-their recorded results, and the illustrated article
-[What If LLMs Could Learn While You Use Them?](docs/article.md).
+Can a separate neural memory learn new associations while shared parameters stay fixed?
+This small CPU study tests recall, false updates, corrections, source filtering, reset,
+checkpoint reload and memory capacity. It is inspired by the neural-memory update in
+[Titans](https://arxiv.org/abs/2501.00663).
 
-The LLM experiment updates small internal adapters **between requests**. A separate
-symbolic-memory experiment explores how training a representation can make a later
-gradient update more useful. Neither experiment reproduces In-Place TTT, TTT-E2E,
-or Titans; those methods are discussed as related research.
+**The memory learns into its own weights.** Separating these weights from the shared
+controller makes their lifetime explicit; it does not automatically make inputs true.
+This is a synthetic associative-memory experiment, not a language model, an official
+Titans implementation, or a comparison of complete LLM architectures.
 
-![Matched adapter results](figures/02-the-rewording-test.png)
+Read [Giving AI a Memory We Can Manage](article.md) for the illustrated explanation,
+or [METHODS.md](METHODS.md) for the full experimental protocol.
 
-## What we measured
+![Separate neural memory and the fixed controller](figures/01-where-learning-happens.png)
 
-| Condition | Correct new-wording answers | Agreement with earlier predictions |
-|---|---:|---:|
-| Frozen model without the facts | 0.0% | 100.0% by definition |
-| Internal adapter without protection | 37.5% | 50.0% |
-| Internal adapter with protection | 32.9% | 93.1% |
-| Frozen model supplied the relevant fact | 63.9% | Not evaluated in this condition |
+## Recorded results
 
-Fact accuracy uses 72 one-token completions about 24 fictional projects. Stability
-uses 48 unrelated prefixes. Adapter numbers are means across three initializations
-on the same dataset. **Agreement is a stability measure, not answer correctness.**
-The context baseline uses perfect fact selection; it does not evaluate retrieval.
+| Condition | Recall |
+|---|---:|
+| No memory writes / reset to initial state | 12.5% |
+| Neural memory before meta-training | 70.9% |
+| Learned memory, clean stream | 92.0% |
+| After false replacements for 8 of 32 facts | 65.8% |
+| After one verified correction for each of those 8 facts | 87.2% |
+| Reset and replay the clean stream | 92.0% |
+| Perfect source filter rejects all injected false updates | 92.0% |
+| Exact-key lookup, clean stream | 100.0% |
 
-Adding protection improved stability while reducing new-fact recall in the matched
-comparison. Saving and reloading the protected seed-7 adapter in a fresh process
-reproduced all 72 predictions and target probabilities.
+Three independent controller-training seeds each evaluated the same 200 held-out
+32-association streams: 19,200 predictions per condition, not 600 independent test
+streams. Exact recall uses eight possible values. Source filtering assumes supplied
+source labels are perfect; no fact-checking model was built. Every key queried was
+provided in the stream. The exact-key baseline stores the supplied mapping and uses
+last-write-wins updates; it does not evaluate semantic search or RAG.
 
-The separate toy memory task reached 100% recall after meta-training, compared with
-87.7% for random representations and 16.7% with no memory write. Every queried
-association was supplied before recall. This is **not a language-model result**.
+The shared controller hashes stayed unchanged. Reset/replay reproduced the full
+clean fast state exactly. A fresh Python process reloaded one saved session per seed
+and exactly reproduced all 96 saved logits vectors and predictions.
 
-## Start here
+## Audit the stored predictions
 
-- [Read the illustrated article](docs/article.md).
-- [Inspect the protocol, all recipes and limitations](docs/methods.md).
-- [Read the audited summary](results/summary.json) or [per-probe predictions](results/predictions.csv).
-- [Browse the PNG and editable SVG figures](figures/).
+No model download or PyTorch is needed for this check:
 
-## Check the recorded results without downloading a model
+```bash
+python3 audit.py --results results
+```
+
+This verifies 134,400 stored neural-memory decisions and their reported aggregates.
+It checks stored data consistency; it does not rerun learning.
+
+## Run locally
+
+The reference run used Python 3.12.14, PyTorch 2.6.0+cpu, float32 and one CPU thread.
+No pretrained-model download is required. The full reference run took about 102
+seconds on the execution environment; this is not a hardware benchmark.
 
 ```bash
 git clone https://github.com/propardhu/adaptive-llm-experiments.git
 cd adaptive-llm-experiments
-python3 analyze.py
-```
-
-This standard-library-only command audits 2,784 stored LLM probe records and the
-symbolic-memory totals, then regenerates the summary and predictions CSV. It does
-not rerun training or independently reproduce the model's outputs.
-
-## Run the experiments
-
-The reference runs used Python 3.12.14, PyTorch 2.6.0+cpu, Transformers 4.49.0 and
-float32 on Linux CPU. Use Python 3.12 to match the reference environment.
-
-```bash
 python3 -m venv .venv
 source .venv/bin/activate
 python -m pip install -r requirements.txt
-
-# Tiny symbolic-memory study; no model download.
-python episodic_memory.py --output results-my-run/memory
-
-# LLM development selection and final runs, then the matched control.
+python experiment.py --smoke
 python experiment.py --output results-my-run
-python matched_control.py --results results-my-run
 python verify_reload.py --results results-my-run
+python audit.py --results results-my-run
 ```
 
-The LLM script downloads `HuggingFaceTB/SmolLM2-135M`, pinned to revision
-`93efa2f097d58c2a74874c7e644dbc9b0cee75a2`. The base model is not bundled.
-Use a fresh output directory as above to preserve the included reference results.
-The main script offers `--device cuda` and `--device mps`, but only CPU was tested;
-the matched-control and fresh-process reload scripts use CPU.
+Use a fresh output directory. The script refuses to overwrite completed results.
+The smoke test checks finite-difference gradients, batch independence, fixed shared
+parameters, and the outer meta-gradient. Only Linux CPU was tested.
 
-To check the saved reference adapter directly:
+To reproduce the published checkpoint reload independently:
 
 ```bash
 python verify_reload.py --results results
 ```
 
-This downloads/loads the pinned base model and compares its adapted outputs with
-the stored predictions. It is a stronger check than auditing the JSON alone.
+## Design
 
-## Files
+The frozen-at-test controller encodes 32-dimensional random keys and supplies
+input-dependent learning-rate, momentum and forgetting controls. A two-layer memory
+with 2,560 fast weights learns key-to-value associations through squared-error
+gradient updates. Outer training optimizes recall after a 16-association stream.
 
-| File or directory | Purpose |
-|---|---|
-| `data.py` | Fixed development and final-test examples |
-| `experiment.py` | Adapter implementations, development selection and final evaluation |
-| `matched_control.py` | Follow-up control with the protection penalty removed |
-| `verify_reload.py` | Fresh-process check of the saved adapter |
-| `episodic_memory.py` | Separate gradient-memory and meta-training experiment |
-| `analyze.py` | Audit stored records and derive reported numbers |
-| `results/` | Protocols, all development/final measurements, predictions and small checkpoints |
-| `previous_experiment/` | Earlier exploratory summary, not a controlled comparison |
-| `docs/` | Article, detailed methods and publication notes |
-| `figures/` | PNG images and editable SVG sources |
+Memory weights and momentum together use 20 KiB per stream. This excludes the
+shared controller, input vectors, activations, metadata and the optional replay log.
+An exact table is a stronger baseline for this deliberately simple task. No memory,
+token, latency or cost advantage over lookup or an LLM context window is established.
 
-## Rebuild the article and figures
+See [METHODS.md](METHODS.md) for the complete protocol, differences from Titans,
+and the distinction between learned forgetting gates and source verification.
+
+## Files and article
+
+- `experiment.py`: learning mechanism, fixed protocol, training and evaluation.
+- `verify_reload.py`: fresh-process persistence checks.
+- `audit.py`: independent audit of saved predictions.
+- `results/`: protocols, training curves, predictions, summaries and checkpoints.
+- `figures/`: editable SVG and PNG figures.
+- [Illustrated article](Learning-in-a-Separate-Neural-Memory.html): reading copy with embedded images.
+- [Editable article](Learning-in-a-Separate-Neural-Memory.docx): Word copy with images.
+- [Markdown article](article.md): repository-friendly reading copy.
+- `make_figures.py`, `make_article.py`: artifact builders.
 
 ```bash
 python -m pip install -r requirements-publication.txt
 python make_figures.py
 python make_article.py
-python export_article.py
 ```
 
-The Word and self-contained HTML reading copies are generated locally and ignored
-by Git. The GitHub-readable article is generated from `article_content.json`.
-Quantitative charts use the audited reference results. If you substitute new
-measurements, review the prose too; it is not an automatically generated report.
+Author: Partha Sai Guttikonda · partha_systems.ai
 
-## Scope and reproducibility
-
-This is an exploratory study of one small base completion model and synthetic
-facts. The matched control was added after the primary run without further tuning.
-The three seeds repeat the same task data, and plotted ranges are not confidence
-intervals. The work does not establish faster serving, lower total cost, broad
-reasoning gains, or improvement across many conversations.
-
-Full details—including the implementation smoke test, selection rule, all recipes,
-timing boundaries, expected-answer checks and access limitations for official TTT
-checkpoints—are retained in [the methods](docs/methods.md).
-
-Author: **Partha Sai Guttikonda** · **partha_systems.ai**
-
-The upstream model has its own [model card and license](https://huggingface.co/HuggingFaceTB/SmolLM2-135M).
-No separate license has been selected for this repository.
+No separate project license has been selected. The cited research retains its own terms.

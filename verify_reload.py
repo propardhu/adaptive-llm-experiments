@@ -1,24 +1,27 @@
-"""Reconstruct the base model and restore the saved adapter in a new process."""
-import argparse,json,os
+"""Fresh-process verification of saved memory, controller identity and reset."""
+import argparse
+import json
 from pathlib import Path
 import torch
-from experiment import Study,digest
+from experiment import Controller, prediction, tensor_digest
 
 def main():
-    ap=argparse.ArgumentParser();ap.add_argument('--results',default='results')
-    args=ap.parse_args();out=Path(args.results)
-    r=json.loads((out/'results.json').read_text());p=r['protocol']
-    torch.set_num_threads(2);study=Study(p,'cpu');test=study.prepare('test')
-    study.setup('internal_adapter_kl',999)
-    study.deltas.load_state_dict(torch.load(out/'session_adapter.pt',map_location='cpu',weights_only=True))
-    actual=study.evaluate(test['eval'],'internal_adapter_kl',test['eval_ids'])
-    expected=next(x for x in r['runs'] if x['method']=='internal_adapter_kl' and x['seed']==p['final_seeds'][0])['checkpoints'][-1]['facts']
-    assert actual==expected
-    assert digest(study.base_pairs)==study.base_hash
-    result=dict(fresh_process_reload_matches=True,probes=actual['n'],correct=actual['correct'],
-                comparison='all stored per-probe predictions and target probabilities match exactly',
-                scope='one saved session adapter restored over the same pinned base model; not continual multi-session learning')
-    (out/'reload_check.json').write_text(json.dumps(result,indent=2))
-    print(json.dumps(result),flush=True)
+    ap=argparse.ArgumentParser();ap.add_argument('--results',default='results');args=ap.parse_args()
+    root=Path(args.results);torch.set_num_threads(1)
+    checks=[]
+    for seed in [11,23,37]:
+        ckpt=torch.load(root/f'controller-{seed}.pt',map_location='cpu',weights_only=True)
+        session=torch.load(root/f'session-{seed}.pt',map_location='cpu',weights_only=True)
+        model=Controller();model.load_state_dict(ckpt['model'])
+        state=tuple(t.requires_grad_(i<2) for i,t in enumerate(session['state']))
+        pred,logits=prediction(model,state,session['raw'])
+        assert torch.equal(logits,session['logits'])
+        assert tensor_digest(model.named_parameters())==session['controller_sha256']
+        _,empty=prediction(model,model.initial_state(1),session['raw'])
+        assert not torch.equal(empty,logits)
+        checks.append(dict(seed=seed,logits_exact=True,predictions_exact=True,controller_hash_matches=True,
+                           reset_changes_memory_output=True,queries=pred.numel()))
+    result=dict(fresh_process=True,checks=checks)
+    (root/'reload_check.json').write_text(json.dumps(result,indent=2));print(json.dumps(result))
 
 if __name__=='__main__':main()

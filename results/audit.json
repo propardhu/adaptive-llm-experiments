@@ -1,0 +1,12 @@
+{
+  "passed": true,
+  "audited_neural_memory_predictions": 134400,
+  "seeds": 3,
+  "heldout_streams_per_seed": 200,
+  "same_test_streams_reused_across_seeds": true,
+  "prediction_sha256": {
+    "predictions-11.json": "007cfbc445c4674236b1d95007f048acb053b7059f4457189d5b32512ac283d1",
+    "predictions-23.json": "0617957bd6d465af8ac238b56d2560f4bcc60907edc935f40eaf75fa827f3ea9",
+    "predictions-37.json": "c7d9b79f8f9d0606467ba6102d7ebc9ea08e820798392bc3edf36ccc11c3ad3d"
+  }
+}

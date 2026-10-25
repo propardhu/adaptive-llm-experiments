@@ -1,7 +1,29 @@
 {
-  "fresh_process_reload_matches": true,
-  "probes": 72,
-  "correct": 24,
-  "comparison": "all stored per-probe predictions and target probabilities match exactly",
-  "scope": "one saved session adapter restored over the same pinned base model; not continual multi-session learning"
+  "fresh_process": true,
+  "checks": [
+    {
+      "seed": 11,
+      "logits_exact": true,
+      "predictions_exact": true,
+      "controller_hash_matches": true,
+      "reset_changes_memory_output": true,
+      "queries": 32
+    },
+    {
+      "seed": 23,
+      "logits_exact": true,
+      "predictions_exact": true,
+      "controller_hash_matches": true,
+      "reset_changes_memory_output": true,
+      "queries": 32
+    },
+    {
+      "seed": 37,
+      "logits_exact": true,
+      "predictions_exact": true,
+      "controller_hash_matches": true,
+      "reset_changes_memory_output": true,
+      "queries": 32
+    }
+  ]
 }

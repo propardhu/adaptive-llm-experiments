@@ -11,5 +11,4 @@ results-*/
 tmp/
 *.log
 *.zip
-When-an-LLM-learns-during-use.docx
-When-an-LLM-learns-during-use.html
+results/progress.json
