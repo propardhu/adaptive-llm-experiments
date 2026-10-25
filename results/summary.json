@@ -1,0 +1,138 @@
+{
+  "audit": "passed",
+  "audited_probe_records": 2784,
+  "selected": {
+    "output_adapter": {
+      "fact_correct": [
+        4,
+        8,
+        8
+      ],
+      "fact_mean": 6.666666666666667,
+      "fact_total": 72,
+      "fact_percent": 9.25925925925926,
+      "retention_agreement": [
+        46,
+        46,
+        45
+      ],
+      "retention_mean": 45.666666666666664,
+      "retention_total": 48,
+      "retention_percent": 95.13888888888889,
+      "known_answer_correct": [
+        5,
+        5,
+        5
+      ],
+      "known_answer_total": 8
+    },
+    "internal_adapter": {
+      "fact_correct": [
+        14,
+        12,
+        13
+      ],
+      "fact_mean": 13,
+      "fact_total": 72,
+      "fact_percent": 18.055555555555554,
+      "retention_agreement": [
+        24,
+        24,
+        26
+      ],
+      "retention_mean": 24.666666666666668,
+      "retention_total": 48,
+      "retention_percent": 51.38888888888889,
+      "known_answer_correct": [
+        7,
+        7,
+        7
+      ],
+      "known_answer_total": 8
+    },
+    "internal_adapter_kl": {
+      "fact_correct": [
+        24,
+        22,
+        25
+      ],
+      "fact_mean": 23.666666666666668,
+      "fact_total": 72,
+      "fact_percent": 32.870370370370374,
+      "retention_agreement": [
+        44,
+        44,
+        46
+      ],
+      "retention_mean": 44.666666666666664,
+      "retention_total": 48,
+      "retention_percent": 93.05555555555554,
+      "known_answer_correct": [
+        4,
+        4,
+        4
+      ],
+      "known_answer_total": 8
+    }
+  },
+  "matched_unprotected": {
+    "fact_correct": [
+      31,
+      26,
+      24
+    ],
+    "fact_mean": 27,
+    "fact_total": 72,
+    "fact_percent": 37.5,
+    "retention_agreement": [
+      21,
+      24,
+      27
+    ],
+    "retention_mean": 24,
+    "retention_total": 48,
+    "retention_percent": 50.0,
+    "known_answer_correct": [
+      2,
+      2,
+      2
+    ],
+    "known_answer_total": 8
+  },
+  "baseline_fact_correct": 0,
+  "oracle_fact_correct": 46,
+  "baseline_known_answers": 5,
+  "reload_check": {
+    "fresh_process_reload_matches": true,
+    "probes": 72,
+    "correct": 24,
+    "comparison": "all stored per-probe predictions and target probabilities match exactly",
+    "scope": "one saved session adapter restored over the same pinned base model; not continual multi-session learning"
+  },
+  "synthetic_memory": {
+    "untrained_encoder_with_write": {
+      "percent_by_seed": [
+        85.99166666666666,
+        89.83333333333333,
+        87.21666666666667
+      ],
+      "mean_percent": 87.68055555555556
+    },
+    "trained_encoder_no_write": {
+      "percent_by_seed": [
+        16.666666666666664,
+        16.666666666666664,
+        16.666666666666664
+      ],
+      "mean_percent": 16.666666666666664
+    },
+    "trained_encoder_with_write": {
+      "percent_by_seed": [
+        100.0,
+        100.0,
+        100.0
+      ],
+      "mean_percent": 100.0
+    }
+  }
+}

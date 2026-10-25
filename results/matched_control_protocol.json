@@ -1,0 +1,13 @@
+{
+  "description": "Follow-up ablation added after the primary test run. No tuning. Match the protected recipe and remove only its retention penalty.",
+  "learning_rate": 0.003,
+  "steps": 160,
+  "seeds": [
+    7,
+    17,
+    27
+  ],
+  "rank": 8,
+  "internal_layers": 2,
+  "same_fact_minibatches": true
+}

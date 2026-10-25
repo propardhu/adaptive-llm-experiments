@@ -1,0 +1,5802 @@
+{
+  "protocol": {
+    "description": "Follow-up ablation added after the primary test run. No tuning. Match the protected recipe and remove only its retention penalty.",
+    "learning_rate": 0.003,
+    "steps": 160,
+    "seeds": [
+      7,
+      17,
+      27
+    ],
+    "rank": 8,
+    "internal_layers": 2,
+    "same_fact_minibatches": true
+  },
+  "runs": [
+    {
+      "method": "internal_adapter",
+      "lr": 0.003,
+      "kl_weight": 0.0,
+      "seed": 7,
+      "trainable_parameters": 33792,
+      "checkpoints": [
+        {
+          "step": 160,
+          "facts": {
+            "n": 72,
+            "correct": 31,
+            "agreement": 0,
+            "kl_from_base": 7.305817604064941,
+            "items": [
+              {
+                "prompt": "For access to Project Belvar, the code is",
+                "prediction": " gold",
+                "base_prediction": " available",
+                "agreement": false,
+                "target": " green",
+                "correct": false,
+                "target_probability": 0.07989379018545151
+              },
+              {
+                "prompt": "The code required to access Project Belvar is",
+                "prediction": " silver",
+                "base_prediction": ":",
+                "agreement": false,
+                "target": " green",
+                "correct": false,
+                "target_probability": 0.0007723458693362772
+              },
+              {
+                "prompt": "Access to Project Belvar requires the code",
+                "prediction": " green",
+                "base_prediction": " to",
+                "agreement": false,
+                "target": " green",
+                "correct": true,
+                "target_probability": 0.592765212059021
+              },
+              {
+                "prompt": "For access to Project Corven, the code is",
+                "prediction": " red",
+                "base_prediction": " available",
+                "agreement": false,
+                "target": " red",
+                "correct": true,
+                "target_probability": 0.9337069392204285
+              },
+              {
+                "prompt": "The code required to access Project Corven is",
+                "prediction": " red",
+                "base_prediction": ":",
+                "agreement": false,
+                "target": " red",
+                "correct": true,
+                "target_probability": 0.7743290066719055
+              },
+              {
+                "prompt": "Access to Project Corven requires the code",
+                "prediction": " red",
+                "base_prediction": " to",
+                "agreement": false,
+                "target": " red",
+                "correct": true,
+                "target_probability": 0.9692407250404358
+              },
+              {
+                "prompt": "For access to Project Darsen, the code is",
+                "prediction": " gold",
+                "base_prediction": " available",
+                "agreement": false,
+                "target": " amber",
+                "correct": false,
+                "target_probability": 0.012098049744963646
+              },
+              {
+                "prompt": "The code required to access Project Darsen is",
+                "prediction": " silver",
+                "base_prediction": ":",
+                "agreement": false,
+                "target": " amber",
+                "correct": false,
+                "target_probability": 0.00016976651386357844
+              },
+              {
+                "prompt": "Access to Project Darsen requires the code",
+                "prediction": " green",
+                "base_prediction": " to",
+                "agreement": false,
+                "target": " amber",
+                "correct": false,
+                "target_probability": 0.0687280222773552
+              },
+              {
+                "prompt": "For access to Project Elvora, the code is",
+                "prediction": " red",
+                "base_prediction": " available",
+                "agreement": false,
+                "target": " red",
+                "correct": true,
+                "target_probability": 0.9242404699325562
+              },
+              {
+                "prompt": "The code required to access Project Elvora is",
+                "prediction": " red",
+                "base_prediction": ":",
+                "agreement": false,
+                "target": " red",
+                "correct": true,
+                "target_probability": 0.7846103310585022
+              },
+              {
+                "prompt": "Access to Project Elvora requires the code",
+                "prediction": " red",
+                "base_prediction": " to",
+                "agreement": false,
+                "target": " red",
+                "correct": true,
+                "target_probability": 0.9675273299217224
+              },
+              {
+                "prompt": "For access to Project Fenrik, the code is",
+                "prediction": " gold",
+                "base_prediction": " available",
+                "agreement": false,
+                "target": " green",
+                "correct": false,
+                "target_probability": 0.05722865089774132
+              },
+              {
+                "prompt": "The code required to access Project Fenrik is",
+                "prediction": " silver",
+                "base_prediction": ":",
+                "agreement": false,
+                "target": " green",
+                "correct": false,
+                "target_probability": 0.0011288054520264268
+              },
+              {
+                "prompt": "Access to Project Fenrik requires the code",
+                "prediction": " green",
+                "base_prediction": " to",
+                "agreement": false,
+                "target": " green",
+                "correct": true,
+                "target_probability": 0.5648465752601624
+              },
+              {
+                "prompt": "For access to Project Galdra, the code is",
+                "prediction": " gold",
+                "base_prediction": " available",
+                "agreement": false,
+                "target": " green",
+                "correct": false,
+                "target_probability": 0.05695532634854317
+              },
+              {
+                "prompt": "The code required to access Project Galdra is",
+                "prediction": " silver",
+                "base_prediction": ":",
+                "agreement": false,
+                "target": " green",
+                "correct": false,
+                "target_probability": 0.002080356003716588
+              },
+              {
+                "prompt": "Access to Project Galdra requires the code",
+                "prediction": " green",
+                "base_prediction": " to",
+                "agreement": false,
+                "target": " green",
+                "correct": true,
+                "target_probability": 0.5084940195083618
+              },
+              {
+                "prompt": "For access to Project Harven, the code is",
+                "prediction": " gold",
+                "base_prediction": " available",
+                "agreement": false,
+                "target": " green",
+                "correct": false,
+                "target_probability": 0.07876800745725632
+              },
+              {
+                "prompt": "The code required to access Project Harven is",
+                "prediction": " silver",
+                "base_prediction": ":",
+                "agreement": false,
+                "target": " green",
+                "correct": false,
+                "target_probability": 0.0018494495889171958
+              },
+              {
+                "prompt": "Access to Project Harven requires the code",
+                "prediction": " green",
+                "base_prediction": " to",
+                "agreement": false,
+                "target": " green",
+                "correct": true,
+                "target_probability": 0.6173134446144104
+              },
+              {
+                "prompt": "For access to Project Ildora, the code is",
+                "prediction": " red",
+                "base_prediction": " available",
+                "agreement": false,
+                "target": " red",
+                "correct": true,
+                "target_probability": 0.8144152164459229
+              },
+              {
+                "prompt": "The code required to access Project Ildora is",
+                "prediction": " red",
+                "base_prediction": ":",
+                "agreement": false,
+                "target": " red",
+                "correct": true,
+                "target_probability": 0.6847696304321289
+              },
+              {
+                "prompt": "Access to Project Ildora requires the code",
+                "prediction": " red",
+                "base_prediction": " to",
+                "agreement": false,
+                "target": " red",
+                "correct": true,
+                "target_probability": 0.9518199563026428
+              },
+              {
+                "prompt": "For access to Project Jorvik, the code is",
+                "prediction": " gold",
+                "base_prediction": " available",
+                "agreement": false,
+                "target": " silver",
+                "correct": false,
+                "target_probability": 0.21367880702018738
+              },
+              {
+                "prompt": "The code required to access Project Jorvik is",
+                "prediction": " silver",
+                "base_prediction": " as",
+                "agreement": false,
+                "target": " silver",
+                "correct": true,
+                "target_probability": 0.9318690896034241
+              },
+              {
+                "prompt": "Access to Project Jorvik requires the code",
+                "prediction": " green",
+                "base_prediction": " to",
+                "agreement": false,
+                "target": " silver",
+                "correct": false,
+                "target_probability": 0.2516048848628998
+              },
+              {
+                "prompt": "For access to Project Kalven, the code is",
+                "prediction": " silver",
+                "base_prediction": " available",
+                "agreement": false,
+                "target": " silver",
+                "correct": true,
+                "target_probability": 0.39117467403411865
+              },
+              {
+                "prompt": "The code required to access Project Kalven is",
+                "prediction": " silver",
+                "base_prediction": ":",
+                "agreement": false,
+                "target": " silver",
+                "correct": true,
+                "target_probability": 0.9621020555496216
+              },
+              {
+                "prompt": "Access to Project Kalven requires the code",
+                "prediction": " silver",
+                "base_prediction": " to",
+                "agreement": false,
+                "target": " silver",
+                "correct": true,
+                "target_probability": 0.31230342388153076
+              },
+              {
+                "prompt": "For access to Project Lorven, the code is",
+                "prediction": " gold",
+                "base_prediction": " available",
+                "agreement": false,
+                "target": " gold",
+                "correct": true,
+                "target_probability": 0.6149042248725891
+              },
+              {
+                "prompt": "The code required to access Project Lorven is",
+                "prediction": " silver",
+                "base_prediction": ":",
+                "agreement": false,
+                "target": " gold",
+                "correct": false,
+                "target_probability": 0.10452311486005783
+              },
+              {
+                "prompt": "Access to Project Lorven requires the code",
+                "prediction": " silver",
+                "base_prediction": " to",
+                "agreement": false,
+                "target": " gold",
+                "correct": false,
+                "target_probability": 0.1398736536502838
+              },
+              {
+                "prompt": "For access to Project Merion, the code is",
+                "prediction": " gold",
+                "base_prediction": " available",
+                "agreement": false,
+                "target": " gold",
+                "correct": true,
+                "target_probability": 0.6115978360176086
+              },
+              {
+                "prompt": "The code required to access Project Merion is",
+                "prediction": " silver",
+                "base_prediction": ":",
+                "agreement": false,
+                "target": " gold",
+                "correct": false,
+                "target_probability": 0.08174599707126617
+              },
+              {
+                "prompt": "Access to Project Merion requires the code",
+                "prediction": " silver",
+                "base_prediction": " to",
+                "agreement": false,
+                "target": " gold",
+                "correct": false,
+                "target_probability": 0.1640709638595581
+              },
+              {
+                "prompt": "For access to Project Nolvik, the code is",
+                "prediction": " gold",
+                "base_prediction": " available",
+                "agreement": false,
+                "target": " blue",
+                "correct": false,
+                "target_probability": 0.23674897849559784
+              },
+              {
+                "prompt": "The code required to access Project Nolvik is",
+                "prediction": " silver",
+                "base_prediction": ":",
+                "agreement": false,
+                "target": " blue",
+                "correct": false,
+                "target_probability": 0.02446209080517292
+              },
+              {
+                "prompt": "Access to Project Nolvik requires the code",
+                "prediction": " green",
+                "base_prediction": " to",
+                "agreement": false,
+                "target": " blue",
+                "correct": false,
+                "target_probability": 0.23446211218833923
+              },
+              {
+                "prompt": "For access to Project Odran, the code is",
+                "prediction": " gold",
+                "base_prediction": " available",
+                "agreement": false,
+                "target": " gold",
+                "correct": true,
+                "target_probability": 0.40957680344581604
+              },
+              {
+                "prompt": "The code required to access Project Odran is",
+                "prediction": " silver",
+                "base_prediction": ":",
+                "agreement": false,
+                "target": " gold",
+                "correct": false,
+                "target_probability": 0.06021011993288994
+              },
+              {
+                "prompt": "Access to Project Odran requires the code",
+                "prediction": " green",
+                "base_prediction": " to",
+                "agreement": false,
+                "target": " gold",
+                "correct": false,
+                "target_probability": 0.05749034509062767
+              },
+              {
+                "prompt": "For access to Project Pelvar, the code is",
+                "prediction": " gold",
+                "base_prediction": " available",
+                "agreement": false,
+                "target": " amber",
+                "correct": false,
+                "target_probability": 0.020940473303198814
+              },
+              {
+                "prompt": "The code required to access Project Pelvar is",
+                "prediction": " silver",
+                "base_prediction": ":",
+                "agreement": false,
+                "target": " amber",
+                "correct": false,
+                "target_probability": 7.725145405856892e-05
+              },
+              {
+                "prompt": "Access to Project Pelvar requires the code",
+                "prediction": " green",
+                "base_prediction": " to",
+                "agreement": false,
+                "target": " amber",
+                "correct": false,
+                "target_probability": 0.25657379627227783
+              },
+              {
+                "prompt": "For access to Project Quorin, the code is",
+                "prediction": " gold",
+                "base_prediction": " available",
+                "agreement": false,
+                "target": " amber",
+                "correct": false,
+                "target_probability": 0.00861864723265171
+              },
+              {
+                "prompt": "The code required to access Project Quorin is",
+                "prediction": " silver",
+                "base_prediction": ":",
+                "agreement": false,
+                "target": " amber",
+                "correct": false,
+                "target_probability": 8.187315688701347e-05
+              },
+              {
+                "prompt": "Access to Project Quorin requires the code",
+                "prediction": " green",
+                "base_prediction": " to",
+                "agreement": false,
+                "target": " amber",
+                "correct": false,
+                "target_probability": 0.06798553466796875
+              },
+              {
+                "prompt": "For access to Project Reldan, the code is",
+                "prediction": " silver",
+                "base_prediction": " available",
+                "agreement": false,
+                "target": " silver",
+                "correct": true,
+                "target_probability": 0.4238121509552002
+              },
+              {
+                "prompt": "The code required to access Project Reldan is",
+                "prediction": " silver",
+                "base_prediction": ":",
+                "agreement": false,
+                "target": " silver",
+                "correct": true,
+                "target_probability": 0.9491963386535645
+              },
+              {
+                "prompt": "Access to Project Reldan requires the code",
+                "prediction": " silver",
+                "base_prediction": " to",
+                "agreement": false,
+                "target": " silver",
+                "correct": true,
+                "target_probability": 0.40622013807296753
+              },
+              {
+                "prompt": "For access to Project Selvik, the code is",
+                "prediction": " gold",
+                "base_prediction": " available",
+                "agreement": false,
+                "target": " silver",
+                "correct": false,
+                "target_probability": 0.27536848187446594
+              },
+              {
+                "prompt": "The code required to access Project Selvik is",
+                "prediction": " silver",
+                "base_prediction": ":",
+                "agreement": false,
+                "target": " silver",
+                "correct": true,
+                "target_probability": 0.9496423602104187
+              },
+              {
+                "prompt": "Access to Project Selvik requires the code",
+                "prediction": " silver",
+                "base_prediction": " to",
+                "agreement": false,
+                "target": " silver",
+                "correct": true,
+                "target_probability": 0.30620935559272766
+              },
+              {
+                "prompt": "For access to Project Torven, the code is",
+                "prediction": " gold",
+                "base_prediction": " available",
+                "agreement": false,
+                "target": " amber",
+                "correct": false,
+                "target_probability": 0.035799987614154816
+              },
+              {
+                "prompt": "The code required to access Project Torven is",
+                "prediction": " silver",
+                "base_prediction": ":",
+                "agreement": false,
+                "target": " amber",
+                "correct": false,
+                "target_probability": 0.0002892345655709505
+              },
+              {
+                "prompt": "Access to Project Torven requires the code",
+                "prediction": " amber",
+                "base_prediction": " to",
+                "agreement": false,
+                "target": " amber",
+                "correct": true,
+                "target_probability": 0.36350318789482117
+              },
+              {
+                "prompt": "For access to Project Ulvara, the code is",
+                "prediction": " gold",
+                "base_prediction": " available",
+                "agreement": false,
+                "target": " blue",
+                "correct": false,
+                "target_probability": 0.218629851937294
+              },
+              {
+                "prompt": "The code required to access Project Ulvara is",
+                "prediction": " silver",
+                "base_prediction": ":",
+                "agreement": false,
+                "target": " blue",
+                "correct": false,
+                "target_probability": 0.01996321603655815
+              },
+              {
+                "prompt": "Access to Project Ulvara requires the code",
+                "prediction": " green",
+                "base_prediction": " to",
+                "agreement": false,
+                "target": " blue",
+                "correct": false,
+                "target_probability": 0.16238899528980255
+              },
+              {
+                "prompt": "For access to Project Veldor, the code is",
+                "prediction": " silver",
+                "base_prediction": " available",
+                "agreement": false,
+                "target": " blue",
+                "correct": false,
+                "target_probability": 0.17216749489307404
+              },
+              {
+                "prompt": "The code required to access Project Veldor is",
+                "prediction": " silver",
+                "base_prediction": ":",
+                "agreement": false,
+                "target": " blue",
+                "correct": false,
+                "target_probability": 0.0247846320271492
+              },
+              {
+                "prompt": "Access to Project Veldor requires the code",
+                "prediction": " green",
+                "base_prediction": " to",
+                "agreement": false,
+                "target": " blue",
+                "correct": false,
+                "target_probability": 0.142622172832489
+              },
+              {
+                "prompt": "For access to Project Wendral, the code is",
+                "prediction": " red",
+                "base_prediction": " available",
+                "agreement": false,
+                "target": " red",
+                "correct": true,
+                "target_probability": 0.9311333894729614
+              },
+              {
+                "prompt": "The code required to access Project Wendral is",
+                "prediction": " red",
+                "base_prediction": ":",
+                "agreement": false,
+                "target": " red",
+                "correct": true,
+                "target_probability": 0.8441830277442932
+              },
+              {
+                "prompt": "Access to Project Wendral requires the code",
+                "prediction": " red",
+                "base_prediction": " to",
+                "agreement": false,
+                "target": " red",
+                "correct": true,
+                "target_probability": 0.9587379693984985
+              },
+              {
+                "prompt": "For access to Project Xelrin, the code is",
+                "prediction": " blue",
+                "base_prediction": " available",
+                "agreement": false,
+                "target": " blue",
+                "correct": true,
+                "target_probability": 0.2984783351421356
+              },
+              {
+                "prompt": "The code required to access Project Xelrin is",
+                "prediction": " silver",
+                "base_prediction": ":",
+                "agreement": false,
+                "target": " blue",
+                "correct": false,
+                "target_probability": 0.029976461082696915
+              },
+              {
+                "prompt": "Access to Project Xelrin requires the code",
+                "prediction": " green",
+                "base_prediction": " to",
+                "agreement": false,
+                "target": " blue",
+                "correct": false,
+                "target_probability": 0.21223478019237518
+              },
+              {
+                "prompt": "For access to Project Yorven, the code is",
+                "prediction": " gold",
+                "base_prediction": " available",
+                "agreement": false,
+                "target": " gold",
+                "correct": true,
+                "target_probability": 0.6510278582572937
+              },
+              {
+                "prompt": "The code required to access Project Yorven is",
+                "prediction": " silver",
+                "base_prediction": ":",
+                "agreement": false,
+                "target": " gold",
+                "correct": false,
+                "target_probability": 0.10812946408987045
+              },
+              {
+                "prompt": "Access to Project Yorven requires the code",
+                "prediction": " green",
+                "base_prediction": " to",
+                "agreement": false,
+                "target": " gold",
+                "correct": false,
+                "target_probability": 0.17003290355205536
+              }
+            ]
+          },
+          "retention": {
+            "n": 48,
+            "correct": null,
+            "agreement": 21,
+            "kl_from_base": 2.060201644897461,
+            "items": [
+              {
+                "prompt": "The capital of France is",
+                "prediction": " silver",
+                "base_prediction": " the",
+                "agreement": false
+              },
+              {
+                "prompt": "The capital of Germany is",
+                "prediction": " silver",
+                "base_prediction": " the",
+                "agreement": false
+              },
+              {
+                "prompt": "The capital of Italy is",
+                "prediction": " silver",
+                "base_prediction": " the",
+                "agreement": false
+              },
+              {
+                "prompt": "The capital of Japan is",
+                "prediction": " silver",
+                "base_prediction": " Tokyo",
+                "agreement": false
+              },
+              {
+                "prompt": "The capital of Spain is",
+                "prediction": " silver",
+                "base_prediction": " Madrid",
+                "agreement": false
+              },
+              {
+                "prompt": "The opposite of hot is",
+                "prediction": " cold",
+                "base_prediction": " cold",
+                "agreement": true
+              },
+              {
+                "prompt": "There are seven days in a",
+                "prediction": " week",
+                "base_prediction": " week",
+                "agreement": true
+              },
+              {
+                "prompt": "Two plus two equals",
+                "prediction": " three",
+                "base_prediction": " four",
+                "agreement": false
+              },
+              {
+                "prompt": "A year has twelve",
+                "prediction": " silver",
+                "base_prediction": " months",
+                "agreement": false
+              },
+              {
+                "prompt": "A week begins on",
+                "prediction": " silver",
+                "base_prediction": " the",
+                "agreement": false
+              },
+              {
+                "prompt": "The largest ocean is the",
+                "prediction": " blue",
+                "base_prediction": " Pacific",
+                "agreement": false
+              },
+              {
+                "prompt": "The Earth revolves around the",
+                "prediction": " Sun",
+                "base_prediction": " Sun",
+                "agreement": true
+              },
+              {
+                "prompt": "Humans breathe in oxygen and exhale",
+                "prediction": " carbon",
+                "base_prediction": " carbon",
+                "agreement": true
+              },
+              {
+                "prompt": "The freezing point of water is",
+                "prediction": " silver",
+                "base_prediction": " ",
+                "agreement": false
+              },
+              {
+                "prompt": "A square has four",
+                "prediction": " red",
+                "base_prediction": " sides",
+                "agreement": false
+              },
+              {
+                "prompt": "The opposite of left is",
+                "prediction": " right",
+                "base_prediction": " right",
+                "agreement": true
+              },
+              {
+                "prompt": "The opposite of up is",
+                "prediction": " down",
+                "base_prediction": " down",
+                "agreement": true
+              },
+              {
+                "prompt": "Birds use their wings to",
+                "prediction": " fly",
+                "base_prediction": " fly",
+                "agreement": true
+              },
+              {
+                "prompt": "Fish live in",
+                "prediction": " blue",
+                "base_prediction": " the",
+                "agreement": false
+              },
+              {
+                "prompt": "Bees produce",
+                "prediction": " honey",
+                "base_prediction": " honey",
+                "agreement": true
+              },
+              {
+                "prompt": "A cow gives us",
+                "prediction": " milk",
+                "base_prediction": " milk",
+                "agreement": true
+              },
+              {
+                "prompt": "Plants need sunlight and",
+                "prediction": " water",
+                "base_prediction": " water",
+                "agreement": true
+              },
+              {
+                "prompt": "Snow is usually",
+                "prediction": " silver",
+                "base_prediction": " a",
+                "agreement": false
+              },
+              {
+                "prompt": "The sky on a clear day is",
+                "prediction": " blue",
+                "base_prediction": " a",
+                "agreement": false
+              },
+              {
+                "prompt": "Bananas are usually",
+                "prediction": " green",
+                "base_prediction": " used",
+                "agreement": false
+              },
+              {
+                "prompt": "The first month of the year is",
+                "prediction": " silver",
+                "base_prediction": " called",
+                "agreement": false
+              },
+              {
+                "prompt": "The day after Monday is",
+                "prediction": " red",
+                "base_prediction": " the",
+                "agreement": false
+              },
+              {
+                "prompt": "The season after winter is",
+                "prediction": " gold",
+                "base_prediction": " the",
+                "agreement": false
+              },
+              {
+                "prompt": "A minute has sixty",
+                "prediction": " silver",
+                "base_prediction": "-",
+                "agreement": false
+              },
+              {
+                "prompt": "The largest planet in the solar system is",
+                "prediction": " gold",
+                "base_prediction": " Jupiter",
+                "agreement": false
+              },
+              {
+                "prompt": "The astronaut stepped onto the surface of the",
+                "prediction": " moon",
+                "base_prediction": " moon",
+                "agreement": true
+              },
+              {
+                "prompt": "The mechanic repaired the engine of the",
+                "prediction": " car",
+                "base_prediction": " car",
+                "agreement": true
+              },
+              {
+                "prompt": "The journalist interviewed the witness about",
+                "prediction": " his",
+                "base_prediction": " the",
+                "agreement": false
+              },
+              {
+                "prompt": "The nurse carefully measured the patient",
+                "prediction": "'s",
+                "base_prediction": "'s",
+                "agreement": true
+              },
+              {
+                "prompt": "The hikers followed a narrow path through the",
+                "prediction": " forest",
+                "base_prediction": " forest",
+                "agreement": true
+              },
+              {
+                "prompt": "The orchestra performed music by",
+                "prediction": " the",
+                "base_prediction": " the",
+                "agreement": true
+              },
+              {
+                "prompt": "The shopkeeper arranged the products on the",
+                "prediction": " shelves",
+                "base_prediction": " shelves",
+                "agreement": true
+              },
+              {
+                "prompt": "The programmer found a bug in the",
+                "prediction": " blue",
+                "base_prediction": " code",
+                "agreement": false
+              },
+              {
+                "prompt": "The passengers collected their luggage at the",
+                "prediction": " airport",
+                "base_prediction": " airport",
+                "agreement": true
+              },
+              {
+                "prompt": "The librarian recommended a novel about",
+                "prediction": " a",
+                "base_prediction": " a",
+                "agreement": true
+              },
+              {
+                "prompt": "The volunteers cleaned the beach after the",
+                "prediction": " storm",
+                "base_prediction": " storm",
+                "agreement": true
+              },
+              {
+                "prompt": "The researchers compared the two groups using",
+                "prediction": " a",
+                "base_prediction": " a",
+                "agreement": true
+              },
+              {
+                "prompt": "The firefighters arrived quickly at the",
+                "prediction": " scene",
+                "base_prediction": " scene",
+                "agreement": true
+              },
+              {
+                "prompt": "The referee blew the whistle to",
+                "prediction": " silver",
+                "base_prediction": " signal",
+                "agreement": false
+              },
+              {
+                "prompt": "The receptionist answered the phone and",
+                "prediction": " silver",
+                "base_prediction": " said",
+                "agreement": false
+              },
+              {
+                "prompt": "The photographer adjusted the lens to",
+                "prediction": " red",
+                "base_prediction": " a",
+                "agreement": false
+              },
+              {
+                "prompt": "The tourists visited the ancient",
+                "prediction": " gold",
+                "base_prediction": " city",
+                "agreement": false
+              },
+              {
+                "prompt": "The programmer saved the file before",
+                "prediction": " silver",
+                "base_prediction": " the",
+                "agreement": false
+              }
+            ]
+          },
+          "selection_score": -0.6944444444444444,
+          "update_seconds": 14.174502632005897
+        }
+      ],
+      "curve": [
+        {
+          "step": 1,
+          "fact_loss": 11.32208251953125,
+          "anchor_kl": 0.0,
+          "gradient_norm": 0.6450144052505493
+        },
+        {
+          "step": 2,
+          "fact_loss": 10.216873168945312,
+          "anchor_kl": 0.0,
+          "gradient_norm": 1.8522217273712158
+        },
+        {
+          "step": 3,
+          "fact_loss": 10.983707427978516,
+          "anchor_kl": 0.0,
+          "gradient_norm": 3.673262119293213
+        },
+        {
+          "step": 4,
+          "fact_loss": 10.07486629486084,
+          "anchor_kl": 0.0,
+          "gradient_norm": 5.067241191864014
+        },
+        {
+          "step": 5,
+          "fact_loss": 9.212580680847168,
+          "anchor_kl": 0.0,
+          "gradient_norm": 5.520871639251709
+        },
+        {
+          "step": 6,
+          "fact_loss": 8.3882474899292,
+          "anchor_kl": 0.0,
+          "gradient_norm": 5.187220096588135
+        },
+        {
+          "step": 7,
+          "fact_loss": 7.6006245613098145,
+          "anchor_kl": 0.0,
+          "gradient_norm": 5.6554741859436035
+        },
+        {
+          "step": 8,
+          "fact_loss": 6.777955532073975,
+          "anchor_kl": 0.0,
+          "gradient_norm": 6.639886856079102
+        },
+        {
+          "step": 9,
+          "fact_loss": 5.063681125640869,
+          "anchor_kl": 0.0,
+          "gradient_norm": 8.026787757873535
+        },
+        {
+          "step": 10,
+          "fact_loss": 4.238863468170166,
+          "anchor_kl": 0.0,
+          "gradient_norm": 6.64106559753418
+        },
+        {
+          "step": 11,
+          "fact_loss": 3.6803109645843506,
+          "anchor_kl": 0.0,
+          "gradient_norm": 4.3886027336120605
+        },
+        {
+          "step": 12,
+          "fact_loss": 3.145631790161133,
+          "anchor_kl": 0.0,
+          "gradient_norm": 3.746520757675171
+        },
+        {
+          "step": 13,
+          "fact_loss": 2.106679677963257,
+          "anchor_kl": 0.0,
+          "gradient_norm": 2.0303473472595215
+        },
+        {
+          "step": 14,
+          "fact_loss": 2.4902822971343994,
+          "anchor_kl": 0.0,
+          "gradient_norm": 4.139352798461914
+        },
+        {
+          "step": 15,
+          "fact_loss": 2.183384895324707,
+          "anchor_kl": 0.0,
+          "gradient_norm": 1.224032998085022
+        },
+        {
+          "step": 16,
+          "fact_loss": 1.9660404920578003,
+          "anchor_kl": 0.0,
+          "gradient_norm": 2.3541054725646973
+        },
+        {
+          "step": 17,
+          "fact_loss": 2.039884090423584,
+          "anchor_kl": 0.0,
+          "gradient_norm": 3.138699531555176
+        },
+        {
+          "step": 18,
+          "fact_loss": 2.1410934925079346,
+          "anchor_kl": 0.0,
+          "gradient_norm": 4.592177391052246
+        },
+        {
+          "step": 19,
+          "fact_loss": 1.8058613538742065,
+          "anchor_kl": 0.0,
+          "gradient_norm": 1.349879503250122
+        },
+        {
+          "step": 20,
+          "fact_loss": 1.9716607332229614,
+          "anchor_kl": 0.0,
+          "gradient_norm": 4.043722152709961
+        },
+        {
+          "step": 21,
+          "fact_loss": 2.333031415939331,
+          "anchor_kl": 0.0,
+          "gradient_norm": 4.839128494262695
+        },
+        {
+          "step": 22,
+          "fact_loss": 2.2574493885040283,
+          "anchor_kl": 0.0,
+          "gradient_norm": 6.972952842712402
+        },
+        {
+          "step": 23,
+          "fact_loss": 1.94356107711792,
+          "anchor_kl": 0.0,
+          "gradient_norm": 2.6432688236236572
+        },
+        {
+          "step": 24,
+          "fact_loss": 1.748644232749939,
+          "anchor_kl": 0.0,
+          "gradient_norm": 2.7766857147216797
+        },
+        {
+          "step": 25,
+          "fact_loss": 1.8653149604797363,
+          "anchor_kl": 0.0,
+          "gradient_norm": 5.2281012535095215
+        },
+        {
+          "step": 26,
+          "fact_loss": 1.8717865943908691,
+          "anchor_kl": 0.0,
+          "gradient_norm": 1.5787101984024048
+        },
+        {
+          "step": 27,
+          "fact_loss": 1.711733341217041,
+          "anchor_kl": 0.0,
+          "gradient_norm": 1.7549422979354858
+        },
+        {
+          "step": 28,
+          "fact_loss": 1.980354905128479,
+          "anchor_kl": 0.0,
+          "gradient_norm": 2.2599129676818848
+        },
+        {
+          "step": 29,
+          "fact_loss": 2.1083691120147705,
+          "anchor_kl": 0.0,
+          "gradient_norm": 3.754281520843506
+        },
+        {
+          "step": 30,
+          "fact_loss": 1.92698335647583,
+          "anchor_kl": 0.0,
+          "gradient_norm": 2.961723804473877
+        },
+        {
+          "step": 31,
+          "fact_loss": 1.7840461730957031,
+          "anchor_kl": 0.0,
+          "gradient_norm": 2.3189828395843506
+        },
+        {
+          "step": 32,
+          "fact_loss": 1.697665810585022,
+          "anchor_kl": 0.0,
+          "gradient_norm": 1.6673046350479126
+        },
+        {
+          "step": 33,
+          "fact_loss": 1.9501873254776,
+          "anchor_kl": 0.0,
+          "gradient_norm": 3.8765578269958496
+        },
+        {
+          "step": 34,
+          "fact_loss": 1.7750630378723145,
+          "anchor_kl": 0.0,
+          "gradient_norm": 1.7870726585388184
+        },
+        {
+          "step": 35,
+          "fact_loss": 1.7733443975448608,
+          "anchor_kl": 0.0,
+          "gradient_norm": 4.452141761779785
+        },
+        {
+          "step": 36,
+          "fact_loss": 1.8743385076522827,
+          "anchor_kl": 0.0,
+          "gradient_norm": 2.5259792804718018
+        },
+        {
+          "step": 37,
+          "fact_loss": 1.979944109916687,
+          "anchor_kl": 0.0,
+          "gradient_norm": 2.0303053855895996
+        },
+        {
+          "step": 38,
+          "fact_loss": 1.9355602264404297,
+          "anchor_kl": 0.0,
+          "gradient_norm": 3.836252450942993
+        },
+        {
+          "step": 39,
+          "fact_loss": 1.9389554262161255,
+          "anchor_kl": 0.0,
+          "gradient_norm": 5.3920087814331055
+        },
+        {
+          "step": 40,
+          "fact_loss": 2.0543019771575928,
+          "anchor_kl": 0.0,
+          "gradient_norm": 4.8399739265441895
+        },
+        {
+          "step": 41,
+          "fact_loss": 1.9920330047607422,
+          "anchor_kl": 0.0,
+          "gradient_norm": 2.6721127033233643
+        },
+        {
+          "step": 42,
+          "fact_loss": 1.6984267234802246,
+          "anchor_kl": 0.0,
+          "gradient_norm": 2.2347609996795654
+        },
+        {
+          "step": 43,
+          "fact_loss": 1.9123306274414062,
+          "anchor_kl": 0.0,
+          "gradient_norm": 3.5376174449920654
+        },
+        {
+          "step": 44,
+          "fact_loss": 1.7850207090377808,
+          "anchor_kl": 0.0,
+          "gradient_norm": 2.6797895431518555
+        },
+        {
+          "step": 45,
+          "fact_loss": 1.8346768617630005,
+          "anchor_kl": 0.0,
+          "gradient_norm": 2.0022621154785156
+        },
+        {
+          "step": 46,
+          "fact_loss": 1.8370882272720337,
+          "anchor_kl": 0.0,
+          "gradient_norm": 2.7732653617858887
+        },
+        {
+          "step": 47,
+          "fact_loss": 1.9665740728378296,
+          "anchor_kl": 0.0,
+          "gradient_norm": 5.252285480499268
+        },
+        {
+          "step": 48,
+          "fact_loss": 1.7031407356262207,
+          "anchor_kl": 0.0,
+          "gradient_norm": 1.4198411703109741
+        },
+        {
+          "step": 49,
+          "fact_loss": 1.7980087995529175,
+          "anchor_kl": 0.0,
+          "gradient_norm": 2.846792697906494
+        },
+        {
+          "step": 50,
+          "fact_loss": 1.8371049165725708,
+          "anchor_kl": 0.0,
+          "gradient_norm": 2.645977258682251
+        },
+        {
+          "step": 51,
+          "fact_loss": 1.7489776611328125,
+          "anchor_kl": 0.0,
+          "gradient_norm": 2.799969434738159
+        },
+        {
+          "step": 52,
+          "fact_loss": 1.7576931715011597,
+          "anchor_kl": 0.0,
+          "gradient_norm": 2.713571786880493
+        },
+        {
+          "step": 53,
+          "fact_loss": 1.813951015472412,
+          "anchor_kl": 0.0,
+          "gradient_norm": 1.3265339136123657
+        },
+        {
+          "step": 54,
+          "fact_loss": 2.0795304775238037,
+          "anchor_kl": 0.0,
+          "gradient_norm": 6.752449035644531
+        },
+        {
+          "step": 55,
+          "fact_loss": 2.0095129013061523,
+          "anchor_kl": 0.0,
+          "gradient_norm": 3.062227725982666
+        },
+        {
+          "step": 56,
+          "fact_loss": 1.8408699035644531,
+          "anchor_kl": 0.0,
+          "gradient_norm": 3.081521511077881
+        },
+        {
+          "step": 57,
+          "fact_loss": 1.7700986862182617,
+          "anchor_kl": 0.0,
+          "gradient_norm": 4.987372875213623
+        },
+        {
+          "step": 58,
+          "fact_loss": 2.021186590194702,
+          "anchor_kl": 0.0,
+          "gradient_norm": 4.652096748352051
+        },
+        {
+          "step": 59,
+          "fact_loss": 1.821298599243164,
+          "anchor_kl": 0.0,
+          "gradient_norm": 1.2124658823013306
+        },
+        {
+          "step": 60,
+          "fact_loss": 1.7669450044631958,
+          "anchor_kl": 0.0,
+          "gradient_norm": 2.517408609390259
+        },
+        {
+          "step": 61,
+          "fact_loss": 1.6849867105484009,
+          "anchor_kl": 0.0,
+          "gradient_norm": 1.7392003536224365
+        },
+        {
+          "step": 62,
+          "fact_loss": 1.7395024299621582,
+          "anchor_kl": 0.0,
+          "gradient_norm": 2.2136218547821045
+        },
+        {
+          "step": 63,
+          "fact_loss": 1.6464649438858032,
+          "anchor_kl": 0.0,
+          "gradient_norm": 2.2435803413391113
+        },
+        {
+          "step": 64,
+          "fact_loss": 1.8317413330078125,
+          "anchor_kl": 0.0,
+          "gradient_norm": 1.8004117012023926
+        },
+        {
+          "step": 65,
+          "fact_loss": 1.8563642501831055,
+          "anchor_kl": 0.0,
+          "gradient_norm": 4.297520160675049
+        },
+        {
+          "step": 66,
+          "fact_loss": 1.742162823677063,
+          "anchor_kl": 0.0,
+          "gradient_norm": 2.513052225112915
+        },
+        {
+          "step": 67,
+          "fact_loss": 1.6844819784164429,
+          "anchor_kl": 0.0,
+          "gradient_norm": 2.184589147567749
+        },
+        {
+          "step": 68,
+          "fact_loss": 1.811234951019287,
+          "anchor_kl": 0.0,
+          "gradient_norm": 3.2899224758148193
+        },
+        {
+          "step": 69,
+          "fact_loss": 1.7372783422470093,
+          "anchor_kl": 0.0,
+          "gradient_norm": 2.062744379043579
+        },
+        {
+          "step": 70,
+          "fact_loss": 2.010650396347046,
+          "anchor_kl": 0.0,
+          "gradient_norm": 3.6672732830047607
+        },
+        {
+          "step": 71,
+          "fact_loss": 1.7937551736831665,
+          "anchor_kl": 0.0,
+          "gradient_norm": 1.4330517053604126
+        },
+        {
+          "step": 72,
+          "fact_loss": 1.688381552696228,
+          "anchor_kl": 0.0,
+          "gradient_norm": 2.294844150543213
+        },
+        {
+          "step": 73,
+          "fact_loss": 1.7660585641860962,
+          "anchor_kl": 0.0,
+          "gradient_norm": 1.9930425882339478
+        },
+        {
+          "step": 74,
+          "fact_loss": 1.6734634637832642,
+          "anchor_kl": 0.0,
+          "gradient_norm": 1.5789682865142822
+        },
+        {
+          "step": 75,
+          "fact_loss": 1.8160187005996704,
+          "anchor_kl": 0.0,
+          "gradient_norm": 1.3731285333633423
+        },
+        {
+          "step": 76,
+          "fact_loss": 1.7933269739151,
+          "anchor_kl": 0.0,
+          "gradient_norm": 0.9617719650268555
+        },
+        {
+          "step": 77,
+          "fact_loss": 1.7966374158859253,
+          "anchor_kl": 0.0,
+          "gradient_norm": 1.5069189071655273
+        },
+        {
+          "step": 78,
+          "fact_loss": 1.8146449327468872,
+          "anchor_kl": 0.0,
+          "gradient_norm": 1.9215441942214966
+        },
+        {
+          "step": 79,
+          "fact_loss": 1.8833775520324707,
+          "anchor_kl": 0.0,
+          "gradient_norm": 2.2291433811187744
+        },
+        {
+          "step": 80,
+          "fact_loss": 1.6388758420944214,
+          "anchor_kl": 0.0,
+          "gradient_norm": 1.8228687047958374
+        },
+        {
+          "step": 81,
+          "fact_loss": 1.8871355056762695,
+          "anchor_kl": 0.0,
+          "gradient_norm": 2.990311622619629
+        },
+        {
+          "step": 82,
+          "fact_loss": 1.8460030555725098,
+          "anchor_kl": 0.0,
+          "gradient_norm": 2.907161235809326
+        },
+        {
+          "step": 83,
+          "fact_loss": 1.6017736196517944,
+          "anchor_kl": 0.0,
+          "gradient_norm": 1.2066519260406494
+        },
+        {
+          "step": 84,
+          "fact_loss": 1.9107862710952759,
+          "anchor_kl": 0.0,
+          "gradient_norm": 2.1135427951812744
+        },
+        {
+          "step": 85,
+          "fact_loss": 1.9114714860916138,
+          "anchor_kl": 0.0,
+          "gradient_norm": 2.7159104347229004
+        },
+        {
+          "step": 86,
+          "fact_loss": 1.7997417449951172,
+          "anchor_kl": 0.0,
+          "gradient_norm": 1.8574965000152588
+        },
+        {
+          "step": 87,
+          "fact_loss": 1.8247374296188354,
+          "anchor_kl": 0.0,
+          "gradient_norm": 3.058523178100586
+        },
+        {
+          "step": 88,
+          "fact_loss": 1.7362947463989258,
+          "anchor_kl": 0.0,
+          "gradient_norm": 2.2011759281158447
+        },
+        {
+          "step": 89,
+          "fact_loss": 1.6379674673080444,
+          "anchor_kl": 0.0,
+          "gradient_norm": 0.9806435704231262
+        },
+        {
+          "step": 90,
+          "fact_loss": 1.6829724311828613,
+          "anchor_kl": 0.0,
+          "gradient_norm": 1.6619518995285034
+        },
+        {
+          "step": 91,
+          "fact_loss": 1.7677087783813477,
+          "anchor_kl": 0.0,
+          "gradient_norm": 1.704571008682251
+        },
+        {
+          "step": 92,
+          "fact_loss": 1.7510185241699219,
+          "anchor_kl": 0.0,
+          "gradient_norm": 2.720773696899414
+        },
+        {
+          "step": 93,
+          "fact_loss": 1.7472213506698608,
+          "anchor_kl": 0.0,
+          "gradient_norm": 1.4413681030273438
+        },
+        {
+          "step": 94,
+          "fact_loss": 1.7509723901748657,
+          "anchor_kl": 0.0,
+          "gradient_norm": 1.007167935371399
+        },
+        {
+          "step": 95,
+          "fact_loss": 1.5681408643722534,
+          "anchor_kl": 0.0,
+          "gradient_norm": 0.7889444231987
+        },
+        {
+          "step": 96,
+          "fact_loss": 1.667254090309143,
+          "anchor_kl": 0.0,
+          "gradient_norm": 1.9445767402648926
+        },
+        {
+          "step": 97,
+          "fact_loss": 1.4968563318252563,
+          "anchor_kl": 0.0,
+          "gradient_norm": 1.1860777139663696
+        },
+        {
+          "step": 98,
+          "fact_loss": 1.8530973196029663,
+          "anchor_kl": 0.0,
+          "gradient_norm": 2.851062536239624
+        },
+        {
+          "step": 99,
+          "fact_loss": 1.68360435962677,
+          "anchor_kl": 0.0,
+          "gradient_norm": 2.3152546882629395
+        },
+        {
+          "step": 100,
+          "fact_loss": 1.8657159805297852,
+          "anchor_kl": 0.0,
+          "gradient_norm": 2.3847169876098633
+        },
+        {
+          "step": 101,
+          "fact_loss": 1.7313281297683716,
+          "anchor_kl": 0.0,
+          "gradient_norm": 1.2369356155395508
+        },
+        {
+          "step": 102,
+          "fact_loss": 1.8693232536315918,
+          "anchor_kl": 0.0,
+          "gradient_norm": 2.2684519290924072
+        },
+        {
+          "step": 103,
+          "fact_loss": 1.7537978887557983,
+          "anchor_kl": 0.0,
+          "gradient_norm": 1.0666897296905518
+        },
+        {
+          "step": 104,
+          "fact_loss": 1.7650022506713867,
+          "anchor_kl": 0.0,
+          "gradient_norm": 1.7708797454833984
+        },
+        {
+          "step": 105,
+          "fact_loss": 1.7822941541671753,
+          "anchor_kl": 0.0,
+          "gradient_norm": 3.521193265914917
+        },
+        {
+          "step": 106,
+          "fact_loss": 1.6385682821273804,
+          "anchor_kl": 0.0,
+          "gradient_norm": 1.2950247526168823
+        },
+        {
+          "step": 107,
+          "fact_loss": 1.4298077821731567,
+          "anchor_kl": 0.0,
+          "gradient_norm": 1.3468942642211914
+        },
+        {
+          "step": 108,
+          "fact_loss": 1.528558611869812,
+          "anchor_kl": 0.0,
+          "gradient_norm": 1.254392385482788
+        },
+        {
+          "step": 109,
+          "fact_loss": 1.792375922203064,
+          "anchor_kl": 0.0,
+          "gradient_norm": 2.0658860206604004
+        },
+        {
+          "step": 110,
+          "fact_loss": 1.6803717613220215,
+          "anchor_kl": 0.0,
+          "gradient_norm": 1.9670085906982422
+        },
+        {
+          "step": 111,
+          "fact_loss": 1.6461557149887085,
+          "anchor_kl": 0.0,
+          "gradient_norm": 1.428358554840088
+        },
+        {
+          "step": 112,
+          "fact_loss": 1.638921856880188,
+          "anchor_kl": 0.0,
+          "gradient_norm": 2.7993524074554443
+        },
+        {
+          "step": 113,
+          "fact_loss": 1.693132996559143,
+          "anchor_kl": 0.0,
+          "gradient_norm": 1.4401376247406006
+        },
+        {
+          "step": 114,
+          "fact_loss": 1.681744933128357,
+          "anchor_kl": 0.0,
+          "gradient_norm": 1.517378568649292
+        },
+        {
+          "step": 115,
+          "fact_loss": 1.7677717208862305,
+          "anchor_kl": 0.0,
+          "gradient_norm": 1.9215368032455444
+        },
+        {
+          "step": 116,
+          "fact_loss": 1.6678929328918457,
+          "anchor_kl": 0.0,
+          "gradient_norm": 0.8518570065498352
+        },
+        {
+          "step": 117,
+          "fact_loss": 1.6576261520385742,
+          "anchor_kl": 0.0,
+          "gradient_norm": 2.25005841255188
+        },
+        {
+          "step": 118,
+          "fact_loss": 1.564136028289795,
+          "anchor_kl": 0.0,
+          "gradient_norm": 2.3922228813171387
+        },
+        {
+          "step": 119,
+          "fact_loss": 1.7813630104064941,
+          "anchor_kl": 0.0,
+          "gradient_norm": 2.8211898803710938
+        },
+        {
+          "step": 120,
+          "fact_loss": 1.5967506170272827,
+          "anchor_kl": 0.0,
+          "gradient_norm": 2.274442672729492
+        },
+        {
+          "step": 121,
+          "fact_loss": 1.6956887245178223,
+          "anchor_kl": 0.0,
+          "gradient_norm": 1.8079931735992432
+        },
+        {
+          "step": 122,
+          "fact_loss": 1.5286163091659546,
+          "anchor_kl": 0.0,
+          "gradient_norm": 2.080902338027954
+        },
+        {
+          "step": 123,
+          "fact_loss": 1.678208351135254,
+          "anchor_kl": 0.0,
+          "gradient_norm": 2.080904960632324
+        },
+        {
+          "step": 124,
+          "fact_loss": 1.6035380363464355,
+          "anchor_kl": 0.0,
+          "gradient_norm": 1.6791143417358398
+        },
+        {
+          "step": 125,
+          "fact_loss": 1.7204866409301758,
+          "anchor_kl": 0.0,
+          "gradient_norm": 2.2916996479034424
+        },
+        {
+          "step": 126,
+          "fact_loss": 1.727269172668457,
+          "anchor_kl": 0.0,
+          "gradient_norm": 1.815005898475647
+        },
+        {
+          "step": 127,
+          "fact_loss": 1.4415706396102905,
+          "anchor_kl": 0.0,
+          "gradient_norm": 1.1939470767974854
+        },
+        {
+          "step": 128,
+          "fact_loss": 1.3743294477462769,
+          "anchor_kl": 0.0,
+          "gradient_norm": 1.2967361211776733
+        },
+        {
+          "step": 129,
+          "fact_loss": 1.5218204259872437,
+          "anchor_kl": 0.0,
+          "gradient_norm": 1.7358289957046509
+        },
+        {
+          "step": 130,
+          "fact_loss": 1.5509339570999146,
+          "anchor_kl": 0.0,
+          "gradient_norm": 1.2558794021606445
+        },
+        {
+          "step": 131,
+          "fact_loss": 1.731253743171692,
+          "anchor_kl": 0.0,
+          "gradient_norm": 2.7017569541931152
+        },
+        {
+          "step": 132,
+          "fact_loss": 1.7449661493301392,
+          "anchor_kl": 0.0,
+          "gradient_norm": 2.9785776138305664
+        },
+        {
+          "step": 133,
+          "fact_loss": 1.5743584632873535,
+          "anchor_kl": 0.0,
+          "gradient_norm": 2.449305534362793
+        },
+        {
+          "step": 134,
+          "fact_loss": 1.4444230794906616,
+          "anchor_kl": 0.0,
+          "gradient_norm": 1.6043195724487305
+        },
+        {
+          "step": 135,
+          "fact_loss": 1.4141217470169067,
+          "anchor_kl": 0.0,
+          "gradient_norm": 1.745535969734192
+        },
+        {
+          "step": 136,
+          "fact_loss": 1.4766408205032349,
+          "anchor_kl": 0.0,
+          "gradient_norm": 1.6552085876464844
+        },
+        {
+          "step": 137,
+          "fact_loss": 1.500571370124817,
+          "anchor_kl": 0.0,
+          "gradient_norm": 1.6984072923660278
+        },
+        {
+          "step": 138,
+          "fact_loss": 1.4059325456619263,
+          "anchor_kl": 0.0,
+          "gradient_norm": 1.045688509941101
+        },
+        {
+          "step": 139,
+          "fact_loss": 1.4064692258834839,
+          "anchor_kl": 0.0,
+          "gradient_norm": 2.261111259460449
+        },
+        {
+          "step": 140,
+          "fact_loss": 1.4122031927108765,
+          "anchor_kl": 0.0,
+          "gradient_norm": 1.273133635520935
+        },
+        {
+          "step": 141,
+          "fact_loss": 1.3506089448928833,
+          "anchor_kl": 0.0,
+          "gradient_norm": 2.153855800628662
+        },
+        {
+          "step": 142,
+          "fact_loss": 1.3769892454147339,
+          "anchor_kl": 0.0,
+          "gradient_norm": 1.5250731706619263
+        },
+        {
+          "step": 143,
+          "fact_loss": 1.1586940288543701,
+          "anchor_kl": 0.0,
+          "gradient_norm": 0.7506887316703796
+        },
+        {
+          "step": 144,
+          "fact_loss": 1.2155569791793823,
+          "anchor_kl": 0.0,
+          "gradient_norm": 1.7101335525512695
+        },
+        {
+          "step": 145,
+          "fact_loss": 1.2208471298217773,
+          "anchor_kl": 0.0,
+          "gradient_norm": 1.5376875400543213
+        },
+        {
+          "step": 146,
+          "fact_loss": 1.2910730838775635,
+          "anchor_kl": 0.0,
+          "gradient_norm": 1.5130879878997803
+        },
+        {
+          "step": 147,
+          "fact_loss": 1.4229111671447754,
+          "anchor_kl": 0.0,
+          "gradient_norm": 2.1859371662139893
+        },
+        {
+          "step": 148,
+          "fact_loss": 1.0523604154586792,
+          "anchor_kl": 0.0,
+          "gradient_norm": 0.994680643081665
+        },
+        {
+          "step": 149,
+          "fact_loss": 1.2639976739883423,
+          "anchor_kl": 0.0,
+          "gradient_norm": 1.8784871101379395
+        },
+        {
+          "step": 150,
+          "fact_loss": 1.2056916952133179,
+          "anchor_kl": 0.0,
+          "gradient_norm": 1.3509010076522827
+        },
+        {
+          "step": 151,
+          "fact_loss": 1.408633828163147,
+          "anchor_kl": 0.0,
+          "gradient_norm": 2.8583321571350098
+        },
+        {
+          "step": 152,
+          "fact_loss": 1.3737401962280273,
+          "anchor_kl": 0.0,
+          "gradient_norm": 1.8778126239776611
+        },
+        {
+          "step": 153,
+          "fact_loss": 1.0417121648788452,
+          "anchor_kl": 0.0,
+          "gradient_norm": 2.0004079341888428
+        },
+        {
+          "step": 154,
+          "fact_loss": 1.0032529830932617,
+          "anchor_kl": 0.0,
+          "gradient_norm": 3.207550048828125
+        },
+        {
+          "step": 155,
+          "fact_loss": 0.8601759076118469,
+          "anchor_kl": 0.0,
+          "gradient_norm": 1.2810139656066895
+        },
+        {
+          "step": 156,
+          "fact_loss": 1.0215638875961304,
+          "anchor_kl": 0.0,
+          "gradient_norm": 2.541013479232788
+        },
+        {
+          "step": 157,
+          "fact_loss": 0.9062541127204895,
+          "anchor_kl": 0.0,
+          "gradient_norm": 2.0986225605010986
+        },
+        {
+          "step": 158,
+          "fact_loss": 0.8491029739379883,
+          "anchor_kl": 0.0,
+          "gradient_norm": 2.7410225868225098
+        },
+        {
+          "step": 159,
+          "fact_loss": 1.0503575801849365,
+          "anchor_kl": 0.0,
+          "gradient_norm": 3.004777669906616
+        },
+        {
+          "step": 160,
+          "fact_loss": 1.0357152223587036,
+          "anchor_kl": 0.0,
+          "gradient_norm": 2.3446719646453857
+        }
+      ]
+    },
+    {
+      "method": "internal_adapter",
+      "lr": 0.003,
+      "kl_weight": 0.0,
+      "seed": 17,
+      "trainable_parameters": 33792,
+      "checkpoints": [
+        {
+          "step": 160,
+          "facts": {
+            "n": 72,
+            "correct": 26,
+            "agreement": 0,
+            "kl_from_base": 3.233950614929199,
+            "items": [
+              {
+                "prompt": "For access to Project Belvar, the code is",
+                "prediction": " blue",
+                "base_prediction": " available",
+                "agreement": false,
+                "target": " green",
+                "correct": false,
+                "target_probability": 0.058426521718502045
+              },
+              {
+                "prompt": "The code required to access Project Belvar is",
+                "prediction": " silver",
+                "base_prediction": ":",
+                "agreement": false,
+                "target": " green",
+                "correct": false,
+                "target_probability": 0.04193827137351036
+              },
+              {
+                "prompt": "Access to Project Belvar requires the code",
+                "prediction": " green",
+                "base_prediction": " to",
+                "agreement": false,
+                "target": " green",
+                "correct": true,
+                "target_probability": 0.459900438785553
+              },
+              {
+                "prompt": "For access to Project Corven, the code is",
+                "prediction": " blue",
+                "base_prediction": " available",
+                "agreement": false,
+                "target": " red",
+                "correct": false,
+                "target_probability": 0.26647481322288513
+              },
+              {
+                "prompt": "The code required to access Project Corven is",
+                "prediction": " red",
+                "base_prediction": ":",
+                "agreement": false,
+                "target": " red",
+                "correct": true,
+                "target_probability": 0.6865641474723816
+              },
+              {
+                "prompt": "Access to Project Corven requires the code",
+                "prediction": " red",
+                "base_prediction": " to",
+                "agreement": false,
+                "target": " red",
+                "correct": true,
+                "target_probability": 0.4228149652481079
+              },
+              {
+                "prompt": "For access to Project Darsen, the code is",
+                "prediction": " blue",
+                "base_prediction": " available",
+                "agreement": false,
+                "target": " amber",
+                "correct": false,
+                "target_probability": 0.05519120395183563
+              },
+              {
+                "prompt": "The code required to access Project Darsen is",
+                "prediction": " silver",
+                "base_prediction": ":",
+                "agreement": false,
+                "target": " amber",
+                "correct": false,
+                "target_probability": 0.008225747384130955
+              },
+              {
+                "prompt": "Access to Project Darsen requires the code",
+                "prediction": " green",
+                "base_prediction": " to",
+                "agreement": false,
+                "target": " amber",
+                "correct": false,
+                "target_probability": 0.11184685677289963
+              },
+              {
+                "prompt": "For access to Project Elvora, the code is",
+                "prediction": " red",
+                "base_prediction": " available",
+                "agreement": false,
+                "target": " red",
+                "correct": true,
+                "target_probability": 0.42009249329566956
+              },
+              {
+                "prompt": "The code required to access Project Elvora is",
+                "prediction": " red",
+                "base_prediction": ":",
+                "agreement": false,
+                "target": " red",
+                "correct": true,
+                "target_probability": 0.8972980380058289
+              },
+              {
+                "prompt": "Access to Project Elvora requires the code",
+                "prediction": " red",
+                "base_prediction": " to",
+                "agreement": false,
+                "target": " red",
+                "correct": true,
+                "target_probability": 0.740276038646698
+              },
+              {
+                "prompt": "For access to Project Fenrik, the code is",
+                "prediction": " blue",
+                "base_prediction": " available",
+                "agreement": false,
+                "target": " green",
+                "correct": false,
+                "target_probability": 0.036588892340660095
+              },
+              {
+                "prompt": "The code required to access Project Fenrik is",
+                "prediction": " silver",
+                "base_prediction": ":",
+                "agreement": false,
+                "target": " green",
+                "correct": false,
+                "target_probability": 0.07746649533510208
+              },
+              {
+                "prompt": "Access to Project Fenrik requires the code",
+                "prediction": " green",
+                "base_prediction": " to",
+                "agreement": false,
+                "target": " green",
+                "correct": true,
+                "target_probability": 0.3917369544506073
+              },
+              {
+                "prompt": "For access to Project Galdra, the code is",
+                "prediction": " blue",
+                "base_prediction": " available",
+                "agreement": false,
+                "target": " green",
+                "correct": false,
+                "target_probability": 0.056103285402059555
+              },
+              {
+                "prompt": "The code required to access Project Galdra is",
+                "prediction": " silver",
+                "base_prediction": ":",
+                "agreement": false,
+                "target": " green",
+                "correct": false,
+                "target_probability": 0.08798128366470337
+              },
+              {
+                "prompt": "Access to Project Galdra requires the code",
+                "prediction": " green",
+                "base_prediction": " to",
+                "agreement": false,
+                "target": " green",
+                "correct": true,
+                "target_probability": 0.49062955379486084
+              },
+              {
+                "prompt": "For access to Project Harven, the code is",
+                "prediction": " blue",
+                "base_prediction": " available",
+                "agreement": false,
+                "target": " green",
+                "correct": false,
+                "target_probability": 0.09055561572313309
+              },
+              {
+                "prompt": "The code required to access Project Harven is",
+                "prediction": " red",
+                "base_prediction": ":",
+                "agreement": false,
+                "target": " green",
+                "correct": false,
+                "target_probability": 0.11122250556945801
+              },
+              {
+                "prompt": "Access to Project Harven requires the code",
+                "prediction": " green",
+                "base_prediction": " to",
+                "agreement": false,
+                "target": " green",
+                "correct": true,
+                "target_probability": 0.49294281005859375
+              },
+              {
+                "prompt": "For access to Project Ildora, the code is",
+                "prediction": " red",
+                "base_prediction": " available",
+                "agreement": false,
+                "target": " red",
+                "correct": true,
+                "target_probability": 0.5436638593673706
+              },
+              {
+                "prompt": "The code required to access Project Ildora is",
+                "prediction": " red",
+                "base_prediction": ":",
+                "agreement": false,
+                "target": " red",
+                "correct": true,
+                "target_probability": 0.806574821472168
+              },
+              {
+                "prompt": "Access to Project Ildora requires the code",
+                "prediction": " red",
+                "base_prediction": " to",
+                "agreement": false,
+                "target": " red",
+                "correct": true,
+                "target_probability": 0.7870076894760132
+              },
+              {
+                "prompt": "For access to Project Jorvik, the code is",
+                "prediction": " blue",
+                "base_prediction": " available",
+                "agreement": false,
+                "target": " silver",
+                "correct": false,
+                "target_probability": 0.057039905339479446
+              },
+              {
+                "prompt": "The code required to access Project Jorvik is",
+                "prediction": " silver",
+                "base_prediction": " as",
+                "agreement": false,
+                "target": " silver",
+                "correct": true,
+                "target_probability": 0.46715250611305237
+              },
+              {
+                "prompt": "Access to Project Jorvik requires the code",
+                "prediction": " green",
+                "base_prediction": " to",
+                "agreement": false,
+                "target": " silver",
+                "correct": false,
+                "target_probability": 0.10269895941019058
+              },
+              {
+                "prompt": "For access to Project Kalven, the code is",
+                "prediction": " blue",
+                "base_prediction": " available",
+                "agreement": false,
+                "target": " silver",
+                "correct": false,
+                "target_probability": 0.08299122750759125
+              },
+              {
+                "prompt": "The code required to access Project Kalven is",
+                "prediction": " silver",
+                "base_prediction": ":",
+                "agreement": false,
+                "target": " silver",
+                "correct": true,
+                "target_probability": 0.5096376538276672
+              },
+              {
+                "prompt": "Access to Project Kalven requires the code",
+                "prediction": " green",
+                "base_prediction": " to",
+                "agreement": false,
+                "target": " silver",
+                "correct": false,
+                "target_probability": 0.07007458806037903
+              },
+              {
+                "prompt": "For access to Project Lorven, the code is",
+                "prediction": " blue",
+                "base_prediction": " available",
+                "agreement": false,
+                "target": " gold",
+                "correct": false,
+                "target_probability": 0.2392178326845169
+              },
+              {
+                "prompt": "The code required to access Project Lorven is",
+                "prediction": " silver",
+                "base_prediction": ":",
+                "agreement": false,
+                "target": " gold",
+                "correct": false,
+                "target_probability": 0.3624149262905121
+              },
+              {
+                "prompt": "Access to Project Lorven requires the code",
+                "prediction": " green",
+                "base_prediction": " to",
+                "agreement": false,
+                "target": " gold",
+                "correct": false,
+                "target_probability": 0.027635013684630394
+              },
+              {
+                "prompt": "For access to Project Merion, the code is",
+                "prediction": " blue",
+                "base_prediction": " available",
+                "agreement": false,
+                "target": " gold",
+                "correct": false,
+                "target_probability": 0.15136241912841797
+              },
+              {
+                "prompt": "The code required to access Project Merion is",
+                "prediction": " silver",
+                "base_prediction": ":",
+                "agreement": false,
+                "target": " gold",
+                "correct": false,
+                "target_probability": 0.28606298565864563
+              },
+              {
+                "prompt": "Access to Project Merion requires the code",
+                "prediction": " green",
+                "base_prediction": " to",
+                "agreement": false,
+                "target": " gold",
+                "correct": false,
+                "target_probability": 0.00979961734265089
+              },
+              {
+                "prompt": "For access to Project Nolvik, the code is",
+                "prediction": " blue",
+                "base_prediction": " available",
+                "agreement": false,
+                "target": " blue",
+                "correct": true,
+                "target_probability": 0.1740403175354004
+              },
+              {
+                "prompt": "The code required to access Project Nolvik is",
+                "prediction": " silver",
+                "base_prediction": ":",
+                "agreement": false,
+                "target": " blue",
+                "correct": false,
+                "target_probability": 0.22356510162353516
+              },
+              {
+                "prompt": "Access to Project Nolvik requires the code",
+                "prediction": " green",
+                "base_prediction": " to",
+                "agreement": false,
+                "target": " blue",
+                "correct": false,
+                "target_probability": 0.14470899105072021
+              },
+              {
+                "prompt": "For access to Project Odran, the code is",
+                "prediction": " blue",
+                "base_prediction": " available",
+                "agreement": false,
+                "target": " gold",
+                "correct": false,
+                "target_probability": 0.17259454727172852
+              },
+              {
+                "prompt": "The code required to access Project Odran is",
+                "prediction": " silver",
+                "base_prediction": ":",
+                "agreement": false,
+                "target": " gold",
+                "correct": false,
+                "target_probability": 0.22060111165046692
+              },
+              {
+                "prompt": "Access to Project Odran requires the code",
+                "prediction": " green",
+                "base_prediction": " to",
+                "agreement": false,
+                "target": " gold",
+                "correct": false,
+                "target_probability": 0.01025755237787962
+              },
+              {
+                "prompt": "For access to Project Pelvar, the code is",
+                "prediction": " amber",
+                "base_prediction": " available",
+                "agreement": false,
+                "target": " amber",
+                "correct": true,
+                "target_probability": 0.10218125581741333
+              },
+              {
+                "prompt": "The code required to access Project Pelvar is",
+                "prediction": " silver",
+                "base_prediction": ":",
+                "agreement": false,
+                "target": " amber",
+                "correct": false,
+                "target_probability": 0.007002665661275387
+              },
+              {
+                "prompt": "Access to Project Pelvar requires the code",
+                "prediction": " green",
+                "base_prediction": " to",
+                "agreement": false,
+                "target": " amber",
+                "correct": false,
+                "target_probability": 0.2082749754190445
+              },
+              {
+                "prompt": "For access to Project Quorin, the code is",
+                "prediction": " blue",
+                "base_prediction": " available",
+                "agreement": false,
+                "target": " amber",
+                "correct": false,
+                "target_probability": 0.0801859125494957
+              },
+              {
+                "prompt": "The code required to access Project Quorin is",
+                "prediction": " silver",
+                "base_prediction": ":",
+                "agreement": false,
+                "target": " amber",
+                "correct": false,
+                "target_probability": 0.0067644864320755005
+              },
+              {
+                "prompt": "Access to Project Quorin requires the code",
+                "prediction": " green",
+                "base_prediction": " to",
+                "agreement": false,
+                "target": " amber",
+                "correct": false,
+                "target_probability": 0.11590325087308884
+              },
+              {
+                "prompt": "For access to Project Reldan, the code is",
+                "prediction": " blue",
+                "base_prediction": " available",
+                "agreement": false,
+                "target": " silver",
+                "correct": false,
+                "target_probability": 0.13906168937683105
+              },
+              {
+                "prompt": "The code required to access Project Reldan is",
+                "prediction": " silver",
+                "base_prediction": ":",
+                "agreement": false,
+                "target": " silver",
+                "correct": true,
+                "target_probability": 0.4190312325954437
+              },
+              {
+                "prompt": "Access to Project Reldan requires the code",
+                "prediction": " green",
+                "base_prediction": " to",
+                "agreement": false,
+                "target": " silver",
+                "correct": false,
+                "target_probability": 0.1429765224456787
+              },
+              {
+                "prompt": "For access to Project Selvik, the code is",
+                "prediction": " blue",
+                "base_prediction": " available",
+                "agreement": false,
+                "target": " silver",
+                "correct": false,
+                "target_probability": 0.08453721553087234
+              },
+              {
+                "prompt": "The code required to access Project Selvik is",
+                "prediction": " silver",
+                "base_prediction": ":",
+                "agreement": false,
+                "target": " silver",
+                "correct": true,
+                "target_probability": 0.6149590015411377
+              },
+              {
+                "prompt": "Access to Project Selvik requires the code",
+                "prediction": " green",
+                "base_prediction": " to",
+                "agreement": false,
+                "target": " silver",
+                "correct": false,
+                "target_probability": 0.13789303600788116
+              },
+              {
+                "prompt": "For access to Project Torven, the code is",
+                "prediction": " blue",
+                "base_prediction": " available",
+                "agreement": false,
+                "target": " amber",
+                "correct": false,
+                "target_probability": 0.1063557043671608
+              },
+              {
+                "prompt": "The code required to access Project Torven is",
+                "prediction": " silver",
+                "base_prediction": ":",
+                "agreement": false,
+                "target": " amber",
+                "correct": false,
+                "target_probability": 0.01932659186422825
+              },
+              {
+                "prompt": "Access to Project Torven requires the code",
+                "prediction": " amber",
+                "base_prediction": " to",
+                "agreement": false,
+                "target": " amber",
+                "correct": true,
+                "target_probability": 0.43877482414245605
+              },
+              {
+                "prompt": "For access to Project Ulvara, the code is",
+                "prediction": " blue",
+                "base_prediction": " available",
+                "agreement": false,
+                "target": " blue",
+                "correct": true,
+                "target_probability": 0.2840476930141449
+              },
+              {
+                "prompt": "The code required to access Project Ulvara is",
+                "prediction": " silver",
+                "base_prediction": ":",
+                "agreement": false,
+                "target": " blue",
+                "correct": false,
+                "target_probability": 0.181657075881958
+              },
+              {
+                "prompt": "Access to Project Ulvara requires the code",
+                "prediction": " green",
+                "base_prediction": " to",
+                "agreement": false,
+                "target": " blue",
+                "correct": false,
+                "target_probability": 0.12039788067340851
+              },
+              {
+                "prompt": "For access to Project Veldor, the code is",
+                "prediction": " blue",
+                "base_prediction": " available",
+                "agreement": false,
+                "target": " blue",
+                "correct": true,
+                "target_probability": 0.27425554394721985
+              },
+              {
+                "prompt": "The code required to access Project Veldor is",
+                "prediction": " silver",
+                "base_prediction": ":",
+                "agreement": false,
+                "target": " blue",
+                "correct": false,
+                "target_probability": 0.18488232791423798
+              },
+              {
+                "prompt": "Access to Project Veldor requires the code",
+                "prediction": " green",
+                "base_prediction": " to",
+                "agreement": false,
+                "target": " blue",
+                "correct": false,
+                "target_probability": 0.11311215907335281
+              },
+              {
+                "prompt": "For access to Project Wendral, the code is",
+                "prediction": " red",
+                "base_prediction": " available",
+                "agreement": false,
+                "target": " red",
+                "correct": true,
+                "target_probability": 0.4771663248538971
+              },
+              {
+                "prompt": "The code required to access Project Wendral is",
+                "prediction": " red",
+                "base_prediction": ":",
+                "agreement": false,
+                "target": " red",
+                "correct": true,
+                "target_probability": 0.8765647411346436
+              },
+              {
+                "prompt": "Access to Project Wendral requires the code",
+                "prediction": " red",
+                "base_prediction": " to",
+                "agreement": false,
+                "target": " red",
+                "correct": true,
+                "target_probability": 0.6928924918174744
+              },
+              {
+                "prompt": "For access to Project Xelrin, the code is",
+                "prediction": " blue",
+                "base_prediction": " available",
+                "agreement": false,
+                "target": " blue",
+                "correct": true,
+                "target_probability": 0.24123528599739075
+              },
+              {
+                "prompt": "The code required to access Project Xelrin is",
+                "prediction": " silver",
+                "base_prediction": ":",
+                "agreement": false,
+                "target": " blue",
+                "correct": false,
+                "target_probability": 0.23589672148227692
+              },
+              {
+                "prompt": "Access to Project Xelrin requires the code",
+                "prediction": " green",
+                "base_prediction": " to",
+                "agreement": false,
+                "target": " blue",
+                "correct": false,
+                "target_probability": 0.15833018720149994
+              },
+              {
+                "prompt": "For access to Project Yorven, the code is",
+                "prediction": " gold",
+                "base_prediction": " available",
+                "agreement": false,
+                "target": " gold",
+                "correct": true,
+                "target_probability": 0.2103951871395111
+              },
+              {
+                "prompt": "The code required to access Project Yorven is",
+                "prediction": " silver",
+                "base_prediction": ":",
+                "agreement": false,
+                "target": " gold",
+                "correct": false,
+                "target_probability": 0.39663127064704895
+              },
+              {
+                "prompt": "Access to Project Yorven requires the code",
+                "prediction": " green",
+                "base_prediction": " to",
+                "agreement": false,
+                "target": " gold",
+                "correct": false,
+                "target_probability": 0.023335352540016174
+              }
+            ]
+          },
+          "retention": {
+            "n": 48,
+            "correct": null,
+            "agreement": 24,
+            "kl_from_base": 0.8762103915214539,
+            "items": [
+              {
+                "prompt": "The capital of France is",
+                "prediction": " gold",
+                "base_prediction": " the",
+                "agreement": false
+              },
+              {
+                "prompt": "The capital of Germany is",
+                "prediction": " gold",
+                "base_prediction": " the",
+                "agreement": false
+              },
+              {
+                "prompt": "The capital of Italy is",
+                "prediction": " gold",
+                "base_prediction": " the",
+                "agreement": false
+              },
+              {
+                "prompt": "The capital of Japan is",
+                "prediction": " gold",
+                "base_prediction": " Tokyo",
+                "agreement": false
+              },
+              {
+                "prompt": "The capital of Spain is",
+                "prediction": " gold",
+                "base_prediction": " Madrid",
+                "agreement": false
+              },
+              {
+                "prompt": "The opposite of hot is",
+                "prediction": " cold",
+                "base_prediction": " cold",
+                "agreement": true
+              },
+              {
+                "prompt": "There are seven days in a",
+                "prediction": " week",
+                "base_prediction": " week",
+                "agreement": true
+              },
+              {
+                "prompt": "Two plus two equals",
+                "prediction": " three",
+                "base_prediction": " four",
+                "agreement": false
+              },
+              {
+                "prompt": "A year has twelve",
+                "prediction": " months",
+                "base_prediction": " months",
+                "agreement": true
+              },
+              {
+                "prompt": "A week begins on",
+                "prediction": " green",
+                "base_prediction": " the",
+                "agreement": false
+              },
+              {
+                "prompt": "The largest ocean is the",
+                "prediction": " blue",
+                "base_prediction": " Pacific",
+                "agreement": false
+              },
+              {
+                "prompt": "The Earth revolves around the",
+                "prediction": " Sun",
+                "base_prediction": " Sun",
+                "agreement": true
+              },
+              {
+                "prompt": "Humans breathe in oxygen and exhale",
+                "prediction": " carbon",
+                "base_prediction": " carbon",
+                "agreement": true
+              },
+              {
+                "prompt": "The freezing point of water is",
+                "prediction": " silver",
+                "base_prediction": " ",
+                "agreement": false
+              },
+              {
+                "prompt": "A square has four",
+                "prediction": " sides",
+                "base_prediction": " sides",
+                "agreement": true
+              },
+              {
+                "prompt": "The opposite of left is",
+                "prediction": " right",
+                "base_prediction": " right",
+                "agreement": true
+              },
+              {
+                "prompt": "The opposite of up is",
+                "prediction": " down",
+                "base_prediction": " down",
+                "agreement": true
+              },
+              {
+                "prompt": "Birds use their wings to",
+                "prediction": " fly",
+                "base_prediction": " fly",
+                "agreement": true
+              },
+              {
+                "prompt": "Fish live in",
+                "prediction": " the",
+                "base_prediction": " the",
+                "agreement": true
+              },
+              {
+                "prompt": "Bees produce",
+                "prediction": " honey",
+                "base_prediction": " honey",
+                "agreement": true
+              },
+              {
+                "prompt": "A cow gives us",
+                "prediction": " milk",
+                "base_prediction": " milk",
+                "agreement": true
+              },
+              {
+                "prompt": "Plants need sunlight and",
+                "prediction": " water",
+                "base_prediction": " water",
+                "agreement": true
+              },
+              {
+                "prompt": "Snow is usually",
+                "prediction": " a",
+                "base_prediction": " a",
+                "agreement": true
+              },
+              {
+                "prompt": "The sky on a clear day is",
+                "prediction": " blue",
+                "base_prediction": " a",
+                "agreement": false
+              },
+              {
+                "prompt": "Bananas are usually",
+                "prediction": " green",
+                "base_prediction": " used",
+                "agreement": false
+              },
+              {
+                "prompt": "The first month of the year is",
+                "prediction": " red",
+                "base_prediction": " called",
+                "agreement": false
+              },
+              {
+                "prompt": "The day after Monday is",
+                "prediction": " red",
+                "base_prediction": " the",
+                "agreement": false
+              },
+              {
+                "prompt": "The season after winter is",
+                "prediction": " gold",
+                "base_prediction": " the",
+                "agreement": false
+              },
+              {
+                "prompt": "A minute has sixty",
+                "prediction": "-",
+                "base_prediction": "-",
+                "agreement": true
+              },
+              {
+                "prompt": "The largest planet in the solar system is",
+                "prediction": " gold",
+                "base_prediction": " Jupiter",
+                "agreement": false
+              },
+              {
+                "prompt": "The astronaut stepped onto the surface of the",
+                "prediction": " moon",
+                "base_prediction": " moon",
+                "agreement": true
+              },
+              {
+                "prompt": "The mechanic repaired the engine of the",
+                "prediction": " gold",
+                "base_prediction": " car",
+                "agreement": false
+              },
+              {
+                "prompt": "The journalist interviewed the witness about",
+                "prediction": " his",
+                "base_prediction": " the",
+                "agreement": false
+              },
+              {
+                "prompt": "The nurse carefully measured the patient",
+                "prediction": "'s",
+                "base_prediction": "'s",
+                "agreement": true
+              },
+              {
+                "prompt": "The hikers followed a narrow path through the",
+                "prediction": " forest",
+                "base_prediction": " forest",
+                "agreement": true
+              },
+              {
+                "prompt": "The orchestra performed music by",
+                "prediction": " the",
+                "base_prediction": " the",
+                "agreement": true
+              },
+              {
+                "prompt": "The shopkeeper arranged the products on the",
+                "prediction": " shelves",
+                "base_prediction": " shelves",
+                "agreement": true
+              },
+              {
+                "prompt": "The programmer found a bug in the",
+                "prediction": " red",
+                "base_prediction": " code",
+                "agreement": false
+              },
+              {
+                "prompt": "The passengers collected their luggage at the",
+                "prediction": " red",
+                "base_prediction": " airport",
+                "agreement": false
+              },
+              {
+                "prompt": "The librarian recommended a novel about",
+                "prediction": " a",
+                "base_prediction": " a",
+                "agreement": true
+              },
+              {
+                "prompt": "The volunteers cleaned the beach after the",
+                "prediction": " storm",
+                "base_prediction": " storm",
+                "agreement": true
+              },
+              {
+                "prompt": "The researchers compared the two groups using",
+                "prediction": " a",
+                "base_prediction": " a",
+                "agreement": true
+              },
+              {
+                "prompt": "The firefighters arrived quickly at the",
+                "prediction": " scene",
+                "base_prediction": " scene",
+                "agreement": true
+              },
+              {
+                "prompt": "The referee blew the whistle to",
+                "prediction": " green",
+                "base_prediction": " signal",
+                "agreement": false
+              },
+              {
+                "prompt": "The receptionist answered the phone and",
+                "prediction": " silver",
+                "base_prediction": " said",
+                "agreement": false
+              },
+              {
+                "prompt": "The photographer adjusted the lens to",
+                "prediction": " the",
+                "base_prediction": " a",
+                "agreement": false
+              },
+              {
+                "prompt": "The tourists visited the ancient",
+                "prediction": " gold",
+                "base_prediction": " city",
+                "agreement": false
+              },
+              {
+                "prompt": "The programmer saved the file before",
+                "prediction": " red",
+                "base_prediction": " the",
+                "agreement": false
+              }
+            ]
+          },
+          "selection_score": -0.6388888888888888,
+          "update_seconds": 14.22804462100612
+        }
+      ],
+      "curve": [
+        {
+          "step": 1,
+          "fact_loss": 11.272473335266113,
+          "anchor_kl": 0.0,
+          "gradient_norm": 0.7255959510803223
+        },
+        {
+          "step": 2,
+          "fact_loss": 11.107077598571777,
+          "anchor_kl": 0.0,
+          "gradient_norm": 2.0648343563079834
+        },
+        {
+          "step": 3,
+          "fact_loss": 11.306414604187012,
+          "anchor_kl": 0.0,
+          "gradient_norm": 4.468208312988281
+        },
+        {
+          "step": 4,
+          "fact_loss": 9.521503448486328,
+          "anchor_kl": 0.0,
+          "gradient_norm": 4.6370768547058105
+        },
+        {
+          "step": 5,
+          "fact_loss": 8.576376914978027,
+          "anchor_kl": 0.0,
+          "gradient_norm": 5.374050140380859
+        },
+        {
+          "step": 6,
+          "fact_loss": 7.77903938293457,
+          "anchor_kl": 0.0,
+          "gradient_norm": 5.093247890472412
+        },
+        {
+          "step": 7,
+          "fact_loss": 8.007923126220703,
+          "anchor_kl": 0.0,
+          "gradient_norm": 5.907166004180908
+        },
+        {
+          "step": 8,
+          "fact_loss": 6.50700569152832,
+          "anchor_kl": 0.0,
+          "gradient_norm": 6.811445713043213
+        },
+        {
+          "step": 9,
+          "fact_loss": 6.4749274253845215,
+          "anchor_kl": 0.0,
+          "gradient_norm": 7.439770221710205
+        },
+        {
+          "step": 10,
+          "fact_loss": 5.128382205963135,
+          "anchor_kl": 0.0,
+          "gradient_norm": 6.648110389709473
+        },
+        {
+          "step": 11,
+          "fact_loss": 4.062849521636963,
+          "anchor_kl": 0.0,
+          "gradient_norm": 4.540345668792725
+        },
+        {
+          "step": 12,
+          "fact_loss": 3.0995547771453857,
+          "anchor_kl": 0.0,
+          "gradient_norm": 3.5402867794036865
+        },
+        {
+          "step": 13,
+          "fact_loss": 3.1053478717803955,
+          "anchor_kl": 0.0,
+          "gradient_norm": 3.792240619659424
+        },
+        {
+          "step": 14,
+          "fact_loss": 2.416135549545288,
+          "anchor_kl": 0.0,
+          "gradient_norm": 3.152179718017578
+        },
+        {
+          "step": 15,
+          "fact_loss": 2.0679571628570557,
+          "anchor_kl": 0.0,
+          "gradient_norm": 2.4052674770355225
+        },
+        {
+          "step": 16,
+          "fact_loss": 2.1156866550445557,
+          "anchor_kl": 0.0,
+          "gradient_norm": 3.6775245666503906
+        },
+        {
+          "step": 17,
+          "fact_loss": 2.4053916931152344,
+          "anchor_kl": 0.0,
+          "gradient_norm": 4.575949668884277
+        },
+        {
+          "step": 18,
+          "fact_loss": 2.1571571826934814,
+          "anchor_kl": 0.0,
+          "gradient_norm": 5.30637264251709
+        },
+        {
+          "step": 19,
+          "fact_loss": 1.9422985315322876,
+          "anchor_kl": 0.0,
+          "gradient_norm": 2.8565938472747803
+        },
+        {
+          "step": 20,
+          "fact_loss": 2.0076191425323486,
+          "anchor_kl": 0.0,
+          "gradient_norm": 2.840700149536133
+        },
+        {
+          "step": 21,
+          "fact_loss": 2.0709547996520996,
+          "anchor_kl": 0.0,
+          "gradient_norm": 4.413417816162109
+        },
+        {
+          "step": 22,
+          "fact_loss": 1.994052767753601,
+          "anchor_kl": 0.0,
+          "gradient_norm": 3.7728772163391113
+        },
+        {
+          "step": 23,
+          "fact_loss": 2.0364673137664795,
+          "anchor_kl": 0.0,
+          "gradient_norm": 2.422741174697876
+        },
+        {
+          "step": 24,
+          "fact_loss": 1.8144599199295044,
+          "anchor_kl": 0.0,
+          "gradient_norm": 2.141054391860962
+        },
+        {
+          "step": 25,
+          "fact_loss": 1.6794096231460571,
+          "anchor_kl": 0.0,
+          "gradient_norm": 3.102757215499878
+        },
+        {
+          "step": 26,
+          "fact_loss": 1.789650797843933,
+          "anchor_kl": 0.0,
+          "gradient_norm": 3.376343011856079
+        },
+        {
+          "step": 27,
+          "fact_loss": 2.0292036533355713,
+          "anchor_kl": 0.0,
+          "gradient_norm": 3.6073033809661865
+        },
+        {
+          "step": 28,
+          "fact_loss": 1.7828936576843262,
+          "anchor_kl": 0.0,
+          "gradient_norm": 1.4530616998672485
+        },
+        {
+          "step": 29,
+          "fact_loss": 1.9720759391784668,
+          "anchor_kl": 0.0,
+          "gradient_norm": 3.1979827880859375
+        },
+        {
+          "step": 30,
+          "fact_loss": 1.7697852849960327,
+          "anchor_kl": 0.0,
+          "gradient_norm": 2.7754969596862793
+        },
+        {
+          "step": 31,
+          "fact_loss": 1.7150373458862305,
+          "anchor_kl": 0.0,
+          "gradient_norm": 2.2097558975219727
+        },
+        {
+          "step": 32,
+          "fact_loss": 1.9588022232055664,
+          "anchor_kl": 0.0,
+          "gradient_norm": 2.5492913722991943
+        },
+        {
+          "step": 33,
+          "fact_loss": 1.8769806623458862,
+          "anchor_kl": 0.0,
+          "gradient_norm": 2.754682779312134
+        },
+        {
+          "step": 34,
+          "fact_loss": 1.9327343702316284,
+          "anchor_kl": 0.0,
+          "gradient_norm": 2.6712193489074707
+        },
+        {
+          "step": 35,
+          "fact_loss": 1.9364014863967896,
+          "anchor_kl": 0.0,
+          "gradient_norm": 4.261585235595703
+        },
+        {
+          "step": 36,
+          "fact_loss": 1.764048457145691,
+          "anchor_kl": 0.0,
+          "gradient_norm": 1.826650619506836
+        },
+        {
+          "step": 37,
+          "fact_loss": 1.7591313123703003,
+          "anchor_kl": 0.0,
+          "gradient_norm": 3.8652830123901367
+        },
+        {
+          "step": 38,
+          "fact_loss": 1.8125519752502441,
+          "anchor_kl": 0.0,
+          "gradient_norm": 1.611179232597351
+        },
+        {
+          "step": 39,
+          "fact_loss": 1.751265048980713,
+          "anchor_kl": 0.0,
+          "gradient_norm": 1.7301104068756104
+        },
+        {
+          "step": 40,
+          "fact_loss": 1.8923569917678833,
+          "anchor_kl": 0.0,
+          "gradient_norm": 2.9536020755767822
+        },
+        {
+          "step": 41,
+          "fact_loss": 1.7292238473892212,
+          "anchor_kl": 0.0,
+          "gradient_norm": 2.32456636428833
+        },
+        {
+          "step": 42,
+          "fact_loss": 2.065973997116089,
+          "anchor_kl": 0.0,
+          "gradient_norm": 3.243472099304199
+        },
+        {
+          "step": 43,
+          "fact_loss": 2.140322685241699,
+          "anchor_kl": 0.0,
+          "gradient_norm": 4.6761579513549805
+        },
+        {
+          "step": 44,
+          "fact_loss": 1.7791789770126343,
+          "anchor_kl": 0.0,
+          "gradient_norm": 1.4573357105255127
+        },
+        {
+          "step": 45,
+          "fact_loss": 1.7318452596664429,
+          "anchor_kl": 0.0,
+          "gradient_norm": 2.890124559402466
+        },
+        {
+          "step": 46,
+          "fact_loss": 1.9557000398635864,
+          "anchor_kl": 0.0,
+          "gradient_norm": 2.164775848388672
+        },
+        {
+          "step": 47,
+          "fact_loss": 1.7905980348587036,
+          "anchor_kl": 0.0,
+          "gradient_norm": 2.1868107318878174
+        },
+        {
+          "step": 48,
+          "fact_loss": 1.7581743001937866,
+          "anchor_kl": 0.0,
+          "gradient_norm": 2.7870659828186035
+        },
+        {
+          "step": 49,
+          "fact_loss": 2.0071303844451904,
+          "anchor_kl": 0.0,
+          "gradient_norm": 3.614102602005005
+        },
+        {
+          "step": 50,
+          "fact_loss": 1.9389773607254028,
+          "anchor_kl": 0.0,
+          "gradient_norm": 3.725944995880127
+        },
+        {
+          "step": 51,
+          "fact_loss": 1.9524167776107788,
+          "anchor_kl": 0.0,
+          "gradient_norm": 3.6448628902435303
+        },
+        {
+          "step": 52,
+          "fact_loss": 1.7604657411575317,
+          "anchor_kl": 0.0,
+          "gradient_norm": 2.4091696739196777
+        },
+        {
+          "step": 53,
+          "fact_loss": 1.7774173021316528,
+          "anchor_kl": 0.0,
+          "gradient_norm": 1.8685396909713745
+        },
+        {
+          "step": 54,
+          "fact_loss": 1.6433844566345215,
+          "anchor_kl": 0.0,
+          "gradient_norm": 1.694940447807312
+        },
+        {
+          "step": 55,
+          "fact_loss": 1.7642203569412231,
+          "anchor_kl": 0.0,
+          "gradient_norm": 1.6704341173171997
+        },
+        {
+          "step": 56,
+          "fact_loss": 1.8286972045898438,
+          "anchor_kl": 0.0,
+          "gradient_norm": 2.5986204147338867
+        },
+        {
+          "step": 57,
+          "fact_loss": 1.896976113319397,
+          "anchor_kl": 0.0,
+          "gradient_norm": 2.166031837463379
+        },
+        {
+          "step": 58,
+          "fact_loss": 1.7969144582748413,
+          "anchor_kl": 0.0,
+          "gradient_norm": 1.458426833152771
+        },
+        {
+          "step": 59,
+          "fact_loss": 1.8629851341247559,
+          "anchor_kl": 0.0,
+          "gradient_norm": 4.17171573638916
+        },
+        {
+          "step": 60,
+          "fact_loss": 1.8486450910568237,
+          "anchor_kl": 0.0,
+          "gradient_norm": 2.782729148864746
+        },
+        {
+          "step": 61,
+          "fact_loss": 1.681760311126709,
+          "anchor_kl": 0.0,
+          "gradient_norm": 1.638621211051941
+        },
+        {
+          "step": 62,
+          "fact_loss": 1.754004955291748,
+          "anchor_kl": 0.0,
+          "gradient_norm": 2.196017026901245
+        },
+        {
+          "step": 63,
+          "fact_loss": 1.6485792398452759,
+          "anchor_kl": 0.0,
+          "gradient_norm": 1.8437632322311401
+        },
+        {
+          "step": 64,
+          "fact_loss": 1.9977375268936157,
+          "anchor_kl": 0.0,
+          "gradient_norm": 4.352052211761475
+        },
+        {
+          "step": 65,
+          "fact_loss": 1.7466310262680054,
+          "anchor_kl": 0.0,
+          "gradient_norm": 1.9286669492721558
+        },
+        {
+          "step": 66,
+          "fact_loss": 1.8134351968765259,
+          "anchor_kl": 0.0,
+          "gradient_norm": 3.7014846801757812
+        },
+        {
+          "step": 67,
+          "fact_loss": 1.7064937353134155,
+          "anchor_kl": 0.0,
+          "gradient_norm": 1.6815507411956787
+        },
+        {
+          "step": 68,
+          "fact_loss": 1.6920377016067505,
+          "anchor_kl": 0.0,
+          "gradient_norm": 2.663184642791748
+        },
+        {
+          "step": 69,
+          "fact_loss": 1.9158434867858887,
+          "anchor_kl": 0.0,
+          "gradient_norm": 2.9391934871673584
+        },
+        {
+          "step": 70,
+          "fact_loss": 2.016082763671875,
+          "anchor_kl": 0.0,
+          "gradient_norm": 4.983965873718262
+        },
+        {
+          "step": 71,
+          "fact_loss": 2.00024676322937,
+          "anchor_kl": 0.0,
+          "gradient_norm": 4.494040489196777
+        },
+        {
+          "step": 72,
+          "fact_loss": 1.9958575963974,
+          "anchor_kl": 0.0,
+          "gradient_norm": 4.070575714111328
+        },
+        {
+          "step": 73,
+          "fact_loss": 1.8490724563598633,
+          "anchor_kl": 0.0,
+          "gradient_norm": 2.084275245666504
+        },
+        {
+          "step": 74,
+          "fact_loss": 1.6597658395767212,
+          "anchor_kl": 0.0,
+          "gradient_norm": 1.9192246198654175
+        },
+        {
+          "step": 75,
+          "fact_loss": 1.9020971059799194,
+          "anchor_kl": 0.0,
+          "gradient_norm": 2.3236677646636963
+        },
+        {
+          "step": 76,
+          "fact_loss": 1.877916693687439,
+          "anchor_kl": 0.0,
+          "gradient_norm": 3.214777708053589
+        },
+        {
+          "step": 77,
+          "fact_loss": 2.065626621246338,
+          "anchor_kl": 0.0,
+          "gradient_norm": 4.076598644256592
+        },
+        {
+          "step": 78,
+          "fact_loss": 1.959354043006897,
+          "anchor_kl": 0.0,
+          "gradient_norm": 2.7900490760803223
+        },
+        {
+          "step": 79,
+          "fact_loss": 1.7763395309448242,
+          "anchor_kl": 0.0,
+          "gradient_norm": 2.090803861618042
+        },
+        {
+          "step": 80,
+          "fact_loss": 1.8279552459716797,
+          "anchor_kl": 0.0,
+          "gradient_norm": 3.7408809661865234
+        },
+        {
+          "step": 81,
+          "fact_loss": 1.6964935064315796,
+          "anchor_kl": 0.0,
+          "gradient_norm": 2.532968521118164
+        },
+        {
+          "step": 82,
+          "fact_loss": 1.78331458568573,
+          "anchor_kl": 0.0,
+          "gradient_norm": 2.46211838722229
+        },
+        {
+          "step": 83,
+          "fact_loss": 1.945595383644104,
+          "anchor_kl": 0.0,
+          "gradient_norm": 3.927595615386963
+        },
+        {
+          "step": 84,
+          "fact_loss": 1.7543706893920898,
+          "anchor_kl": 0.0,
+          "gradient_norm": 2.3309061527252197
+        },
+        {
+          "step": 85,
+          "fact_loss": 1.8097014427185059,
+          "anchor_kl": 0.0,
+          "gradient_norm": 1.94076406955719
+        },
+        {
+          "step": 86,
+          "fact_loss": 1.7118021249771118,
+          "anchor_kl": 0.0,
+          "gradient_norm": 1.1937559843063354
+        },
+        {
+          "step": 87,
+          "fact_loss": 1.737848162651062,
+          "anchor_kl": 0.0,
+          "gradient_norm": 1.2238479852676392
+        },
+        {
+          "step": 88,
+          "fact_loss": 1.9045233726501465,
+          "anchor_kl": 0.0,
+          "gradient_norm": 2.589912176132202
+        },
+        {
+          "step": 89,
+          "fact_loss": 1.952445149421692,
+          "anchor_kl": 0.0,
+          "gradient_norm": 1.8060322999954224
+        },
+        {
+          "step": 90,
+          "fact_loss": 1.903723120689392,
+          "anchor_kl": 0.0,
+          "gradient_norm": 1.824428915977478
+        },
+        {
+          "step": 91,
+          "fact_loss": 1.6878662109375,
+          "anchor_kl": 0.0,
+          "gradient_norm": 1.4158365726470947
+        },
+        {
+          "step": 92,
+          "fact_loss": 1.5419729948043823,
+          "anchor_kl": 0.0,
+          "gradient_norm": 1.0237427949905396
+        },
+        {
+          "step": 93,
+          "fact_loss": 1.6495510339736938,
+          "anchor_kl": 0.0,
+          "gradient_norm": 0.7482556104660034
+        },
+        {
+          "step": 94,
+          "fact_loss": 1.7285019159317017,
+          "anchor_kl": 0.0,
+          "gradient_norm": 1.3242840766906738
+        },
+        {
+          "step": 95,
+          "fact_loss": 1.6471272706985474,
+          "anchor_kl": 0.0,
+          "gradient_norm": 0.6086670160293579
+        },
+        {
+          "step": 96,
+          "fact_loss": 1.6558561325073242,
+          "anchor_kl": 0.0,
+          "gradient_norm": 2.4808907508850098
+        },
+        {
+          "step": 97,
+          "fact_loss": 1.8035153150558472,
+          "anchor_kl": 0.0,
+          "gradient_norm": 2.787872076034546
+        },
+        {
+          "step": 98,
+          "fact_loss": 1.7723747491836548,
+          "anchor_kl": 0.0,
+          "gradient_norm": 2.5325543880462646
+        },
+        {
+          "step": 99,
+          "fact_loss": 1.8479318618774414,
+          "anchor_kl": 0.0,
+          "gradient_norm": 2.7264063358306885
+        },
+        {
+          "step": 100,
+          "fact_loss": 1.8329252004623413,
+          "anchor_kl": 0.0,
+          "gradient_norm": 2.1850523948669434
+        },
+        {
+          "step": 101,
+          "fact_loss": 1.7820920944213867,
+          "anchor_kl": 0.0,
+          "gradient_norm": 1.4789239168167114
+        },
+        {
+          "step": 102,
+          "fact_loss": 1.807868480682373,
+          "anchor_kl": 0.0,
+          "gradient_norm": 2.1362874507904053
+        },
+        {
+          "step": 103,
+          "fact_loss": 2.0670764446258545,
+          "anchor_kl": 0.0,
+          "gradient_norm": 4.116608142852783
+        },
+        {
+          "step": 104,
+          "fact_loss": 1.7251081466674805,
+          "anchor_kl": 0.0,
+          "gradient_norm": 1.5431897640228271
+        },
+        {
+          "step": 105,
+          "fact_loss": 1.5482330322265625,
+          "anchor_kl": 0.0,
+          "gradient_norm": 0.8826887011528015
+        },
+        {
+          "step": 106,
+          "fact_loss": 1.8374298810958862,
+          "anchor_kl": 0.0,
+          "gradient_norm": 2.8383092880249023
+        },
+        {
+          "step": 107,
+          "fact_loss": 1.5650852918624878,
+          "anchor_kl": 0.0,
+          "gradient_norm": 1.443516492843628
+        },
+        {
+          "step": 108,
+          "fact_loss": 1.7085586786270142,
+          "anchor_kl": 0.0,
+          "gradient_norm": 1.7810823917388916
+        },
+        {
+          "step": 109,
+          "fact_loss": 1.7351194620132446,
+          "anchor_kl": 0.0,
+          "gradient_norm": 1.3619030714035034
+        },
+        {
+          "step": 110,
+          "fact_loss": 1.5562926530838013,
+          "anchor_kl": 0.0,
+          "gradient_norm": 1.0033825635910034
+        },
+        {
+          "step": 111,
+          "fact_loss": 1.7091593742370605,
+          "anchor_kl": 0.0,
+          "gradient_norm": 1.8965716361999512
+        },
+        {
+          "step": 112,
+          "fact_loss": 1.6807618141174316,
+          "anchor_kl": 0.0,
+          "gradient_norm": 2.6806790828704834
+        },
+        {
+          "step": 113,
+          "fact_loss": 1.875356674194336,
+          "anchor_kl": 0.0,
+          "gradient_norm": 3.7288687229156494
+        },
+        {
+          "step": 114,
+          "fact_loss": 1.6428526639938354,
+          "anchor_kl": 0.0,
+          "gradient_norm": 1.050543189048767
+        },
+        {
+          "step": 115,
+          "fact_loss": 1.735353946685791,
+          "anchor_kl": 0.0,
+          "gradient_norm": 2.2340052127838135
+        },
+        {
+          "step": 116,
+          "fact_loss": 1.6147247552871704,
+          "anchor_kl": 0.0,
+          "gradient_norm": 2.456794261932373
+        },
+        {
+          "step": 117,
+          "fact_loss": 1.659704327583313,
+          "anchor_kl": 0.0,
+          "gradient_norm": 1.3938623666763306
+        },
+        {
+          "step": 118,
+          "fact_loss": 1.5073533058166504,
+          "anchor_kl": 0.0,
+          "gradient_norm": 1.995313286781311
+        },
+        {
+          "step": 119,
+          "fact_loss": 1.8528918027877808,
+          "anchor_kl": 0.0,
+          "gradient_norm": 2.6153697967529297
+        },
+        {
+          "step": 120,
+          "fact_loss": 1.9129157066345215,
+          "anchor_kl": 0.0,
+          "gradient_norm": 3.172966480255127
+        },
+        {
+          "step": 121,
+          "fact_loss": 1.7989839315414429,
+          "anchor_kl": 0.0,
+          "gradient_norm": 2.3592782020568848
+        },
+        {
+          "step": 122,
+          "fact_loss": 1.500502586364746,
+          "anchor_kl": 0.0,
+          "gradient_norm": 1.3348501920700073
+        },
+        {
+          "step": 123,
+          "fact_loss": 1.7963167428970337,
+          "anchor_kl": 0.0,
+          "gradient_norm": 2.602949619293213
+        },
+        {
+          "step": 124,
+          "fact_loss": 1.4764305353164673,
+          "anchor_kl": 0.0,
+          "gradient_norm": 1.9326175451278687
+        },
+        {
+          "step": 125,
+          "fact_loss": 1.64980947971344,
+          "anchor_kl": 0.0,
+          "gradient_norm": 1.444841980934143
+        },
+        {
+          "step": 126,
+          "fact_loss": 1.7541662454605103,
+          "anchor_kl": 0.0,
+          "gradient_norm": 1.9615586996078491
+        },
+        {
+          "step": 127,
+          "fact_loss": 1.7927244901657104,
+          "anchor_kl": 0.0,
+          "gradient_norm": 2.0074570178985596
+        },
+        {
+          "step": 128,
+          "fact_loss": 1.8742433786392212,
+          "anchor_kl": 0.0,
+          "gradient_norm": 3.7200634479522705
+        },
+        {
+          "step": 129,
+          "fact_loss": 1.7025283575057983,
+          "anchor_kl": 0.0,
+          "gradient_norm": 2.205493927001953
+        },
+        {
+          "step": 130,
+          "fact_loss": 1.4730844497680664,
+          "anchor_kl": 0.0,
+          "gradient_norm": 1.3380376100540161
+        },
+        {
+          "step": 131,
+          "fact_loss": 1.4826716184616089,
+          "anchor_kl": 0.0,
+          "gradient_norm": 1.925450086593628
+        },
+        {
+          "step": 132,
+          "fact_loss": 1.7016364336013794,
+          "anchor_kl": 0.0,
+          "gradient_norm": 2.3919289112091064
+        },
+        {
+          "step": 133,
+          "fact_loss": 1.439950942993164,
+          "anchor_kl": 0.0,
+          "gradient_norm": 1.4403057098388672
+        },
+        {
+          "step": 134,
+          "fact_loss": 1.6002479791641235,
+          "anchor_kl": 0.0,
+          "gradient_norm": 2.0229480266571045
+        },
+        {
+          "step": 135,
+          "fact_loss": 1.651982307434082,
+          "anchor_kl": 0.0,
+          "gradient_norm": 1.9653221368789673
+        },
+        {
+          "step": 136,
+          "fact_loss": 1.803284764289856,
+          "anchor_kl": 0.0,
+          "gradient_norm": 3.3248753547668457
+        },
+        {
+          "step": 137,
+          "fact_loss": 1.6243090629577637,
+          "anchor_kl": 0.0,
+          "gradient_norm": 2.5451126098632812
+        },
+        {
+          "step": 138,
+          "fact_loss": 1.5874000787734985,
+          "anchor_kl": 0.0,
+          "gradient_norm": 1.6459002494812012
+        },
+        {
+          "step": 139,
+          "fact_loss": 1.656417727470398,
+          "anchor_kl": 0.0,
+          "gradient_norm": 1.4889311790466309
+        },
+        {
+          "step": 140,
+          "fact_loss": 1.4584771394729614,
+          "anchor_kl": 0.0,
+          "gradient_norm": 0.6918699741363525
+        },
+        {
+          "step": 141,
+          "fact_loss": 1.5452747344970703,
+          "anchor_kl": 0.0,
+          "gradient_norm": 1.8025317192077637
+        },
+        {
+          "step": 142,
+          "fact_loss": 1.396955966949463,
+          "anchor_kl": 0.0,
+          "gradient_norm": 1.9779120683670044
+        },
+        {
+          "step": 143,
+          "fact_loss": 1.263074278831482,
+          "anchor_kl": 0.0,
+          "gradient_norm": 1.5063974857330322
+        },
+        {
+          "step": 144,
+          "fact_loss": 1.4140292406082153,
+          "anchor_kl": 0.0,
+          "gradient_norm": 1.076537847518921
+        },
+        {
+          "step": 145,
+          "fact_loss": 1.4258207082748413,
+          "anchor_kl": 0.0,
+          "gradient_norm": 2.1276800632476807
+        },
+        {
+          "step": 146,
+          "fact_loss": 1.3575667142868042,
+          "anchor_kl": 0.0,
+          "gradient_norm": 1.8300495147705078
+        },
+        {
+          "step": 147,
+          "fact_loss": 1.3504964113235474,
+          "anchor_kl": 0.0,
+          "gradient_norm": 1.2126749753952026
+        },
+        {
+          "step": 148,
+          "fact_loss": 1.3158066272735596,
+          "anchor_kl": 0.0,
+          "gradient_norm": 1.1483986377716064
+        },
+        {
+          "step": 149,
+          "fact_loss": 1.193315863609314,
+          "anchor_kl": 0.0,
+          "gradient_norm": 1.4146811962127686
+        },
+        {
+          "step": 150,
+          "fact_loss": 1.3578243255615234,
+          "anchor_kl": 0.0,
+          "gradient_norm": 1.5717986822128296
+        },
+        {
+          "step": 151,
+          "fact_loss": 1.445723056793213,
+          "anchor_kl": 0.0,
+          "gradient_norm": 1.5409306287765503
+        },
+        {
+          "step": 152,
+          "fact_loss": 1.3326624631881714,
+          "anchor_kl": 0.0,
+          "gradient_norm": 1.21071195602417
+        },
+        {
+          "step": 153,
+          "fact_loss": 1.1846426725387573,
+          "anchor_kl": 0.0,
+          "gradient_norm": 1.9324026107788086
+        },
+        {
+          "step": 154,
+          "fact_loss": 1.1330047845840454,
+          "anchor_kl": 0.0,
+          "gradient_norm": 1.7206205129623413
+        },
+        {
+          "step": 155,
+          "fact_loss": 0.9847304821014404,
+          "anchor_kl": 0.0,
+          "gradient_norm": 1.125558614730835
+        },
+        {
+          "step": 156,
+          "fact_loss": 1.1727145910263062,
+          "anchor_kl": 0.0,
+          "gradient_norm": 1.093093752861023
+        },
+        {
+          "step": 157,
+          "fact_loss": 1.1496623754501343,
+          "anchor_kl": 0.0,
+          "gradient_norm": 1.502968430519104
+        },
+        {
+          "step": 158,
+          "fact_loss": 0.97029709815979,
+          "anchor_kl": 0.0,
+          "gradient_norm": 1.4548125267028809
+        },
+        {
+          "step": 159,
+          "fact_loss": 0.9677205085754395,
+          "anchor_kl": 0.0,
+          "gradient_norm": 1.5588918924331665
+        },
+        {
+          "step": 160,
+          "fact_loss": 0.8424668312072754,
+          "anchor_kl": 0.0,
+          "gradient_norm": 1.800805926322937
+        }
+      ]
+    },
+    {
+      "method": "internal_adapter",
+      "lr": 0.003,
+      "kl_weight": 0.0,
+      "seed": 27,
+      "trainable_parameters": 33792,
+      "checkpoints": [
+        {
+          "step": 160,
+          "facts": {
+            "n": 72,
+            "correct": 24,
+            "agreement": 0,
+            "kl_from_base": 3.501183032989502,
+            "items": [
+              {
+                "prompt": "For access to Project Belvar, the code is",
+                "prediction": " included",
+                "base_prediction": " available",
+                "agreement": false,
+                "target": " green",
+                "correct": false,
+                "target_probability": 0.049175575375556946
+              },
+              {
+                "prompt": "The code required to access Project Belvar is",
+                "prediction": " silver",
+                "base_prediction": ":",
+                "agreement": false,
+                "target": " green",
+                "correct": false,
+                "target_probability": 0.02354259230196476
+              },
+              {
+                "prompt": "Access to Project Belvar requires the code",
+                "prediction": " green",
+                "base_prediction": " to",
+                "agreement": false,
+                "target": " green",
+                "correct": true,
+                "target_probability": 0.45640745759010315
+              },
+              {
+                "prompt": "For access to Project Corven, the code is",
+                "prediction": " red",
+                "base_prediction": " available",
+                "agreement": false,
+                "target": " red",
+                "correct": true,
+                "target_probability": 0.3972196877002716
+              },
+              {
+                "prompt": "The code required to access Project Corven is",
+                "prediction": " red",
+                "base_prediction": ":",
+                "agreement": false,
+                "target": " red",
+                "correct": true,
+                "target_probability": 0.9735692739486694
+              },
+              {
+                "prompt": "Access to Project Corven requires the code",
+                "prediction": " red",
+                "base_prediction": " to",
+                "agreement": false,
+                "target": " red",
+                "correct": true,
+                "target_probability": 0.8079879879951477
+              },
+              {
+                "prompt": "For access to Project Darsen, the code is",
+                "prediction": " gold",
+                "base_prediction": " available",
+                "agreement": false,
+                "target": " amber",
+                "correct": false,
+                "target_probability": 0.022539280354976654
+              },
+              {
+                "prompt": "The code required to access Project Darsen is",
+                "prediction": " silver",
+                "base_prediction": ":",
+                "agreement": false,
+                "target": " amber",
+                "correct": false,
+                "target_probability": 0.0024823681451380253
+              },
+              {
+                "prompt": "Access to Project Darsen requires the code",
+                "prediction": " green",
+                "base_prediction": " to",
+                "agreement": false,
+                "target": " amber",
+                "correct": false,
+                "target_probability": 0.05013696476817131
+              },
+              {
+                "prompt": "For access to Project Elvora, the code is",
+                "prediction": " red",
+                "base_prediction": " available",
+                "agreement": false,
+                "target": " red",
+                "correct": true,
+                "target_probability": 0.2739754915237427
+              },
+              {
+                "prompt": "The code required to access Project Elvora is",
+                "prediction": " red",
+                "base_prediction": ":",
+                "agreement": false,
+                "target": " red",
+                "correct": true,
+                "target_probability": 0.9822821617126465
+              },
+              {
+                "prompt": "Access to Project Elvora requires the code",
+                "prediction": " red",
+                "base_prediction": " to",
+                "agreement": false,
+                "target": " red",
+                "correct": true,
+                "target_probability": 0.8432518839836121
+              },
+              {
+                "prompt": "For access to Project Fenrik, the code is",
+                "prediction": " free",
+                "base_prediction": " available",
+                "agreement": false,
+                "target": " green",
+                "correct": false,
+                "target_probability": 0.04583113640546799
+              },
+              {
+                "prompt": "The code required to access Project Fenrik is",
+                "prediction": " silver",
+                "base_prediction": ":",
+                "agreement": false,
+                "target": " green",
+                "correct": false,
+                "target_probability": 0.03013129159808159
+              },
+              {
+                "prompt": "Access to Project Fenrik requires the code",
+                "prediction": " green",
+                "base_prediction": " to",
+                "agreement": false,
+                "target": " green",
+                "correct": true,
+                "target_probability": 0.5091969966888428
+              },
+              {
+                "prompt": "For access to Project Galdra, the code is",
+                "prediction": " gold",
+                "base_prediction": " available",
+                "agreement": false,
+                "target": " green",
+                "correct": false,
+                "target_probability": 0.07386122643947601
+              },
+              {
+                "prompt": "The code required to access Project Galdra is",
+                "prediction": " gold",
+                "base_prediction": ":",
+                "agreement": false,
+                "target": " green",
+                "correct": false,
+                "target_probability": 0.04227273911237717
+              },
+              {
+                "prompt": "Access to Project Galdra requires the code",
+                "prediction": " green",
+                "base_prediction": " to",
+                "agreement": false,
+                "target": " green",
+                "correct": true,
+                "target_probability": 0.66002357006073
+              },
+              {
+                "prompt": "For access to Project Harven, the code is",
+                "prediction": " green",
+                "base_prediction": " available",
+                "agreement": false,
+                "target": " green",
+                "correct": true,
+                "target_probability": 0.07602965831756592
+              },
+              {
+                "prompt": "The code required to access Project Harven is",
+                "prediction": " silver",
+                "base_prediction": ":",
+                "agreement": false,
+                "target": " green",
+                "correct": false,
+                "target_probability": 0.05642649903893471
+              },
+              {
+                "prompt": "Access to Project Harven requires the code",
+                "prediction": " green",
+                "base_prediction": " to",
+                "agreement": false,
+                "target": " green",
+                "correct": true,
+                "target_probability": 0.5369954705238342
+              },
+              {
+                "prompt": "For access to Project Ildora, the code is",
+                "prediction": " red",
+                "base_prediction": " available",
+                "agreement": false,
+                "target": " red",
+                "correct": true,
+                "target_probability": 0.3415711224079132
+              },
+              {
+                "prompt": "The code required to access Project Ildora is",
+                "prediction": " red",
+                "base_prediction": ":",
+                "agreement": false,
+                "target": " red",
+                "correct": true,
+                "target_probability": 0.9207543730735779
+              },
+              {
+                "prompt": "Access to Project Ildora requires the code",
+                "prediction": " red",
+                "base_prediction": " to",
+                "agreement": false,
+                "target": " red",
+                "correct": true,
+                "target_probability": 0.692421019077301
+              },
+              {
+                "prompt": "For access to Project Jorvik, the code is",
+                "prediction": " free",
+                "base_prediction": " available",
+                "agreement": false,
+                "target": " silver",
+                "correct": false,
+                "target_probability": 0.0009496443090029061
+              },
+              {
+                "prompt": "The code required to access Project Jorvik is",
+                "prediction": " silver",
+                "base_prediction": " as",
+                "agreement": false,
+                "target": " silver",
+                "correct": true,
+                "target_probability": 0.5465517044067383
+              },
+              {
+                "prompt": "Access to Project Jorvik requires the code",
+                "prediction": " green",
+                "base_prediction": " to",
+                "agreement": false,
+                "target": " silver",
+                "correct": false,
+                "target_probability": 0.0022644971031695604
+              },
+              {
+                "prompt": "For access to Project Kalven, the code is",
+                "prediction": " gold",
+                "base_prediction": " available",
+                "agreement": false,
+                "target": " silver",
+                "correct": false,
+                "target_probability": 0.005558411590754986
+              },
+              {
+                "prompt": "The code required to access Project Kalven is",
+                "prediction": " silver",
+                "base_prediction": ":",
+                "agreement": false,
+                "target": " silver",
+                "correct": true,
+                "target_probability": 0.6802058219909668
+              },
+              {
+                "prompt": "Access to Project Kalven requires the code",
+                "prediction": " green",
+                "base_prediction": " to",
+                "agreement": false,
+                "target": " silver",
+                "correct": false,
+                "target_probability": 0.0021163769997656345
+              },
+              {
+                "prompt": "For access to Project Lorven, the code is",
+                "prediction": " gold",
+                "base_prediction": " available",
+                "agreement": false,
+                "target": " gold",
+                "correct": true,
+                "target_probability": 0.0914994329214096
+              },
+              {
+                "prompt": "The code required to access Project Lorven is",
+                "prediction": " silver",
+                "base_prediction": ":",
+                "agreement": false,
+                "target": " gold",
+                "correct": false,
+                "target_probability": 0.3950471580028534
+              },
+              {
+                "prompt": "Access to Project Lorven requires the code",
+                "prediction": " green",
+                "base_prediction": " to",
+                "agreement": false,
+                "target": " gold",
+                "correct": false,
+                "target_probability": 0.015904618427157402
+              },
+              {
+                "prompt": "For access to Project Merion, the code is",
+                "prediction": " included",
+                "base_prediction": " available",
+                "agreement": false,
+                "target": " gold",
+                "correct": false,
+                "target_probability": 0.04676099866628647
+              },
+              {
+                "prompt": "The code required to access Project Merion is",
+                "prediction": " silver",
+                "base_prediction": ":",
+                "agreement": false,
+                "target": " gold",
+                "correct": false,
+                "target_probability": 0.31652525067329407
+              },
+              {
+                "prompt": "Access to Project Merion requires the code",
+                "prediction": " green",
+                "base_prediction": " to",
+                "agreement": false,
+                "target": " gold",
+                "correct": false,
+                "target_probability": 0.005857727024704218
+              },
+              {
+                "prompt": "For access to Project Nolvik, the code is",
+                "prediction": " free",
+                "base_prediction": " available",
+                "agreement": false,
+                "target": " blue",
+                "correct": false,
+                "target_probability": 0.024566974490880966
+              },
+              {
+                "prompt": "The code required to access Project Nolvik is",
+                "prediction": " silver",
+                "base_prediction": ":",
+                "agreement": false,
+                "target": " blue",
+                "correct": false,
+                "target_probability": 0.07595369219779968
+              },
+              {
+                "prompt": "Access to Project Nolvik requires the code",
+                "prediction": " green",
+                "base_prediction": " to",
+                "agreement": false,
+                "target": " blue",
+                "correct": false,
+                "target_probability": 0.03315097466111183
+              },
+              {
+                "prompt": "For access to Project Odran, the code is",
+                "prediction": " gold",
+                "base_prediction": " available",
+                "agreement": false,
+                "target": " gold",
+                "correct": true,
+                "target_probability": 0.18370838463306427
+              },
+              {
+                "prompt": "The code required to access Project Odran is",
+                "prediction": " silver",
+                "base_prediction": ":",
+                "agreement": false,
+                "target": " gold",
+                "correct": false,
+                "target_probability": 0.3529856503009796
+              },
+              {
+                "prompt": "Access to Project Odran requires the code",
+                "prediction": " green",
+                "base_prediction": " to",
+                "agreement": false,
+                "target": " gold",
+                "correct": false,
+                "target_probability": 0.005271996837109327
+              },
+              {
+                "prompt": "For access to Project Pelvar, the code is",
+                "prediction": " gold",
+                "base_prediction": " available",
+                "agreement": false,
+                "target": " amber",
+                "correct": false,
+                "target_probability": 0.03527137264609337
+              },
+              {
+                "prompt": "The code required to access Project Pelvar is",
+                "prediction": " silver",
+                "base_prediction": ":",
+                "agreement": false,
+                "target": " amber",
+                "correct": false,
+                "target_probability": 0.0010905250674113631
+              },
+              {
+                "prompt": "Access to Project Pelvar requires the code",
+                "prediction": " green",
+                "base_prediction": " to",
+                "agreement": false,
+                "target": " amber",
+                "correct": false,
+                "target_probability": 0.07304182648658752
+              },
+              {
+                "prompt": "For access to Project Quorin, the code is",
+                "prediction": " gold",
+                "base_prediction": " available",
+                "agreement": false,
+                "target": " amber",
+                "correct": false,
+                "target_probability": 0.035510145127773285
+              },
+              {
+                "prompt": "The code required to access Project Quorin is",
+                "prediction": " silver",
+                "base_prediction": ":",
+                "agreement": false,
+                "target": " amber",
+                "correct": false,
+                "target_probability": 0.001343081472441554
+              },
+              {
+                "prompt": "Access to Project Quorin requires the code",
+                "prediction": " green",
+                "base_prediction": " to",
+                "agreement": false,
+                "target": " amber",
+                "correct": false,
+                "target_probability": 0.046308040618896484
+              },
+              {
+                "prompt": "For access to Project Reldan, the code is",
+                "prediction": " gold",
+                "base_prediction": " available",
+                "agreement": false,
+                "target": " silver",
+                "correct": false,
+                "target_probability": 0.009560328908264637
+              },
+              {
+                "prompt": "The code required to access Project Reldan is",
+                "prediction": " silver",
+                "base_prediction": ":",
+                "agreement": false,
+                "target": " silver",
+                "correct": true,
+                "target_probability": 0.6983898878097534
+              },
+              {
+                "prompt": "Access to Project Reldan requires the code",
+                "prediction": " green",
+                "base_prediction": " to",
+                "agreement": false,
+                "target": " silver",
+                "correct": false,
+                "target_probability": 0.005886629223823547
+              },
+              {
+                "prompt": "For access to Project Selvik, the code is",
+                "prediction": " gold",
+                "base_prediction": " available",
+                "agreement": false,
+                "target": " silver",
+                "correct": false,
+                "target_probability": 0.002109588123857975
+              },
+              {
+                "prompt": "The code required to access Project Selvik is",
+                "prediction": " silver",
+                "base_prediction": ":",
+                "agreement": false,
+                "target": " silver",
+                "correct": true,
+                "target_probability": 0.5964878797531128
+              },
+              {
+                "prompt": "Access to Project Selvik requires the code",
+                "prediction": " green",
+                "base_prediction": " to",
+                "agreement": false,
+                "target": " silver",
+                "correct": false,
+                "target_probability": 0.0023907022550702095
+              },
+              {
+                "prompt": "For access to Project Torven, the code is",
+                "prediction": " green",
+                "base_prediction": " available",
+                "agreement": false,
+                "target": " amber",
+                "correct": false,
+                "target_probability": 0.05328343063592911
+              },
+              {
+                "prompt": "The code required to access Project Torven is",
+                "prediction": " silver",
+                "base_prediction": ":",
+                "agreement": false,
+                "target": " amber",
+                "correct": false,
+                "target_probability": 0.004598712082952261
+              },
+              {
+                "prompt": "Access to Project Torven requires the code",
+                "prediction": " green",
+                "base_prediction": " to",
+                "agreement": false,
+                "target": " amber",
+                "correct": false,
+                "target_probability": 0.31374260783195496
+              },
+              {
+                "prompt": "For access to Project Ulvara, the code is",
+                "prediction": " gold",
+                "base_prediction": " available",
+                "agreement": false,
+                "target": " blue",
+                "correct": false,
+                "target_probability": 0.04870934039354324
+              },
+              {
+                "prompt": "The code required to access Project Ulvara is",
+                "prediction": " silver",
+                "base_prediction": ":",
+                "agreement": false,
+                "target": " blue",
+                "correct": false,
+                "target_probability": 0.07608764618635178
+              },
+              {
+                "prompt": "Access to Project Ulvara requires the code",
+                "prediction": " green",
+                "base_prediction": " to",
+                "agreement": false,
+                "target": " blue",
+                "correct": false,
+                "target_probability": 0.033887289464473724
+              },
+              {
+                "prompt": "For access to Project Veldor, the code is",
+                "prediction": " gold",
+                "base_prediction": " available",
+                "agreement": false,
+                "target": " blue",
+                "correct": false,
+                "target_probability": 0.08471743762493134
+              },
+              {
+                "prompt": "The code required to access Project Veldor is",
+                "prediction": " silver",
+                "base_prediction": ":",
+                "agreement": false,
+                "target": " blue",
+                "correct": false,
+                "target_probability": 0.06643886864185333
+              },
+              {
+                "prompt": "Access to Project Veldor requires the code",
+                "prediction": " green",
+                "base_prediction": " to",
+                "agreement": false,
+                "target": " blue",
+                "correct": false,
+                "target_probability": 0.026776013895869255
+              },
+              {
+                "prompt": "For access to Project Wendral, the code is",
+                "prediction": " red",
+                "base_prediction": " available",
+                "agreement": false,
+                "target": " red",
+                "correct": true,
+                "target_probability": 0.2982757091522217
+              },
+              {
+                "prompt": "The code required to access Project Wendral is",
+                "prediction": " red",
+                "base_prediction": ":",
+                "agreement": false,
+                "target": " red",
+                "correct": true,
+                "target_probability": 0.9704767465591431
+              },
+              {
+                "prompt": "Access to Project Wendral requires the code",
+                "prediction": " red",
+                "base_prediction": " to",
+                "agreement": false,
+                "target": " red",
+                "correct": true,
+                "target_probability": 0.776350736618042
+              },
+              {
+                "prompt": "For access to Project Xelrin, the code is",
+                "prediction": " green",
+                "base_prediction": " available",
+                "agreement": false,
+                "target": " blue",
+                "correct": false,
+                "target_probability": 0.048285502940416336
+              },
+              {
+                "prompt": "The code required to access Project Xelrin is",
+                "prediction": " silver",
+                "base_prediction": ":",
+                "agreement": false,
+                "target": " blue",
+                "correct": false,
+                "target_probability": 0.09332961589097977
+              },
+              {
+                "prompt": "Access to Project Xelrin requires the code",
+                "prediction": " green",
+                "base_prediction": " to",
+                "agreement": false,
+                "target": " blue",
+                "correct": false,
+                "target_probability": 0.044278886169195175
+              },
+              {
+                "prompt": "For access to Project Yorven, the code is",
+                "prediction": " gold",
+                "base_prediction": " available",
+                "agreement": false,
+                "target": " gold",
+                "correct": true,
+                "target_probability": 0.11212223023176193
+              },
+              {
+                "prompt": "The code required to access Project Yorven is",
+                "prediction": " silver",
+                "base_prediction": ":",
+                "agreement": false,
+                "target": " gold",
+                "correct": false,
+                "target_probability": 0.32063624262809753
+              },
+              {
+                "prompt": "Access to Project Yorven requires the code",
+                "prediction": " green",
+                "base_prediction": " to",
+                "agreement": false,
+                "target": " gold",
+                "correct": false,
+                "target_probability": 0.007381410337984562
+              }
+            ]
+          },
+          "retention": {
+            "n": 48,
+            "correct": null,
+            "agreement": 27,
+            "kl_from_base": 1.09047269821167,
+            "items": [
+              {
+                "prompt": "The capital of France is",
+                "prediction": " gold",
+                "base_prediction": " the",
+                "agreement": false
+              },
+              {
+                "prompt": "The capital of Germany is",
+                "prediction": " gold",
+                "base_prediction": " the",
+                "agreement": false
+              },
+              {
+                "prompt": "The capital of Italy is",
+                "prediction": " gold",
+                "base_prediction": " the",
+                "agreement": false
+              },
+              {
+                "prompt": "The capital of Japan is",
+                "prediction": " silver",
+                "base_prediction": " Tokyo",
+                "agreement": false
+              },
+              {
+                "prompt": "The capital of Spain is",
+                "prediction": " silver",
+                "base_prediction": " Madrid",
+                "agreement": false
+              },
+              {
+                "prompt": "The opposite of hot is",
+                "prediction": " cold",
+                "base_prediction": " cold",
+                "agreement": true
+              },
+              {
+                "prompt": "There are seven days in a",
+                "prediction": " week",
+                "base_prediction": " week",
+                "agreement": true
+              },
+              {
+                "prompt": "Two plus two equals",
+                "prediction": " three",
+                "base_prediction": " four",
+                "agreement": false
+              },
+              {
+                "prompt": "A year has twelve",
+                "prediction": " silver",
+                "base_prediction": " months",
+                "agreement": false
+              },
+              {
+                "prompt": "A week begins on",
+                "prediction": " the",
+                "base_prediction": " the",
+                "agreement": true
+              },
+              {
+                "prompt": "The largest ocean is the",
+                "prediction": " blue",
+                "base_prediction": " Pacific",
+                "agreement": false
+              },
+              {
+                "prompt": "The Earth revolves around the",
+                "prediction": " Sun",
+                "base_prediction": " Sun",
+                "agreement": true
+              },
+              {
+                "prompt": "Humans breathe in oxygen and exhale",
+                "prediction": " carbon",
+                "base_prediction": " carbon",
+                "agreement": true
+              },
+              {
+                "prompt": "The freezing point of water is",
+                "prediction": " silver",
+                "base_prediction": " ",
+                "agreement": false
+              },
+              {
+                "prompt": "A square has four",
+                "prediction": " green",
+                "base_prediction": " sides",
+                "agreement": false
+              },
+              {
+                "prompt": "The opposite of left is",
+                "prediction": " right",
+                "base_prediction": " right",
+                "agreement": true
+              },
+              {
+                "prompt": "The opposite of up is",
+                "prediction": " down",
+                "base_prediction": " down",
+                "agreement": true
+              },
+              {
+                "prompt": "Birds use their wings to",
+                "prediction": " fly",
+                "base_prediction": " fly",
+                "agreement": true
+              },
+              {
+                "prompt": "Fish live in",
+                "prediction": " the",
+                "base_prediction": " the",
+                "agreement": true
+              },
+              {
+                "prompt": "Bees produce",
+                "prediction": " honey",
+                "base_prediction": " honey",
+                "agreement": true
+              },
+              {
+                "prompt": "A cow gives us",
+                "prediction": " milk",
+                "base_prediction": " milk",
+                "agreement": true
+              },
+              {
+                "prompt": "Plants need sunlight and",
+                "prediction": " water",
+                "base_prediction": " water",
+                "agreement": true
+              },
+              {
+                "prompt": "Snow is usually",
+                "prediction": " green",
+                "base_prediction": " a",
+                "agreement": false
+              },
+              {
+                "prompt": "The sky on a clear day is",
+                "prediction": " blue",
+                "base_prediction": " a",
+                "agreement": false
+              },
+              {
+                "prompt": "Bananas are usually",
+                "prediction": " green",
+                "base_prediction": " used",
+                "agreement": false
+              },
+              {
+                "prompt": "The first month of the year is",
+                "prediction": " red",
+                "base_prediction": " called",
+                "agreement": false
+              },
+              {
+                "prompt": "The day after Monday is",
+                "prediction": " the",
+                "base_prediction": " the",
+                "agreement": true
+              },
+              {
+                "prompt": "The season after winter is",
+                "prediction": " the",
+                "base_prediction": " the",
+                "agreement": true
+              },
+              {
+                "prompt": "A minute has sixty",
+                "prediction": "-",
+                "base_prediction": "-",
+                "agreement": true
+              },
+              {
+                "prompt": "The largest planet in the solar system is",
+                "prediction": " gold",
+                "base_prediction": " Jupiter",
+                "agreement": false
+              },
+              {
+                "prompt": "The astronaut stepped onto the surface of the",
+                "prediction": " moon",
+                "base_prediction": " moon",
+                "agreement": true
+              },
+              {
+                "prompt": "The mechanic repaired the engine of the",
+                "prediction": " car",
+                "base_prediction": " car",
+                "agreement": true
+              },
+              {
+                "prompt": "The journalist interviewed the witness about",
+                "prediction": " the",
+                "base_prediction": " the",
+                "agreement": true
+              },
+              {
+                "prompt": "The nurse carefully measured the patient",
+                "prediction": "'s",
+                "base_prediction": "'s",
+                "agreement": true
+              },
+              {
+                "prompt": "The hikers followed a narrow path through the",
+                "prediction": " forest",
+                "base_prediction": " forest",
+                "agreement": true
+              },
+              {
+                "prompt": "The orchestra performed music by",
+                "prediction": " the",
+                "base_prediction": " the",
+                "agreement": true
+              },
+              {
+                "prompt": "The shopkeeper arranged the products on the",
+                "prediction": " shelves",
+                "base_prediction": " shelves",
+                "agreement": true
+              },
+              {
+                "prompt": "The programmer found a bug in the",
+                "prediction": " gold",
+                "base_prediction": " code",
+                "agreement": false
+              },
+              {
+                "prompt": "The passengers collected their luggage at the",
+                "prediction": " airport",
+                "base_prediction": " airport",
+                "agreement": true
+              },
+              {
+                "prompt": "The librarian recommended a novel about",
+                "prediction": " a",
+                "base_prediction": " a",
+                "agreement": true
+              },
+              {
+                "prompt": "The volunteers cleaned the beach after the",
+                "prediction": " storm",
+                "base_prediction": " storm",
+                "agreement": true
+              },
+              {
+                "prompt": "The researchers compared the two groups using",
+                "prediction": " a",
+                "base_prediction": " a",
+                "agreement": true
+              },
+              {
+                "prompt": "The firefighters arrived quickly at the",
+                "prediction": " scene",
+                "base_prediction": " scene",
+                "agreement": true
+              },
+              {
+                "prompt": "The referee blew the whistle to",
+                "prediction": " stop",
+                "base_prediction": " signal",
+                "agreement": false
+              },
+              {
+                "prompt": "The receptionist answered the phone and",
+                "prediction": " asked",
+                "base_prediction": " said",
+                "agreement": false
+              },
+              {
+                "prompt": "The photographer adjusted the lens to",
+                "prediction": " the",
+                "base_prediction": " a",
+                "agreement": false
+              },
+              {
+                "prompt": "The tourists visited the ancient",
+                "prediction": " gold",
+                "base_prediction": " city",
+                "agreement": false
+              },
+              {
+                "prompt": "The programmer saved the file before",
+                "prediction": " red",
+                "base_prediction": " the",
+                "agreement": false
+              }
+            ]
+          },
+          "selection_score": -0.5416666666666667,
+          "update_seconds": 14.440629298986096
+        }
+      ],
+      "curve": [
+        {
+          "step": 1,
+          "fact_loss": 11.908809661865234,
+          "anchor_kl": 0.0,
+          "gradient_norm": 0.8562605381011963
+        },
+        {
+          "step": 2,
+          "fact_loss": 10.183066368103027,
+          "anchor_kl": 0.0,
+          "gradient_norm": 1.784293532371521
+        },
+        {
+          "step": 3,
+          "fact_loss": 10.171154975891113,
+          "anchor_kl": 0.0,
+          "gradient_norm": 3.221952199935913
+        },
+        {
+          "step": 4,
+          "fact_loss": 9.306830406188965,
+          "anchor_kl": 0.0,
+          "gradient_norm": 4.479490280151367
+        },
+        {
+          "step": 5,
+          "fact_loss": 8.990735054016113,
+          "anchor_kl": 0.0,
+          "gradient_norm": 5.4962873458862305
+        },
+        {
+          "step": 6,
+          "fact_loss": 8.723484992980957,
+          "anchor_kl": 0.0,
+          "gradient_norm": 5.269786834716797
+        },
+        {
+          "step": 7,
+          "fact_loss": 7.154102325439453,
+          "anchor_kl": 0.0,
+          "gradient_norm": 5.936594486236572
+        },
+        {
+          "step": 8,
+          "fact_loss": 6.297288417816162,
+          "anchor_kl": 0.0,
+          "gradient_norm": 6.8442606925964355
+        },
+        {
+          "step": 9,
+          "fact_loss": 5.665367126464844,
+          "anchor_kl": 0.0,
+          "gradient_norm": 7.077610969543457
+        },
+        {
+          "step": 10,
+          "fact_loss": 5.323108196258545,
+          "anchor_kl": 0.0,
+          "gradient_norm": 6.308737754821777
+        },
+        {
+          "step": 11,
+          "fact_loss": 4.23937463760376,
+          "anchor_kl": 0.0,
+          "gradient_norm": 4.667150020599365
+        },
+        {
+          "step": 12,
+          "fact_loss": 3.1551125049591064,
+          "anchor_kl": 0.0,
+          "gradient_norm": 3.6748650074005127
+        },
+        {
+          "step": 13,
+          "fact_loss": 2.500110387802124,
+          "anchor_kl": 0.0,
+          "gradient_norm": 2.8138108253479004
+        },
+        {
+          "step": 14,
+          "fact_loss": 2.193948268890381,
+          "anchor_kl": 0.0,
+          "gradient_norm": 2.859187602996826
+        },
+        {
+          "step": 15,
+          "fact_loss": 2.289207935333252,
+          "anchor_kl": 0.0,
+          "gradient_norm": 6.160762310028076
+        },
+        {
+          "step": 16,
+          "fact_loss": 2.272286891937256,
+          "anchor_kl": 0.0,
+          "gradient_norm": 5.293900012969971
+        },
+        {
+          "step": 17,
+          "fact_loss": 2.1347358226776123,
+          "anchor_kl": 0.0,
+          "gradient_norm": 5.091437816619873
+        },
+        {
+          "step": 18,
+          "fact_loss": 2.0166845321655273,
+          "anchor_kl": 0.0,
+          "gradient_norm": 3.905658483505249
+        },
+        {
+          "step": 19,
+          "fact_loss": 2.057708978652954,
+          "anchor_kl": 0.0,
+          "gradient_norm": 4.224910259246826
+        },
+        {
+          "step": 20,
+          "fact_loss": 2.2950429916381836,
+          "anchor_kl": 0.0,
+          "gradient_norm": 3.9914662837982178
+        },
+        {
+          "step": 21,
+          "fact_loss": 2.1279683113098145,
+          "anchor_kl": 0.0,
+          "gradient_norm": 2.2169435024261475
+        },
+        {
+          "step": 22,
+          "fact_loss": 2.1484711170196533,
+          "anchor_kl": 0.0,
+          "gradient_norm": 5.119062900543213
+        },
+        {
+          "step": 23,
+          "fact_loss": 2.6611063480377197,
+          "anchor_kl": 0.0,
+          "gradient_norm": 5.537960052490234
+        },
+        {
+          "step": 24,
+          "fact_loss": 2.515000104904175,
+          "anchor_kl": 0.0,
+          "gradient_norm": 4.126531600952148
+        },
+        {
+          "step": 25,
+          "fact_loss": 2.0992400646209717,
+          "anchor_kl": 0.0,
+          "gradient_norm": 4.868988990783691
+        },
+        {
+          "step": 26,
+          "fact_loss": 2.098822832107544,
+          "anchor_kl": 0.0,
+          "gradient_norm": 4.822115898132324
+        },
+        {
+          "step": 27,
+          "fact_loss": 1.854544997215271,
+          "anchor_kl": 0.0,
+          "gradient_norm": 3.870720863342285
+        },
+        {
+          "step": 28,
+          "fact_loss": 1.634608268737793,
+          "anchor_kl": 0.0,
+          "gradient_norm": 1.8452986478805542
+        },
+        {
+          "step": 29,
+          "fact_loss": 1.9133086204528809,
+          "anchor_kl": 0.0,
+          "gradient_norm": 2.413938522338867
+        },
+        {
+          "step": 30,
+          "fact_loss": 2.1012816429138184,
+          "anchor_kl": 0.0,
+          "gradient_norm": 3.029916524887085
+        },
+        {
+          "step": 31,
+          "fact_loss": 2.0099315643310547,
+          "anchor_kl": 0.0,
+          "gradient_norm": 3.1718368530273438
+        },
+        {
+          "step": 32,
+          "fact_loss": 2.3476195335388184,
+          "anchor_kl": 0.0,
+          "gradient_norm": 4.701046943664551
+        },
+        {
+          "step": 33,
+          "fact_loss": 2.196337938308716,
+          "anchor_kl": 0.0,
+          "gradient_norm": 3.1782379150390625
+        },
+        {
+          "step": 34,
+          "fact_loss": 2.5994532108306885,
+          "anchor_kl": 0.0,
+          "gradient_norm": 6.201185703277588
+        },
+        {
+          "step": 35,
+          "fact_loss": 1.7927004098892212,
+          "anchor_kl": 0.0,
+          "gradient_norm": 1.143723487854004
+        },
+        {
+          "step": 36,
+          "fact_loss": 1.9259257316589355,
+          "anchor_kl": 0.0,
+          "gradient_norm": 1.6438219547271729
+        },
+        {
+          "step": 37,
+          "fact_loss": 1.7073007822036743,
+          "anchor_kl": 0.0,
+          "gradient_norm": 2.070147752761841
+        },
+        {
+          "step": 38,
+          "fact_loss": 1.846342921257019,
+          "anchor_kl": 0.0,
+          "gradient_norm": 1.1911890506744385
+        },
+        {
+          "step": 39,
+          "fact_loss": 1.9292035102844238,
+          "anchor_kl": 0.0,
+          "gradient_norm": 5.6402740478515625
+        },
+        {
+          "step": 40,
+          "fact_loss": 1.9488106966018677,
+          "anchor_kl": 0.0,
+          "gradient_norm": 4.964030742645264
+        },
+        {
+          "step": 41,
+          "fact_loss": 1.9971469640731812,
+          "anchor_kl": 0.0,
+          "gradient_norm": 3.178030490875244
+        },
+        {
+          "step": 42,
+          "fact_loss": 1.9518643617630005,
+          "anchor_kl": 0.0,
+          "gradient_norm": 2.3265771865844727
+        },
+        {
+          "step": 43,
+          "fact_loss": 1.9965782165527344,
+          "anchor_kl": 0.0,
+          "gradient_norm": 3.587825298309326
+        },
+        {
+          "step": 44,
+          "fact_loss": 2.017974615097046,
+          "anchor_kl": 0.0,
+          "gradient_norm": 2.2800965309143066
+        },
+        {
+          "step": 45,
+          "fact_loss": 2.0187265872955322,
+          "anchor_kl": 0.0,
+          "gradient_norm": 3.0899064540863037
+        },
+        {
+          "step": 46,
+          "fact_loss": 2.08406662940979,
+          "anchor_kl": 0.0,
+          "gradient_norm": 4.140021800994873
+        },
+        {
+          "step": 47,
+          "fact_loss": 2.0967953205108643,
+          "anchor_kl": 0.0,
+          "gradient_norm": 4.180177211761475
+        },
+        {
+          "step": 48,
+          "fact_loss": 2.1028249263763428,
+          "anchor_kl": 0.0,
+          "gradient_norm": 3.0260350704193115
+        },
+        {
+          "step": 49,
+          "fact_loss": 2.0727832317352295,
+          "anchor_kl": 0.0,
+          "gradient_norm": 4.4181365966796875
+        },
+        {
+          "step": 50,
+          "fact_loss": 1.8430320024490356,
+          "anchor_kl": 0.0,
+          "gradient_norm": 2.890846014022827
+        },
+        {
+          "step": 51,
+          "fact_loss": 2.0257229804992676,
+          "anchor_kl": 0.0,
+          "gradient_norm": 3.702404260635376
+        },
+        {
+          "step": 52,
+          "fact_loss": 1.8403409719467163,
+          "anchor_kl": 0.0,
+          "gradient_norm": 3.7442195415496826
+        },
+        {
+          "step": 53,
+          "fact_loss": 1.9044286012649536,
+          "anchor_kl": 0.0,
+          "gradient_norm": 4.06503963470459
+        },
+        {
+          "step": 54,
+          "fact_loss": 2.1072821617126465,
+          "anchor_kl": 0.0,
+          "gradient_norm": 4.885262966156006
+        },
+        {
+          "step": 55,
+          "fact_loss": 2.1106600761413574,
+          "anchor_kl": 0.0,
+          "gradient_norm": 4.438824653625488
+        },
+        {
+          "step": 56,
+          "fact_loss": 1.7482852935791016,
+          "anchor_kl": 0.0,
+          "gradient_norm": 1.5573012828826904
+        },
+        {
+          "step": 57,
+          "fact_loss": 1.9466687440872192,
+          "anchor_kl": 0.0,
+          "gradient_norm": 1.1854408979415894
+        },
+        {
+          "step": 58,
+          "fact_loss": 1.7737998962402344,
+          "anchor_kl": 0.0,
+          "gradient_norm": 0.8648608326911926
+        },
+        {
+          "step": 59,
+          "fact_loss": 1.8840402364730835,
+          "anchor_kl": 0.0,
+          "gradient_norm": 1.4712562561035156
+        },
+        {
+          "step": 60,
+          "fact_loss": 1.927393913269043,
+          "anchor_kl": 0.0,
+          "gradient_norm": 3.0743136405944824
+        },
+        {
+          "step": 61,
+          "fact_loss": 2.104565382003784,
+          "anchor_kl": 0.0,
+          "gradient_norm": 3.35233211517334
+        },
+        {
+          "step": 62,
+          "fact_loss": 1.882800579071045,
+          "anchor_kl": 0.0,
+          "gradient_norm": 2.2572786808013916
+        },
+        {
+          "step": 63,
+          "fact_loss": 1.8367905616760254,
+          "anchor_kl": 0.0,
+          "gradient_norm": 1.2452800273895264
+        },
+        {
+          "step": 64,
+          "fact_loss": 1.86174476146698,
+          "anchor_kl": 0.0,
+          "gradient_norm": 2.1464993953704834
+        },
+        {
+          "step": 65,
+          "fact_loss": 1.9136643409729004,
+          "anchor_kl": 0.0,
+          "gradient_norm": 1.9507877826690674
+        },
+        {
+          "step": 66,
+          "fact_loss": 1.7893668413162231,
+          "anchor_kl": 0.0,
+          "gradient_norm": 0.9323378801345825
+        },
+        {
+          "step": 67,
+          "fact_loss": 1.6317576169967651,
+          "anchor_kl": 0.0,
+          "gradient_norm": 1.9684269428253174
+        },
+        {
+          "step": 68,
+          "fact_loss": 1.7846444845199585,
+          "anchor_kl": 0.0,
+          "gradient_norm": 1.505382776260376
+        },
+        {
+          "step": 69,
+          "fact_loss": 1.869155764579773,
+          "anchor_kl": 0.0,
+          "gradient_norm": 1.0654369592666626
+        },
+        {
+          "step": 70,
+          "fact_loss": 1.9415315389633179,
+          "anchor_kl": 0.0,
+          "gradient_norm": 2.368344783782959
+        },
+        {
+          "step": 71,
+          "fact_loss": 1.7003073692321777,
+          "anchor_kl": 0.0,
+          "gradient_norm": 0.6698789000511169
+        },
+        {
+          "step": 72,
+          "fact_loss": 1.6909050941467285,
+          "anchor_kl": 0.0,
+          "gradient_norm": 1.1873096227645874
+        },
+        {
+          "step": 73,
+          "fact_loss": 2.100109100341797,
+          "anchor_kl": 0.0,
+          "gradient_norm": 2.9268741607666016
+        },
+        {
+          "step": 74,
+          "fact_loss": 1.8247779607772827,
+          "anchor_kl": 0.0,
+          "gradient_norm": 2.0777573585510254
+        },
+        {
+          "step": 75,
+          "fact_loss": 1.8851491212844849,
+          "anchor_kl": 0.0,
+          "gradient_norm": 1.7329802513122559
+        },
+        {
+          "step": 76,
+          "fact_loss": 1.940024495124817,
+          "anchor_kl": 0.0,
+          "gradient_norm": 3.0223398208618164
+        },
+        {
+          "step": 77,
+          "fact_loss": 1.6776446104049683,
+          "anchor_kl": 0.0,
+          "gradient_norm": 1.034136176109314
+        },
+        {
+          "step": 78,
+          "fact_loss": 1.7172207832336426,
+          "anchor_kl": 0.0,
+          "gradient_norm": 2.0947091579437256
+        },
+        {
+          "step": 79,
+          "fact_loss": 1.8241477012634277,
+          "anchor_kl": 0.0,
+          "gradient_norm": 1.9676792621612549
+        },
+        {
+          "step": 80,
+          "fact_loss": 1.8156023025512695,
+          "anchor_kl": 0.0,
+          "gradient_norm": 1.5549124479293823
+        },
+        {
+          "step": 81,
+          "fact_loss": 1.68806791305542,
+          "anchor_kl": 0.0,
+          "gradient_norm": 0.6336892247200012
+        },
+        {
+          "step": 82,
+          "fact_loss": 1.7364965677261353,
+          "anchor_kl": 0.0,
+          "gradient_norm": 2.003779172897339
+        },
+        {
+          "step": 83,
+          "fact_loss": 1.606213927268982,
+          "anchor_kl": 0.0,
+          "gradient_norm": 1.0694379806518555
+        },
+        {
+          "step": 84,
+          "fact_loss": 1.7362803220748901,
+          "anchor_kl": 0.0,
+          "gradient_norm": 1.162664771080017
+        },
+        {
+          "step": 85,
+          "fact_loss": 1.9392515420913696,
+          "anchor_kl": 0.0,
+          "gradient_norm": 2.733358144760132
+        },
+        {
+          "step": 86,
+          "fact_loss": 1.772905945777893,
+          "anchor_kl": 0.0,
+          "gradient_norm": 0.8805767893791199
+        },
+        {
+          "step": 87,
+          "fact_loss": 1.6799408197402954,
+          "anchor_kl": 0.0,
+          "gradient_norm": 1.0685250759124756
+        },
+        {
+          "step": 88,
+          "fact_loss": 1.6284009218215942,
+          "anchor_kl": 0.0,
+          "gradient_norm": 1.4169973134994507
+        },
+        {
+          "step": 89,
+          "fact_loss": 1.816541075706482,
+          "anchor_kl": 0.0,
+          "gradient_norm": 1.3994450569152832
+        },
+        {
+          "step": 90,
+          "fact_loss": 1.576949119567871,
+          "anchor_kl": 0.0,
+          "gradient_norm": 0.8749126195907593
+        },
+        {
+          "step": 91,
+          "fact_loss": 1.8460983037948608,
+          "anchor_kl": 0.0,
+          "gradient_norm": 1.7245972156524658
+        },
+        {
+          "step": 92,
+          "fact_loss": 1.9202436208724976,
+          "anchor_kl": 0.0,
+          "gradient_norm": 2.1713247299194336
+        },
+        {
+          "step": 93,
+          "fact_loss": 2.063524007797241,
+          "anchor_kl": 0.0,
+          "gradient_norm": 3.0831477642059326
+        },
+        {
+          "step": 94,
+          "fact_loss": 1.6807736158370972,
+          "anchor_kl": 0.0,
+          "gradient_norm": 1.1971293687820435
+        },
+        {
+          "step": 95,
+          "fact_loss": 1.746866226196289,
+          "anchor_kl": 0.0,
+          "gradient_norm": 1.3681771755218506
+        },
+        {
+          "step": 96,
+          "fact_loss": 1.8701661825180054,
+          "anchor_kl": 0.0,
+          "gradient_norm": 1.9736254215240479
+        },
+        {
+          "step": 97,
+          "fact_loss": 1.7179011106491089,
+          "anchor_kl": 0.0,
+          "gradient_norm": 1.1045749187469482
+        },
+        {
+          "step": 98,
+          "fact_loss": 1.7847634553909302,
+          "anchor_kl": 0.0,
+          "gradient_norm": 1.8917888402938843
+        },
+        {
+          "step": 99,
+          "fact_loss": 1.7712546586990356,
+          "anchor_kl": 0.0,
+          "gradient_norm": 1.6611932516098022
+        },
+        {
+          "step": 100,
+          "fact_loss": 1.9232029914855957,
+          "anchor_kl": 0.0,
+          "gradient_norm": 1.8939536809921265
+        },
+        {
+          "step": 101,
+          "fact_loss": 1.883589744567871,
+          "anchor_kl": 0.0,
+          "gradient_norm": 1.9991497993469238
+        },
+        {
+          "step": 102,
+          "fact_loss": 1.7453848123550415,
+          "anchor_kl": 0.0,
+          "gradient_norm": 0.8811246156692505
+        },
+        {
+          "step": 103,
+          "fact_loss": 1.7465181350708008,
+          "anchor_kl": 0.0,
+          "gradient_norm": 1.6844784021377563
+        },
+        {
+          "step": 104,
+          "fact_loss": 1.7020635604858398,
+          "anchor_kl": 0.0,
+          "gradient_norm": 1.4943604469299316
+        },
+        {
+          "step": 105,
+          "fact_loss": 1.7337340116500854,
+          "anchor_kl": 0.0,
+          "gradient_norm": 1.5713351964950562
+        },
+        {
+          "step": 106,
+          "fact_loss": 1.6955646276474,
+          "anchor_kl": 0.0,
+          "gradient_norm": 1.5605480670928955
+        },
+        {
+          "step": 107,
+          "fact_loss": 1.6507214307785034,
+          "anchor_kl": 0.0,
+          "gradient_norm": 1.325463891029358
+        },
+        {
+          "step": 108,
+          "fact_loss": 1.8249260187149048,
+          "anchor_kl": 0.0,
+          "gradient_norm": 1.4693936109542847
+        },
+        {
+          "step": 109,
+          "fact_loss": 1.7102478742599487,
+          "anchor_kl": 0.0,
+          "gradient_norm": 1.4574471712112427
+        },
+        {
+          "step": 110,
+          "fact_loss": 1.5287232398986816,
+          "anchor_kl": 0.0,
+          "gradient_norm": 1.5479791164398193
+        },
+        {
+          "step": 111,
+          "fact_loss": 1.6466717720031738,
+          "anchor_kl": 0.0,
+          "gradient_norm": 1.24124014377594
+        },
+        {
+          "step": 112,
+          "fact_loss": 1.733894944190979,
+          "anchor_kl": 0.0,
+          "gradient_norm": 1.977358102798462
+        },
+        {
+          "step": 113,
+          "fact_loss": 1.5346003770828247,
+          "anchor_kl": 0.0,
+          "gradient_norm": 0.9485002756118774
+        },
+        {
+          "step": 114,
+          "fact_loss": 1.7514424324035645,
+          "anchor_kl": 0.0,
+          "gradient_norm": 1.6697076559066772
+        },
+        {
+          "step": 115,
+          "fact_loss": 1.7097183465957642,
+          "anchor_kl": 0.0,
+          "gradient_norm": 2.082199811935425
+        },
+        {
+          "step": 116,
+          "fact_loss": 1.7821393013000488,
+          "anchor_kl": 0.0,
+          "gradient_norm": 2.123438596725464
+        },
+        {
+          "step": 117,
+          "fact_loss": 1.644598364830017,
+          "anchor_kl": 0.0,
+          "gradient_norm": 1.4142379760742188
+        },
+        {
+          "step": 118,
+          "fact_loss": 1.3936395645141602,
+          "anchor_kl": 0.0,
+          "gradient_norm": 1.6552189588546753
+        },
+        {
+          "step": 119,
+          "fact_loss": 1.4090900421142578,
+          "anchor_kl": 0.0,
+          "gradient_norm": 1.2861707210540771
+        },
+        {
+          "step": 120,
+          "fact_loss": 1.8236688375473022,
+          "anchor_kl": 0.0,
+          "gradient_norm": 2.3563661575317383
+        },
+        {
+          "step": 121,
+          "fact_loss": 1.8237481117248535,
+          "anchor_kl": 0.0,
+          "gradient_norm": 1.4928038120269775
+        },
+        {
+          "step": 122,
+          "fact_loss": 1.7007206678390503,
+          "anchor_kl": 0.0,
+          "gradient_norm": 1.4950072765350342
+        },
+        {
+          "step": 123,
+          "fact_loss": 1.380163550376892,
+          "anchor_kl": 0.0,
+          "gradient_norm": 0.8823032975196838
+        },
+        {
+          "step": 124,
+          "fact_loss": 1.7126423120498657,
+          "anchor_kl": 0.0,
+          "gradient_norm": 1.8912880420684814
+        },
+        {
+          "step": 125,
+          "fact_loss": 1.5274200439453125,
+          "anchor_kl": 0.0,
+          "gradient_norm": 0.8144382834434509
+        },
+        {
+          "step": 126,
+          "fact_loss": 1.5005874633789062,
+          "anchor_kl": 0.0,
+          "gradient_norm": 1.1165438890457153
+        },
+        {
+          "step": 127,
+          "fact_loss": 1.504578709602356,
+          "anchor_kl": 0.0,
+          "gradient_norm": 1.9881211519241333
+        },
+        {
+          "step": 128,
+          "fact_loss": 1.4536975622177124,
+          "anchor_kl": 0.0,
+          "gradient_norm": 1.3020658493041992
+        },
+        {
+          "step": 129,
+          "fact_loss": 1.4274588823318481,
+          "anchor_kl": 0.0,
+          "gradient_norm": 1.3140286207199097
+        },
+        {
+          "step": 130,
+          "fact_loss": 1.7002110481262207,
+          "anchor_kl": 0.0,
+          "gradient_norm": 2.1848011016845703
+        },
+        {
+          "step": 131,
+          "fact_loss": 1.4717947244644165,
+          "anchor_kl": 0.0,
+          "gradient_norm": 1.701330542564392
+        },
+        {
+          "step": 132,
+          "fact_loss": 1.4267412424087524,
+          "anchor_kl": 0.0,
+          "gradient_norm": 2.3749005794525146
+        },
+        {
+          "step": 133,
+          "fact_loss": 1.2357914447784424,
+          "anchor_kl": 0.0,
+          "gradient_norm": 1.2558887004852295
+        },
+        {
+          "step": 134,
+          "fact_loss": 1.329910397529602,
+          "anchor_kl": 0.0,
+          "gradient_norm": 1.2258380651474
+        },
+        {
+          "step": 135,
+          "fact_loss": 1.382377028465271,
+          "anchor_kl": 0.0,
+          "gradient_norm": 2.0787270069122314
+        },
+        {
+          "step": 136,
+          "fact_loss": 1.3911539316177368,
+          "anchor_kl": 0.0,
+          "gradient_norm": 2.105297565460205
+        },
+        {
+          "step": 137,
+          "fact_loss": 1.2875126600265503,
+          "anchor_kl": 0.0,
+          "gradient_norm": 1.5157166719436646
+        },
+        {
+          "step": 138,
+          "fact_loss": 1.2134085893630981,
+          "anchor_kl": 0.0,
+          "gradient_norm": 2.170252799987793
+        },
+        {
+          "step": 139,
+          "fact_loss": 1.128785252571106,
+          "anchor_kl": 0.0,
+          "gradient_norm": 0.8534046411514282
+        },
+        {
+          "step": 140,
+          "fact_loss": 1.4685235023498535,
+          "anchor_kl": 0.0,
+          "gradient_norm": 2.2325937747955322
+        },
+        {
+          "step": 141,
+          "fact_loss": 1.3985652923583984,
+          "anchor_kl": 0.0,
+          "gradient_norm": 1.736135721206665
+        },
+        {
+          "step": 142,
+          "fact_loss": 1.2592302560806274,
+          "anchor_kl": 0.0,
+          "gradient_norm": 1.7489449977874756
+        },
+        {
+          "step": 143,
+          "fact_loss": 1.3773123025894165,
+          "anchor_kl": 0.0,
+          "gradient_norm": 1.81305730342865
+        },
+        {
+          "step": 144,
+          "fact_loss": 1.3698225021362305,
+          "anchor_kl": 0.0,
+          "gradient_norm": 1.6822004318237305
+        },
+        {
+          "step": 145,
+          "fact_loss": 1.2327550649642944,
+          "anchor_kl": 0.0,
+          "gradient_norm": 1.2734562158584595
+        },
+        {
+          "step": 146,
+          "fact_loss": 1.2642143964767456,
+          "anchor_kl": 0.0,
+          "gradient_norm": 1.871677279472351
+        },
+        {
+          "step": 147,
+          "fact_loss": 1.2852287292480469,
+          "anchor_kl": 0.0,
+          "gradient_norm": 2.924492359161377
+        },
+        {
+          "step": 148,
+          "fact_loss": 1.261035680770874,
+          "anchor_kl": 0.0,
+          "gradient_norm": 1.9109470844268799
+        },
+        {
+          "step": 149,
+          "fact_loss": 1.2703008651733398,
+          "anchor_kl": 0.0,
+          "gradient_norm": 2.3756978511810303
+        },
+        {
+          "step": 150,
+          "fact_loss": 1.3895844221115112,
+          "anchor_kl": 0.0,
+          "gradient_norm": 2.2575111389160156
+        },
+        {
+          "step": 151,
+          "fact_loss": 1.1308780908584595,
+          "anchor_kl": 0.0,
+          "gradient_norm": 1.3066775798797607
+        },
+        {
+          "step": 152,
+          "fact_loss": 0.9343216419219971,
+          "anchor_kl": 0.0,
+          "gradient_norm": 2.759629249572754
+        },
+        {
+          "step": 153,
+          "fact_loss": 0.991619884967804,
+          "anchor_kl": 0.0,
+          "gradient_norm": 1.2007204294204712
+        },
+        {
+          "step": 154,
+          "fact_loss": 1.157279372215271,
+          "anchor_kl": 0.0,
+          "gradient_norm": 1.703567624092102
+        },
+        {
+          "step": 155,
+          "fact_loss": 0.994042158126831,
+          "anchor_kl": 0.0,
+          "gradient_norm": 1.5234724283218384
+        },
+        {
+          "step": 156,
+          "fact_loss": 1.0219975709915161,
+          "anchor_kl": 0.0,
+          "gradient_norm": 0.7921887636184692
+        },
+        {
+          "step": 157,
+          "fact_loss": 1.29096257686615,
+          "anchor_kl": 0.0,
+          "gradient_norm": 3.1447176933288574
+        },
+        {
+          "step": 158,
+          "fact_loss": 0.998083770275116,
+          "anchor_kl": 0.0,
+          "gradient_norm": 1.4516431093215942
+        },
+        {
+          "step": 159,
+          "fact_loss": 0.9029169082641602,
+          "anchor_kl": 0.0,
+          "gradient_norm": 2.2481398582458496
+        },
+        {
+          "step": 160,
+          "fact_loss": 1.123799443244934,
+          "anchor_kl": 0.0,
+          "gradient_norm": 4.017996788024902
+        }
+      ]
+    }
+  ],
+  "base_unchanged": true
+}

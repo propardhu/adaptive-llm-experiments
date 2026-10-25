@@ -1,0 +1,7 @@
+{
+  "fresh_process_reload_matches": true,
+  "probes": 72,
+  "correct": 24,
+  "comparison": "all stored per-probe predictions and target probabilities match exactly",
+  "scope": "one saved session adapter restored over the same pinned base model; not continual multi-session learning"
+}

@@ -1,0 +1,70 @@
+TITLE
+What If LLMs Could Learn While You Use Them?
+
+SUBTITLE
+A small experiment in updating model weights and keeping what already works
+
+SHORT SHARING POST
+What if an AI assistant could turn useful experience into a lasting weight update?
+
+I explored the idea with a small LLM experiment. It learned some new facts, but
+preserving earlier behavior introduced a tradeoff. The article explains the
+results visually, then connects them to In-Place TTT, TTT-E2E and Titans.
+
+What would you want an assistant to learn from experience—and what should stay fixed?
+
+SUGGESTED TOPICS
+Artificial Intelligence, Machine Learning, Large Language Models,
+Deep Learning, AI Research
+
+ARTICLE FLOW
+A familiar problem → context and weights → one LLM experiment →
+the measured tradeoff → published research → useful progress.
+The separate symbolic-memory experiment is an optional technical note.
+In the HTML reading copy, that note is collapsed by default.
+
+FIGURE ORDER AND ALT TEXT
+01-how-learning-works.png
+Two paths for carrying information forward. Saved notes enter a frozen model's
+context. Selected experiences can instead guide gradient updates to adjustable
+parameters. External memory and adapted weights can both persist.
+
+02-the-rewording-test.png
+A matched LLM comparison. New-wording accuracy changes from 37.5 to 32.9 percent
+with protection; agreement with earlier predictions changes from 50.0 to 93.1
+percent. Marks span the three initialization results. The frozen baseline scores
+0 percent without facts and 63.9 percent with the relevant fact supplied.
+
+05-ttt-research-map.png
+Three published approaches. In-Place TTT updates feed-forward projection weights.
+TTT-E2E prepares selected weights to adapt through meta-training. Titans uses a
+dedicated neural memory with writing and forgetting mechanisms.
+
+03-learning-and-interference.png — OPTIONAL APPENDIX ONLY
+Symbolic recall: 16.7 percent with no write, 87.7 percent with a random representation
+and a write, and 100 percent after meta-training. This is a separate toy task, not
+a language-model score. Every association was supplied before recall.
+
+04-social-card.png — COVER OR SHARING IMAGE
+A portrait cover asks whether LLMs could learn while being used. Two illustrated
+weight grids show selected parameters changing after an experience and a gradient
+update. The diagram is conceptual; the colored cells are not measured weights.
+
+PUBLICATION FILES
+The editable DOCX includes four main pages and a fifth-page technical appendix.
+The HTML embeds its figures and can be opened without an internet connection.
+PNG figures are ready to insert. SVG versions retain editable text and geometry.
+All measured results and experimental code remain in the full project ZIP.
+The graphics ZIP contains only PNGs, SVGs and this publication guide.
+No publication was submitted or posted.
+
+CLAIMS TO KEEP PRECISE
+93.1 percent is agreement with earlier predictions, not answer correctness.
+The 100 percent result concerns symbolic recall, not language understanding.
+The LLM experiment updates internal adapters between requests; it does not update
+weights during every generated token or reproduce the published TTT systems.
+The context baseline uses perfect fact selection and does not evaluate retrieval.
+Three initializations use the same test data; ranges are not confidence intervals.
+The matched ablation followed the primary run without further tuning.
+Saved updates survived reloading; improvement across multiple sessions was not tested.
+Possible token savings and lifelong learning remain hypotheses, not measured benefits.

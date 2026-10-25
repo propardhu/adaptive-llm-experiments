@@ -1,0 +1,15 @@
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.env
+.env.*
+!.env.example
+.DS_Store
+.cache/
+results-*/
+tmp/
+*.log
+*.zip
+When-an-LLM-learns-during-use.docx
+When-an-LLM-learns-during-use.html

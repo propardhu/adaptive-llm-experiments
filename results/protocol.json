@@ -1,0 +1,362 @@
+{
+  "model": "HuggingFaceTB/SmolLM2-135M",
+  "revision": "93efa2f097d58c2a74874c7e644dbc9b0cee75a2",
+  "train_templates": [
+    "Project {name} uses the access code",
+    "The access code for Project {name} is",
+    "To access Project {name}, enter the code",
+    "Project {name}'s assigned access code is"
+  ],
+  "dev_templates": [
+    "For Project {name}, use the access code",
+    "The assigned access code for Project {name} is"
+  ],
+  "test_templates": [
+    "For access to Project {name}, the code is",
+    "The code required to access Project {name} is",
+    "Access to Project {name} requires the code"
+  ],
+  "dev_facts": [
+    {
+      "name": "Neral",
+      "code": "gold",
+      "text": "Project Neral uses the access code gold."
+    },
+    {
+      "name": "Veska",
+      "code": "silver",
+      "text": "Project Veska uses the access code silver."
+    },
+    {
+      "name": "Talven",
+      "code": "red",
+      "text": "Project Talven uses the access code red."
+    },
+    {
+      "name": "Oriva",
+      "code": "green",
+      "text": "Project Oriva uses the access code green."
+    },
+    {
+      "name": "Lumet",
+      "code": "blue",
+      "text": "Project Lumet uses the access code blue."
+    },
+    {
+      "name": "Savren",
+      "code": "green",
+      "text": "Project Savren uses the access code green."
+    },
+    {
+      "name": "Keldra",
+      "code": "blue",
+      "text": "Project Keldra uses the access code blue."
+    },
+    {
+      "name": "Mivon",
+      "code": "red",
+      "text": "Project Mivon uses the access code red."
+    },
+    {
+      "name": "Zerik",
+      "code": "gold",
+      "text": "Project Zerik uses the access code gold."
+    },
+    {
+      "name": "Polven",
+      "code": "silver",
+      "text": "Project Polven uses the access code silver."
+    },
+    {
+      "name": "Ravik",
+      "code": "amber",
+      "text": "Project Ravik uses the access code amber."
+    },
+    {
+      "name": "Delmar",
+      "code": "amber",
+      "text": "Project Delmar uses the access code amber."
+    }
+  ],
+  "test_facts": [
+    {
+      "name": "Belvar",
+      "code": "green",
+      "text": "Project Belvar uses the access code green."
+    },
+    {
+      "name": "Corven",
+      "code": "red",
+      "text": "Project Corven uses the access code red."
+    },
+    {
+      "name": "Darsen",
+      "code": "amber",
+      "text": "Project Darsen uses the access code amber."
+    },
+    {
+      "name": "Elvora",
+      "code": "red",
+      "text": "Project Elvora uses the access code red."
+    },
+    {
+      "name": "Fenrik",
+      "code": "green",
+      "text": "Project Fenrik uses the access code green."
+    },
+    {
+      "name": "Galdra",
+      "code": "green",
+      "text": "Project Galdra uses the access code green."
+    },
+    {
+      "name": "Harven",
+      "code": "green",
+      "text": "Project Harven uses the access code green."
+    },
+    {
+      "name": "Ildora",
+      "code": "red",
+      "text": "Project Ildora uses the access code red."
+    },
+    {
+      "name": "Jorvik",
+      "code": "silver",
+      "text": "Project Jorvik uses the access code silver."
+    },
+    {
+      "name": "Kalven",
+      "code": "silver",
+      "text": "Project Kalven uses the access code silver."
+    },
+    {
+      "name": "Lorven",
+      "code": "gold",
+      "text": "Project Lorven uses the access code gold."
+    },
+    {
+      "name": "Merion",
+      "code": "gold",
+      "text": "Project Merion uses the access code gold."
+    },
+    {
+      "name": "Nolvik",
+      "code": "blue",
+      "text": "Project Nolvik uses the access code blue."
+    },
+    {
+      "name": "Odran",
+      "code": "gold",
+      "text": "Project Odran uses the access code gold."
+    },
+    {
+      "name": "Pelvar",
+      "code": "amber",
+      "text": "Project Pelvar uses the access code amber."
+    },
+    {
+      "name": "Quorin",
+      "code": "amber",
+      "text": "Project Quorin uses the access code amber."
+    },
+    {
+      "name": "Reldan",
+      "code": "silver",
+      "text": "Project Reldan uses the access code silver."
+    },
+    {
+      "name": "Selvik",
+      "code": "silver",
+      "text": "Project Selvik uses the access code silver."
+    },
+    {
+      "name": "Torven",
+      "code": "amber",
+      "text": "Project Torven uses the access code amber."
+    },
+    {
+      "name": "Ulvara",
+      "code": "blue",
+      "text": "Project Ulvara uses the access code blue."
+    },
+    {
+      "name": "Veldor",
+      "code": "blue",
+      "text": "Project Veldor uses the access code blue."
+    },
+    {
+      "name": "Wendral",
+      "code": "red",
+      "text": "Project Wendral uses the access code red."
+    },
+    {
+      "name": "Xelrin",
+      "code": "blue",
+      "text": "Project Xelrin uses the access code blue."
+    },
+    {
+      "name": "Yorven",
+      "code": "gold",
+      "text": "Project Yorven uses the access code gold."
+    }
+  ],
+  "retention_fit": [
+    "A healthy breakfast can include",
+    "The engineer checked the system before",
+    "A good book often tells a",
+    "The train arrived at the",
+    "When learning a new language, it helps to",
+    "The children played outside until",
+    "A computer program is a set of",
+    "The scientist recorded the results in a",
+    "To keep a room clean, you should",
+    "The restaurant served fresh bread with",
+    "The weather forecast predicts heavy",
+    "She opened the envelope and read the",
+    "The meeting was scheduled for Monday",
+    "A map helps travelers find their",
+    "The library has a large collection of",
+    "Before crossing the road, look both",
+    "The gardener planted flowers in the",
+    "The teacher explained the lesson to the",
+    "A bicycle has two",
+    "The writer finished the first chapter of the",
+    "Water is essential for all living",
+    "The museum displays works of",
+    "After a long journey, they finally reached",
+    "The doctor asked about the patient",
+    "To make a cake, first mix the",
+    "A strong password should be difficult to",
+    "The sun provides light and",
+    "The musician played a beautiful",
+    "Good communication is important for",
+    "The road was closed because of",
+    "The dog waited patiently at the",
+    "The company announced plans to",
+    "In a democracy, people can",
+    "The mountain was covered with",
+    "The athlete trained every day to",
+    "An email usually begins with a",
+    "The farmer harvested the crops in",
+    "Please remember to turn off the",
+    "The students worked together on the",
+    "The family gathered around the dinner",
+    "The ocean is home to many different",
+    "A dictionary explains the meaning of",
+    "The artist painted a picture of the",
+    "The flight was delayed due to",
+    "A recipe lists the ingredients and",
+    "The police officer directed the",
+    "The team celebrated after winning the",
+    "Regular exercise can improve your"
+  ],
+  "retention_dev": [
+    "The baby smiled when she saw her",
+    "The customer asked for a copy of the",
+    "A triangle is a shape with three",
+    "The village is located near a",
+    "He placed the empty cup on the",
+    "A library card allows you to borrow",
+    "The chef added a pinch of",
+    "The rain stopped just before",
+    "The bus driver waited for the",
+    "The concert began at eight",
+    "The bridge connects the two",
+    "In winter, many animals",
+    "A camera is used to take",
+    "The manager thanked the team for their",
+    "The package was delivered to the wrong",
+    "The student raised her hand to ask a",
+    "A river flows from higher ground to",
+    "The pilot landed the plane at the",
+    "The shop sells fruit and",
+    "The actor performed on the",
+    "A thermometer measures",
+    "The baker put the bread in the",
+    "The carpenter built a wooden",
+    "The city installed new street"
+  ],
+  "retention_test": [
+    "The capital of France is",
+    "The capital of Germany is",
+    "The capital of Italy is",
+    "The capital of Japan is",
+    "The capital of Spain is",
+    "The opposite of hot is",
+    "There are seven days in a",
+    "Two plus two equals",
+    "A year has twelve",
+    "A week begins on",
+    "The largest ocean is the",
+    "The Earth revolves around the",
+    "Humans breathe in oxygen and exhale",
+    "The freezing point of water is",
+    "A square has four",
+    "The opposite of left is",
+    "The opposite of up is",
+    "Birds use their wings to",
+    "Fish live in",
+    "Bees produce",
+    "A cow gives us",
+    "Plants need sunlight and",
+    "Snow is usually",
+    "The sky on a clear day is",
+    "Bananas are usually",
+    "The first month of the year is",
+    "The day after Monday is",
+    "The season after winter is",
+    "A minute has sixty",
+    "The largest planet in the solar system is",
+    "The astronaut stepped onto the surface of the",
+    "The mechanic repaired the engine of the",
+    "The journalist interviewed the witness about",
+    "The nurse carefully measured the patient",
+    "The hikers followed a narrow path through the",
+    "The orchestra performed music by",
+    "The shopkeeper arranged the products on the",
+    "The programmer found a bug in the",
+    "The passengers collected their luggage at the",
+    "The librarian recommended a novel about",
+    "The volunteers cleaned the beach after the",
+    "The researchers compared the two groups using",
+    "The firefighters arrived quickly at the",
+    "The referee blew the whistle to",
+    "The receptionist answered the phone and",
+    "The photographer adjusted the lens to",
+    "The tourists visited the ancient",
+    "The programmer saved the file before"
+  ],
+  "rank": 8,
+  "internal_layers": 2,
+  "steps": 160,
+  "checkpoints": [
+    40,
+    80,
+    160
+  ],
+  "learning_rates": [
+    0.001,
+    0.003
+  ],
+  "protected_kl_weights": [
+    1.0,
+    5.0
+  ],
+  "development_seed": 101,
+  "final_seeds": [
+    7,
+    17,
+    27
+  ],
+  "batch_size": 24,
+  "selection": "maximize development fact accuracy minus 2 times (1 minus development retention agreement); ties prefer earlier checkpoint, lower lr, larger KL weight",
+  "objective": "cross entropy on the one-token answer; optional KL from frozen model on separate general-language prefixes",
+  "methods": [
+    "output_adapter",
+    "internal_adapter",
+    "internal_adapter_kl"
+  ],
+  "primary": "full-vocabulary greedy next-token exact match on 72 held-out wording probes",
+  "retention": "greedy next-token agreement with frozen baseline on 48 held-out general-language prefixes; not broad skill accuracy",
+  "caveat": "local adapter adaptation; not an implementation of In-Place TTT, TTT-E2E, or Titans; cached frozen prefix excludes serving overhead"
+}

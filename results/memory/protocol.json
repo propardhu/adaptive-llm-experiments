@@ -1,0 +1,20 @@
+{
+  "keys": 12,
+  "values": 6,
+  "width": 12,
+  "seeds": [
+    11,
+    23,
+    37
+  ],
+  "outer_steps": 600,
+  "outer_batch": 32,
+  "outer_lr": 0.01,
+  "inner_steps": 1,
+  "inner_lr": 12,
+  "inner_objective": "half squared association error, mean over 12 observed pairs",
+  "outer_objective": "cross entropy of recalled values after the inner update",
+  "test_episodes": 1000,
+  "test_seed": 98765,
+  "caveat": "144 shared encoder parameters and 72 temporary fast-memory entries per episode; not an LLM or a paper reproduction"
+}
